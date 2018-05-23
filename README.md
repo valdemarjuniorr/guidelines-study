@@ -58,7 +58,7 @@ A tabela abaixo mostra o mapa de métodos padrões para HTTP
 | List | GET <collection URL> | N/A | Resource* list|
 | Get | GET <resource URL> | N/A | Resource*|
 | Create | POST <collection URL> | Resource | Resource*|
-| Update | PUT or PATCH <resource URL> | Resource | Resource*|
+| Update | PUT ou PATCH <resource URL> | Resource | Resource*|
 | Delete | DELETE <resource URL> | N/A | google.protobuf.Empty**|
 
 ### List
@@ -74,3 +74,32 @@ Requisitos:
 * Os recursos retornados devem ser os mesmos dos mapeados no caminho da URL.
 * O corpo da requisição deve estar vazio.
 * A resposta deve conter a lista de recursos com metadados opcionais
+
+### Get
+
+Método `Get` tem o nome do recurso, com nenhum ou vários parâmetros, e retorna o recurso específico.
+
+Requisitos: 
+* `Get` tem que implementar o método HTTP `GET`.
+* Os filtros da requisição do recurso a ser recuperados, deveriam ser mapeados na URL.
+* Os recursos retornados devem ser os mesmos dos mapeados no caminho da URL.
+* O corpo da requisição deve estar vazio.
+* O recurso retornado deve ser mapeado no corpo da resposta da requisição.
+
+Exemplo:
+
+```
+// Note the URL template variable which captures the multi-segment resource
+    // name of the requested book, such as "shelves/shelf1/books/book2"
+    get: "/v1/{name=shelves/*/books/*}"
+```
+
+### Create
+O método `Create` tem o nome do recurso pai, um recurso, e nenhum ou vários parâmetros. Cria um novo recurso do tipo do recurso pai `parent` especificado e retorna esse recurso criado.
+
+Requisitos: 
+* `Create` tem que implementar o método HTTP `POST`.
+* A mensagem da requisição deveria ter o `parent` que especifica o nome do recurso pai, onde o novo recurso será criado.
+* Todos os demais campos da requisição, **poderiam** ser mapeados nos parâmetros da URL.
+* A requisição **deveria** conter o nome do campo `<recurso>_id` para permitir que o cliente escolha por id. Esse campo **deve** estar nos parâmetros da URL.
+* O recurso retornado **poderia** estar no corpo da resposta.
