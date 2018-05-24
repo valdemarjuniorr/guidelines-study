@@ -1,5 +1,8 @@
 # api-guidelines-study
-Guia criado basedo em estudos de como criar APIs 
+Guia criado basedo em estudos de como criar APIs
+
+## Convenções usadas neste documento
+As palavras-chave de nível de exigência **"PRECISA"**, **"NÃO PRECISA"**, **"OBRIGATÓRIO"**, **"DEVERÁ"**, **"NÃO DEVERÁ"**, **"DEVE"**, **"NÃO DEVE"**, **"RECOMENDADO"**, **"PODE"** e **"OPCIONAL"** usadas serão interpretadas conforme descrito no RFC 2119.
 
 **Recursos**
 
@@ -82,8 +85,8 @@ Método `Get` tem o nome do recurso, com nenhum ou vários parâmetros, e retorn
 Requisitos: 
 * `Get` tem que implementar o método HTTP `GET`.
 * Os filtros da requisição do recurso a ser recuperados, deveriam ser mapeados na URL.
-* Os recursos retornados devem ser os mesmos dos mapeados no caminho da URL.
-* O corpo da requisição deve estar vazio.
+* Os recursos retornados **deverá** ser os mesmos dos mapeados no caminho da URL.
+* O corpo da requisição **deverá** estar vazio.
 * O recurso retornado deve ser mapeado no corpo da resposta da requisição.
 
 Exemplo:
@@ -98,8 +101,35 @@ Exemplo:
 O método `Create` tem o nome do recurso pai, um recurso, e nenhum ou vários parâmetros. Cria um novo recurso do tipo do recurso pai `parent` especificado e retorna esse recurso criado.
 
 Requisitos: 
-* `Create` tem que implementar o método HTTP `POST`.
+* `Create` **deve** implementar o método HTTP `POST`.
 * A mensagem da requisição deveria ter o `parent` que especifica o nome do recurso pai, onde o novo recurso será criado.
 * Todos os demais campos da requisição, **poderiam** ser mapeados nos parâmetros da URL.
 * A requisição **deveria** conter o nome do campo `<recurso>_id` para permitir que o cliente escolha por id. Esse campo **deve** estar nos parâmetros da URL.
 * O recurso retornado **poderia** estar no corpo da resposta.
+
+O método `Create` **deveria** tratar o código de erro `ALREADY_EXISTS`.
+
+### Update
+O método `Update` recebe uma messagem contendo um recurso com nenhum ou mais parâmetros. O recurso específico e suas propriedades serão atualizadas e retornadas.
+
+Requisitos: 
+* O método `Update` deveria suportar parcialmente atualização uasndo HTTP `PATCH`, com o campo `FieldMask` nomeado `update_mask`.
+* Se o método `Update` só suportar atualização do recurso inteiro, **deve** usando método http `PUT`.
+* A requisição **deve** conter o recurso que irá ser atualizado.
+* A resposta da requisição **deve** ser o recurso atualizado.
+
+O método `Update` **deveria** tratar o erro de `NOT_FOUND` no caso de um recurso inexistente.
+
+### Delete
+O método `Delete` recebe o nome do recurso com nenhum ou vários parâmetros, que deleta ou marca para deleção um específico recurso.
+A API **não deveria** confiar nas informações retornadas de um método `Delete` e que também **não deve** ser chamado repetidamente.
+
+Requisitos:
+* O método `Delete` **deve** implementar o método HTTP `DELETE`.
+* A requisição da mensagem recebida, para o recurso específico, **deverá** ser mapeada no caminho da URL.
+* O corpo da requisição **deverá** estar vazio.
+* Se o método `Delete` imediatamente remover o recurso, **deverá** retornar um corpo vazio.
+* Se o método `Delete` inicializar uma operação longa de deleção, **deverá** retornar o tempo dessa operação.
+* Se o método `Delete` apenas marcar o recurso como será deletado, **deverá** retornar o recurso atualizado.
+
+O método `Delete` **deveria** tratar o erro de `NOT_FOUND` no caso de um recurso inexistente.
