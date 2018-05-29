@@ -16,9 +16,11 @@
 ## Idiomatic GoLang
 ### Espaços simples entre as frases, depois de ponto final(.) e comentários.
 Certo:
+
 `// Comentário um. Comentário dois.`
 
 Errado:
+
 `//Comentário um.  Comentário dois.`
 
 Referência: [CL 20022](https://golang.org/cl/20022).
@@ -26,6 +28,7 @@ Fonte: https://dmitri.shuralyov.com/idiomatic-go#single-spaces-between-sentences
 
 ### Nome de variável de erro( Error variable naming )
 Certo: 
+
 ```
 // Package level exported error.
 var ErrSomething = errors.New("something went wrong")
@@ -43,6 +46,7 @@ func main() {
 }
 ```
 Errado:
+
 ```
 var ErrorSomething = errors.New("something went wrong")
 var SomethingErr = errors.New("something went wrong")
@@ -60,6 +64,7 @@ func main() {
 }
 ```
 Referência: https://talks.golang.org/2014/names.slide#14.
+
 Fonte: https://dmitri.shuralyov.com/idiomatic-go#error-variable-naming
 
 
