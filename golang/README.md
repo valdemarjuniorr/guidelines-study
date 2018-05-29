@@ -144,7 +144,9 @@ type ExitError struct {
 ```
 
 Nomes de variáveis de erro deveria vir em foma de `ErrFoo`:
-`var ErrFormat = errors.New("image: unknown format")`
+```
+var ErrFormat = errors.New("image: unknown format")
+```
 
 Fonte: https://talks.golang.org/2014/names.slide#14
 
