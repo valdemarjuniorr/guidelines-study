@@ -335,7 +335,7 @@ A primeira forma é mais legível, por que é obvio que `s` é uma string e não
 
 Veja o comentário Russ Cox https://groups.google.com/forum/#!topic/golang-nuts/7Ks1iq2s7FA:
 
-*** if I care about "is it this specific string" I tend to write s == "".***
+> if I care about "is it this specific string" I tend to write s == "".
 
 ###
 
