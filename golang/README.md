@@ -13,6 +13,13 @@
 - É possível ter vários pacotes com o mesmo nome, contanto que em estrutura de pastas diferentes.
 - Não é possível uma variável local que pertença apenas a um arquivo `.go`. O código é compartilhado no pacote inteiro.
 
+### Boas práticas
+- Elegante e simples.
+- Óbvio apenas vendo o nome do pacote.
+- Desenvolva o pacote internamente, mas projete para ser reutilizado algum dia.
+- Considere mais utilizar pacotes com arquivos `_test.go`.
+- Faça parecido com a biblioteca padrão ou pacotes de projetos grandes.
+
 ## Nomes são importantes
 
 ### Nomes
@@ -339,10 +346,60 @@ Veja o comentário Russ Cox https://groups.google.com/forum/#!topic/golang-nuts/
 
 > if I care about "is it this specific string" I tend to write s == "".
 
-###
-
 Fonte: https://dmitri.shuralyov.com/idiomatic-go#empty-string-check
 
+## Sobre Errors
+
+### Tratamento de erros comuns em Go: 
+
+```
+if err != nil {
+    return err
+}
+```
+Se Go tivesse exceptions: 
+```
+func doSomething() {
+    foo()
+    bar()
+    baz()
+}
+```
+Mas como é realmente escrito em Go:
+```
+func doSomething() error {
+    if err := foo(); err != nil {
+        return err
+    }
+    if err := bar(); err != nil {
+        return err
+    }
+    if err := baz(); err != nil {
+        return err
+    }
+    return nil
+}
+```
+E dessa forma é boa por que, mesmo?
+- Erros são importantes.
+- Pode influenciar no fluxo da aplicação.
+- Nós perdermos muito tempo procurando por erros.
+- Boas mensagens de erro, podem salvar dias de trabalho.
+- Errors acontecem o tempo todo.
+- Expliciticidade favorece legibilidade
+
+Fonte: https://rogpeppe.neocities.org/error-loving-talk/index.html#5
+
+### Panic!
+Na verdade Go tem exceções, reservadas para situações exceptionais:
+- Quando um erro realmente não deveria acontecer.
+- Erros de inicialização.
+- Broken internal [invariants](https://en.wikipedia.org/wiki/Invariant_(computer_science)) 
+
+### Logs
+A utilização de logs: 
+- Quando quiser registrar o erro e continuar o fluxo.
+- Geralmente utilizado em lógica de alto nível.
 
 ## Proverbios do GoLang
 
@@ -350,3 +407,5 @@ https://go-proverbs.github.io/
 
 ## Quotes
 - ["If you took a working C/C++/Java function and translated that to Golang, it’s highly unlikely that would yield remotely decent Golang code."](https://medium.com/myntra-engineering/my-journey-with-golang-web-services-4d922a8c9897)
+
+- Main() responsibility is to pull as much information from the environment to bootstrap the running program into working correctly.
