@@ -1,0 +1,1 @@
+"A good general rule is that a system-level diagram should be an acyclic graph. In other works, a program shouldn't contain any circular relationships in which a Class A uses Class B, Class B uses Class C and Class C uses Class A". Page 85
