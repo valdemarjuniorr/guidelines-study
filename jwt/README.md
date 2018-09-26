@@ -64,7 +64,8 @@ Esse JSON é `Base64Url`, codificado para formar a segunda parte do JWT.
 Para criar uma assinatura você precisa do **Header** e **Payload** codificados, o secret, o algoritmo especifícado no **Header** e assiná-los.
 
 Por exemplo, se quiser usar o algoritmo _HMAC SHA256_, a assinatura será criada da seguinte forma:
-```HMACSHA256(
+```
+HMACSHA256(
   base64UrlEncode(header) + "." +
   base64UrlEncode(payload),
   secret)
@@ -75,5 +76,16 @@ A assinatura é usado para verificar se a mensagem não foi alterada no meio do 
 O output são três strings Base64-URL separados por pontos e que pode ser passado facilmente nos ambientes HTTP.
 
 ```
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
+
+## Funcionamento
+Em autenticações, quando o usuário é logado um JSON Web Token(JWT) é retornado. Como JWT são credenciais **"PRECISA"** ter cuidado para previnir problemas de segurança. Se o usuário quer acessar uma rota ou recurso protegido, o agente do usuário **"DEVERÁ"** enviar um JWT. Tipicamente, no header **Authorization** usando o schema **Bearer**. Ex.:
+
+`Authorization: Bearer <token>`
+
+O servidor irá verificar se o JWT enviado é válido no header `Authorization`, caso presente, o servidor irá dar acesso(ou não) ao recurso ou rota.
+
+_Se o token for enviado no header `Authorization`, Cross-Origin Resource Share(CORS) não seria problema, considerando que não usa Cookies_.
