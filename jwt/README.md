@@ -89,3 +89,13 @@ Em autenticações, quando o usuário é logado um JSON Web Token(JWT) é retorn
 O servidor irá verificar se o JWT enviado é válido no header `Authorization`, caso presente, o servidor irá dar acesso(ou não) ao recurso ou rota.
 
 _Se o token for enviado no header `Authorization`, Cross-Origin Resource Share(CORS) não seria problema, considerando que não usa Cookies_.
+
+O diagrama mostra como o JWT é obtido e usado para acessar uma API ou recurso:
+
+![Obtendo credênciais e usandó-as para acessar API ou recursos](https://cdn2.auth0.com/docs/media/articles/api-auth/client-credentials-grant.png)
+
+1. A aplicação solicita autorização para o servidor.
+2. Quando a autorização é concedida, o servidor de autorização retorna o token para o cliente.
+3. A aplicação usa o token para acessar recursos ou rotas protegidas.
+
+## Por que usar?
