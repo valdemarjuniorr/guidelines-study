@@ -99,3 +99,9 @@ O diagrama mostra como o JWT é obtido e usado para acessar uma API ou recurso:
 3. A aplicação usa o token para acessar recursos ou rotas protegidas.
 
 ## Por que usar?
+- JSON é mais compacto e menos verboso em relação ao XML(SAML).
+- Mais seguro que o SWT, pois o JWT consegue ser assinado com chave publica/privada.
+- Parses de JSON são mais comuns em liguagens de programação, como em [Golang](https://github.com/valdemarjuniorr/guidelines-study/tree/master/golang), convertendo em objetos.
+
+### Fonte
+- https://jwt.io/introduction/
