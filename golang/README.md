@@ -7,6 +7,8 @@
 - Representa apenas um conceito.
 - Pequeno e vários.
 - Crie pacote para um propósito e deixe toda a lógica relacionada a esse propósito e encapsule dentro dele mesmo.
+- Use apenas letras minúsculas. Não use underline ou camelCase. Ex.: Não use `httpReader` ou `http_reader`.
+- Não use plural. Ex.: `httputils`.
 
 ### Regras
 - Pacotes estão dentro do diretório do workspace `$GOPATH/src`.

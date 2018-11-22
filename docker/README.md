@@ -20,7 +20,9 @@ Ex.:docker [container] run --publish 80:80 -d --name nginx nginx
 
 ### Criar, executar comando e excluir
 - `docker container run -rm -it ubuntu bash`
-- `docker container start -ai (NOME_CONTAINER)`. Faz a mesma coisa do `docker container run`, mas para um container existente.
+- `docker container start -ai (NOME_CONTAINER)`. 
+
+Faz a mesma coisa do `docker container run`, mas para um container existente.
 
 ### Ver logs
 `docker logs [--tail 50] (NOME/ID CONTAINER)`
@@ -86,3 +88,17 @@ Obs.: Irá criar um novo container.
 
 ### Upload uma imagem para o dockerhub
 `docker image push valdemarjuniorr/nginx`
+
+## Volumes
+
+### Criar
+`docker volume create`
+
+### Listar
+`docker volume ls`
+
+### Inspecionar
+`docker volume inspect (NOME_VOLUME)`
+
+### Definir nome do volume
+`docker container run -d --name new_mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql`
