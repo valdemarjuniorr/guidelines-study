@@ -28,7 +28,7 @@ Sobre o [minikube](https://github.com/kubernetes/minikube)
 Para acessar um serviço exposto via _node port_, execute:
 `minikube service [-n NOME_EXPOSTO] [--url] NOME`
 
-### Executar uma imagem dentro do cluter
+### Executar uma imagem dentro do cluster
 `kubectl run [NOME_EXPOSTO] --image=[IMAGEM] [--port=PORTA]`
 Ex.: kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
 
