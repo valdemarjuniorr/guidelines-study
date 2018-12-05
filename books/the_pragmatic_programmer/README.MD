@@ -2,7 +2,7 @@
 Extracted From The Pragmatic Programmer
 by Andrew Hunt and David Thomas. Copyright 2000, Addison Wesley.
 
-# Pragmatic Software Development Tips
+## Pragmatic Software Development Tips
 ### Care About Your Craft
 Why spend your life developing software unless you care about doing it well?
 
