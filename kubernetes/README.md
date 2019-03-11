@@ -36,8 +36,18 @@ Sobre o [minikube](https://github.com/kubernetes/minikube)
 `minikube dashboard`
 
 ### Acessar serviço
-Para acessar um serviço exposto via _node port_, execute:
+Para acessar um serviço exposto via _node port_:
 `minikube service [-n NOME_EXPOSTO] [--url] NOME`
+
+## Containers no kubernetes
+Para consultar um diagnóstico simpes do cluster, execute: `kubectl get componentstatuses`.
+- _controller_manager_ é responsável por executar controllers que regulam o comportamento do cluber. Ex.: Asegura que as replicas estejam disponíveis e _healthy_.
+- _Scheduler_  é responsável por colocar diferentes pods em diferentes nodes do cluster.
+- _etcd_ é o server é onde todos os objetos da API são gravados.
+
+### Workers Nodes
+Worker nodes é onde os containers serão executados. Para listar todos os nodes do cluster:
+`kubectl get nodes`
 
 ### Executar uma imagem dentro do cluster
 `kubectl 0 [NOME_EXPOSTO] --image=[IMAGEM] [--port=PORTA]`
