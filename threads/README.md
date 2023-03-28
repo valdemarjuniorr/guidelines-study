@@ -136,3 +136,14 @@ Para definir uma tolerância de espera de uma thread, considerando que uma aplic
 thread.join(2000);
 ```
 Dessa forma é adicionado uma tolerância de espera de 2s.
+
+## Thread pooling
+Thread pooling é basicamente criar uma thread para executar uma tarefa e após finalizada, reutilizá-la para executar outra task, assim evita criar outras threads todas às vezes.
+Dentro da JDK existe uma implementação de pool de threads, conhecido como `Fixed Threads pool Executor`. Por exemplo:
+```java
+int numberOfThreads = 4;
+Executor executor = Executors.newFixedThreadPool(numberOfThreads);
+..
+Runnable task = ...;
+executor.execute(task);
+```
