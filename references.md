@@ -2,7 +2,7 @@
 - [Don't let architecture astronauts scare you](https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/)
 - [Who needs an architect?](http://files.catwell.info/misc/mirror/2003-martin-fowler-who-needs-an-architect.pdf)
 - [The secret of fast programming: stop thinking](https://www.codesimplicity.com/post/the-secret-of-fast-programming-stop-thinking/)
-- [Tell, don't ask](https://pragprog.com/articles/tell-dont-ask)
+- [Tell, don't ask](https://martinfowler.com/bliki/TellDontAsk.html)
 - [Change-Detector Tests Considered Harmful](https://testing.googleblog.com/2015/01/testing-on-toilet-change-detector-tests.html)
 - [Test-induced design damage](http://david.heinemeierhansson.com/2014/test-induced-design-damage.html)
 - [Rise of the Expert Beginner](https://www.daedtech.com/how-developers-stop-learning-rise-of-the-expert-beginner/)
