@@ -2,6 +2,14 @@
 ## Anotações realizadas no curso  MongoDB - The Complete Developer's Guide 2023.
 
 ## Conceitos
+### Quando utilizar
+Banco de dados não-relacional pode ser considerado uma boa escolha, quando:
+- Quando sua aplicação requer super baixa-latência.
+- Os dados não são estruturados, ou os dados não tem relacionamentos.
+- Quando é preciso serializar ou deserializar dados, como JSON, XML, YAML e etc.
+- Você precisa armazenar uma quantidade massiva de dados.
+(Referência: System Design Interview – An insider's guide)
+
 ### Collections
 
 Collections é uma coleção de documentos. Documento é uma "tabela" no mundo dos banco de dados relacionais.
