@@ -36,3 +36,44 @@ Decide when to use cache. Consider using cache when data is read frequently but 
 
 ### Datacenters
 To further scale our system, we need to decouple different components of the system so they can be scaled independently. Messaging queue is a key strategy employed by many real-world distributed systems to solve this problem.
+
+## Scaling
+
+### Vertical scaling
+Vertical scaling comes with some serious drawbacks:
+- You can add more CPU, RAM, etc. to your database server, but there are hardware limits. If you have a large user base, a single is not enough.
+- Greater risk of single point of failures.
+- The overall cost of vertical scaling is high. Powerful servers are much more expensive.
+
+### Horizontal scaling
+Horizontal scaling, as known as sharding, is the practice of adding more servers. Sharding separates large databases into smaller, more easily managed parts called `shards`. When choosing a sharding key, one of the most important criteria is to choose a key that can evenly distributed data.
+Sharding is a great technique to scale the database, but it is far from a perfect solution. It introduces complexities and new challenges to the system:
+- `Resharding data`: Resharding data is needed when:
+  - A single shard could no longer hold more data due to rapid growth
+  - Certain shards might experience shard exhaustion faster than others due to uneven data distribution.
+- `Celebrity problem`: This is also called a hotspot key problem. Excessive access to a specific shard could cause server overload.
+- `Join and de-normalization`: Once a database has been sharded across multiple servers, it is hard to perform join operations across database shards. A common workaround is to de-normalize the database so that queries can be performed in a single table.
+
+## Latency
+- Memory is fast, but the disk is slow.
+- Avoid disk seeks if possible.
+- Simple compression algorithms are fast.
+- Compress data before sending it over the internet if possible.
+- Data centers are usually in different regions, and it takes time to send data between them.
+
+## Questions
+- The ability to ask good questions is also an essential skill, and many interviewers specifically look for this skill.
+- In system design interview, giving out an answer quickly without thinking gives you no bonus points. Answering without a thorough understanding of the requirements is a huge red flag as the interview is not a trivia contest. There is no right answer.
+
+### What questions to ask?
+Ask questions to understand the exact requirements. Here is a list of questions to help you get started:
+- What specific features are we going to build?
+- How many users does the product have?
+- How fast does the company anticipate to scale up? What are the anticipated scales in 3 months, 6 months, and a year?
+- What is the company's technology stack? What existing services you might leverage to simplify the design?
+
+## High-level architecture
+
+### Rate limit
+The basic idea of rate limiting algorithms is simple. At the high-level, we need a counter to keep track of how many requests are sent from the same user, IP, address, etc. If the counter is larger than the limit, the request is disallowed.
+Where shall we store counters? Using the database is not a good idea due to slowness of disk access. In-memory cache is chosen because it is fast and supports time-based expiration strategy. For instance, Redis is a popular option to implement rate limiting.
