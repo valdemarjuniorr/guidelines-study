@@ -77,3 +77,34 @@ Ask questions to understand the exact requirements. Here is a list of questions 
 ### Rate limit
 The basic idea of rate limiting algorithms is simple. At the high-level, we need a counter to keep track of how many requests are sent from the same user, IP, address, etc. If the counter is larger than the limit, the request is disallowed.
 Where shall we store counters? Using the database is not a good idea due to slowness of disk access. In-memory cache is chosen because it is fast and supports time-based expiration strategy. For instance, Redis is a popular option to implement rate limiting.
+
+The rate limiter returns the following HTTP headers to clients
+- `X-Ratelimit-Remaining`: The remaining number of allowed requests within the window.
+- `X-Ratelimit-Limit`: It indicates hwo many calls the client can make per time window.
+- `X-Ratelimit-Retry-After`: The number of seconds to wait until you can make a request again without being throttled.
+
+### Design a Key-Value store
+A distributed key-value store is also called a distributed hash table, which distributes key-value pairs across many servers. It is important to understand CAP(Consistency, Availability, Partition Tolerance) theorem.
+CAP theorem states it is impossible for a distributed system to simultaneously provide more than two of these three guarantees: consistency, availability, and partition tolerance.
+
+Bank systems usually have extremely high consistent requirements. For example, it is crucial for a bank system to display the most up-to-date balance info. If inconsistency occurs due to a network partition, the bank system returns an error before the inconsistency is resolved.
+
+Dynamo and Cassandra adopt eventual consistency, which is our recommended consistency model for our key-value store. From concurrent write eventual consistency allows inconsistent values, to enter the system and force the client to read the values to reconcile.
+
+#### Inconsistency resolution: versioning
+Replication gives high availability but causes inconsistencies among replicas. Versioning and vector clocks are used to solve inconsistency problems. Versioning means treating each data modification as a new immutable version of data.
+
+### Design a unique ID generator in distribution way
+
+#### Twitter snowflake approach
+Approaches mentioned above give us some ideas about how different ID generation systems work. However, none of them meet our specific requirements; thus, we need another approach. Twitter's unique ID generation system called "snowflake" is inspiring and can satisfy our requirements.
+
+### Design a Web Crawler
+
+**Politeness**: Generally a web crawler should avoid sending too many requests to the same hosting server within a short period. Sending too many requests is considered as "impolite" or even treated as denial-of-service(DOS) attack.
+
+### Design a Chat System
+**Polling**: It is a technique that the client periodically asks the server if there are messages available. Depending on polling frequency, polling could be costly.
+
+### Design Google Drive
+Achieving strong consistency in a relational database is easy because it maintains the ACID(Atomicity, Consistency, Isolation, Durability) properties. However, NoSQL databases do not support ACID properties by default. ACID properties must be programmatically incorporated in synchronization logic.
