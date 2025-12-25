@@ -115,4 +115,199 @@
 
 "Avoid "magic numbers". Magic numbers are literal numbers, such as 100 or 47524, that appear in the middle of a program without explanation. If you program in a language that supports named constants, use them instead." Page 292
 
-"Changes can be made more reliably. If you use named constants, you won't over-look one of the 100s or change a 100 that refers to something else." Page 292
+"Changes can be made more reliably. If you use named constants, you won't over-look one of the 100s or change a 100 that refers to something else." Page 293
+
+"Character and string literals are cryptic. Comments or named constants clarify your intentions." Page 297
+
+## 12 Fundamentals Data Types
+
+"Use named constants in data declarations. Using named constants helps program readability and maintainability in data declarations and in statements that need to know the size of the data they are working with." Page 308
+
+"Use structures to simplify parameter lists. You can simplify routine parameter lists by using structured variables. The technique is similar to the one just shown. Rather than passing each of the elements needed individually, you can group related elements into a structure and pass the whole enchilada as a group structure." Page 322
+
+"careful programmers avoid passing a structure as a parameter when only one or two fields from the structure are needed—they pass the specific fields needed instead." Page 322
+
+## 14 Organize Straight-line Code
+
+"Document unclear dependencies with comments. Try first to write code without order dependencies.Try second to write code that makes dependencies obvious. If you're still concerned that an order dependency isn't explicit enough, document it. Documenting unclear dependencies is one aspect of documenting coding assumptions, which is critical to writing maintainable, modifiable code." Page 349
+
+"Put the most common cases first. By putting the most common cases first, you minimize the amount of exception-case handling code someone has to read to find the usual cases. You improve efficiency because you minimize the number of tests the code does to find the most common cases." Page 359
+
+"Order cases by frequency. Put the most frequently executed cases first and the least frequently executed last. This approach has two advantages. First, human readers can find the most common cases easily. Readers scanning the list for a specific case are likely to be interested in one of the most common cases, and putting the common ones at the top of the code makes the search quicker." Page 361
+
+## 17 Unusual Control Structures
+
+"Make sure the recursion stops. Check the routine to make sure that it includes a nonrecursive path. That usually means that the routine has a test that stops further recursion when it's not needed." Page 396
+
+"Use safety counters to prevent infinite recursion. If you're using recursion in a situation that doesn't allow a simple test such as the one just described, use a safety counter to prevent infinite recursion." Page 396
+
+"Limit recursion to one routine. Cyclic recursion (A calls B calls C calls A) is dangerous because it's hard to detect." Page 396
+
+## 18 Table-Driven Methods
+
+"Indexed access schemes offer two main advantages. First, if each of the entries in the main lookup table is large, it takes a lot less space to create an index array with a lot of wasted space than it does to create a main lookup table with a lot of wasted space." Page 425
+
+"As Butler Lampson, a distinguished engineer at Microsoft, says, it's better to strive for a good solution and avoid disaster rather than trying to find the best solution (Lampson 1984)." Page 429
+
+"If using flags like 0 and 1 is common practice, what's wrong with it? It's not clear from reading the code whether the function calls are executed when the tests are true or when they're false. Nothing in the code fragment itself tells you whether 1 represents true and 0 false or whether the opposite is true." Page 432
+
+## 19 General Control Issues
+
+"Move complicated expressions into boolean functions. If a test is repeated often or distracts from the main flow of the program, move the code for the test into a function and test the value of the function." Page 434
+
+"Not a few people don't have not any trouble understanding a nonshort string of nonpositives—that is, most people have trouble understanding a lot of negatives." Page 435
+
+"Studies by Noam Chomsky and Gerald Weinberg suggest that few people can understand more than three levels of nested ifs (Yourdon 1986a), and many researchers recommend avoiding nesting to more than three or four levels (Myers 1976, Marca 1981, and Ledgard and Tauer 1987a)." Page 445
+
+"One measure of "programming complexity" is the number of mental objects you have to keep in mind simultaneously in order to understand a program. This mental juggling act is one of the most difficult aspects of programming and is the reason programming requires more concentration than other activities. It's the reason programmers get upset about "quick interruptions"—such interruptions are tantamount to asking a juggler to keep three balls in the air and hold your groceries at the same time." Page 456
+
+"Researchers have tried to formalize their intuitive feelings and have come up with several ways of measuring complexity. Perhaps the most influential of the numeric techniques is Tom McCabe's, in which complexity is measured by counting the number of "decision points" in a routine." Page 457
+
+"One powerful technique for improving software quality is setting explicit quality objectives from among the external and internal characteristics described in the previous section." Page 466
+
+"The organization must show programmers that quality is a priority. Making the quality-assurance activity explicit makes the priority clear, and programmers will respond accordingly." Page 466
+
+"Guidelines should control the technical character of the software as it's developed. Such guidelines apply to all software development activities, including problem definition, requirements development, architecture, construction, and system testing." Page 467
+
+"The surprising implication is that people actually do what you ask them to do. Programmers have high achievement motivation: They will work to the objectives specified, but they must be told what the objectives are." Page 469
+
+## 20 The Software Quality Landscape
+
+"software quality is unusual in a significant way. The General Principle of Software Quality is that improving quality reduces development costs."
+
+## 21 Collaborative Construction
+
+"Programmers who are still wet behind the ears need guidance from those who are more knowledgeable, and more knowledgeable programmers who tend to be busy need to be encouraged to spend time sharing what they know." Page 482
+
+"Don't force pair programming of the easy stuff. One group that used pair programming for the most complicated code found it more expedient to do detailed design at the whiteboard for 15 minutes and then to program solo (Manzo 2002)." Page 483
+
+"Trying to improve software quality by increasing the amount of testing is like trying to lose weight by weighing yourself more often. What you eat before you step onto the scale determines how much you will weigh, and the software-development techniques you use determine how many errors testing will find. If you want to lose weight, don't buy a new scale; change your diet. If you want to improve your software, don't just test more; develop better." Page 501
+
+## 24 Refactoring
+
+"If you throw several untested routines together at once and find an error, any of the several routines might be guilty. If you add one routine at a time to a collection of previously tested routines, you know that any new errors are the result of the new routine or of interactions with the new routine." Page 502
+
+"If you fix errors with logical duct tape and superstition, quality degrades. If you treat modifications as opportunities to tighten up the original design of the program, quality improves." Page 564
+
+"There is no code so big, twisted, or complex that maintenance can't make it worse. — Gerald Weinberg" Page 564
+
+"Martin Fowler defines as "a change made to the internal structure of the software to make it easier to understand and cheaper to modify without changing its observable behavior(Fowler 1999)" Page 565
+
+"One way to improve a system is to increase its modularity—increase the number of well-defined, well-named routines that do one thing and do it well." Page 565
+
+"A parameter list has too many parameters. Well-factored programs tend to have many small, well-defined routines that don't need large parameter lists. A long parameter list is a warning that the abstraction of the routine interface has not been well thought out." Page 565
+
+"If a routine has a poor name, change the name of the routine where it's defined, change the name in all places it's called, and then recompile."
+Page 567
+
+"The additional "design ahead" code creates additional complexity, which calls for additional testing, additional defect correction, and so on. The overall effect is to slow down the project. Experts agree that the best way to prepare for future requirements is not to write speculative code; it's to make the currently required code as clear and straightforward as possible so that future programmers will know what it does and does not do and will make their changes accordingly(Fowler 1999, Beck 2000)" Page 569
+
+"Move a complex boolean expression into a well-named boolean function. If the expression is complicated enough, this refactoring can improve readability. If the expression is used more than once, it eliminates the need for parallel modifications and reduces the chance of error in using the expression." Page 572
+
+"Return as soon as you know the answer instead of assigning a return value within nested if-then-else statements. Code is often easiest to read and least error-prone if you exit a routine as soon as you know the return value." Page 572
+
+"Replace conditionals (especially repeated case statements) with polymorphism. Much of the logic that used to be contained in case statements in structured programs can instead be baked into the inheritance hierarchy and accomplished through polymorphic routine calls." Page 573
+
+"Convert a long routine to a class. If a routine is too long, sometimes turning it into a class and then further factoring the former routine into multiple routines will improve readability." Page 573
+
+"Normally, query operations don't change an object's state. If an operation like GetTotals() changes an object's state, separate the query functionality from the state-changing functionality and provide two separate routines." Page 573
+
+"Pass specific fields rather than a whole object. If you find yourself creating an object just so that you can pass it to a routine, consider modifying the routine so that it takes specific fields rather than a whole object." Page 574
+
+"Convert one class to two. If a class has two or more distinct areas of responsibility, break the class into multiple classes, each of which has a clearly defined responsibility. Eliminate a class. If a class isn't doing much, move its code into other classes that are more cohesive and eliminate the class." Page 575
+
+"Replace inheritance with delegation. If a class needs to use another class but wants more control over its interface, make the superclass a field of the former subclass and then expose a set of routines that will provide a cohesive abstraction." Page 575
+
+"Introduce a foreign routine. If a class needs an additional routine and you can't modify the class to provide it, you can create a new routine within the client class that provides that functionality." Page 575
+
+"If a class needs several additional routines and you can't modify the class, you can create a new class that combines the unmodifiable class's functionality with the additional functionality. You can do that either by subclassing the original class and adding new routines or by wrapping the class and exposing the routines you need." Page 575
+
+"Remove Set() routines for fields that cannot be changed. If a field is supposed to be set at object creation time and not changed afterward, initialize that field in the object's constructor rather than providing a misleading Set() routine." Page 576
+
+"Spend your time on the 20 percent of the refactorings that provide 80 percent of the benefit.". Page 582
+
+"Refactor when you add a class. Adding a class often brings issues with existing code to the fore. Use this time as an opportunity to refactor other classes that are closely related to the class you're adding." Page 582
+
+"In a maintenance environment, improve the parts you touch. Code that is never modified doesn't need to be refactored. But when you do touch a section of code, be sure you leave it better than you found it." Page 582
+
+"Before you invest time solving a performance problem, make sure that you're solving a problem that needs to be solved." Page 589
+
+"The Pareto Principle, also known as the 80/20 rule, states that you can get 80 percent of the result with 20 percent of the effort." Page 591
+
+"Reducing the lines of code in a high-level language improves the speed or size of the resulting machine code—false! Many programmers cling tenaciously to the belief that if they can write code in one or two lines, it will be the most efficient possible." Page 592
+
+"It's almost impossible to identify performance bottlenecks before a program is working completely. Programmers are very bad at guessing which four percent of the code accounts for 50 percent of the execution time," Page 594
+
+"If you need to optimize before a program is complete, minimize the risks by building perspective into your process. One way is to specify size and speed goals for features and then optimize to meet the goals as you go along." Page 595
+
+"Use a high-quality design. Make the program right. Make it modular and easily modifiable so that it's easy to work on later. When it's complete and correct, check the performance. If the program lumbers, make it fast and small. Don't optimize until you know you need to. Jackson's Rules of Optimization: Rule 1. Don't do it. Rule 2 (for experts only). Don't do it yet—that is, not until you have a perfectly clear and unoptimized solution. — M. A. Jackson" Page 596
+
+## 26 Code-Tuning Techniques
+
+"many of the things people feel rushed to do simply don't need to be done. If he waited long enough, he claimed, the things that weren't important would be procrastinated into oblivion and he wouldn't waste his time doing them." Page 615
+
+"Readability and maintenance are usually more important than execution speed or size," Page 617
+
+"One of the most powerful tools in code tuning is a good routine decomposition. Small, well-defined routines save space because they take the place of doing jobs separately in multiple places. They make a program easy to optimize because you can refactor code in one routine and thus improve every routine that calls it." Page 639
+
+## 27 How Program Size Affects Construction
+
+"Productivity is substantially determined by the kind of software you're working on, personnel quality, programming language, methodology, product complexity, programming environment, tool support, how "lines of code" are counted, how nonprogrammer support effort is factored into the "lines of code per staff-year" figure, and many other factors, so the specific figures in Table 27-2 vary dramatically." Page 653
+
+"Regardless of the size of a project, a few techniques are always valuable: disciplined coding practices, design and code inspections by other developers, good tool support, and use of high-level languages. These techniques are valuable on small projects and invaluable on large projects." Page 655
+
+"Some developers welcome standards because they reduce arbitrary variance in the project. If your group resists adopting strict standards, consider a few alternatives: flexible guidelines, a collection of suggestions rather than guidelines, or a set of examples that embody the best practices." Page 662
+
+"Use "suggestions" or "guidelines" with respect to the area. Avoid setting rigid "rules" or "standards."" Page 683
+
+"the details of a specific standard are often less important than the fact that some standard exists. Don't set standards for your programmers, but do insist they standardize in the areas that are important to you." Page 683
+
+## 29 Integration
+
+"As Kent Beck points out, frequent integration sometimes forces you to break the construction of a single feature into multiple episodes. That overhead is an acceptable price to pay for the reduced integration risk, improved status visibility, improved testability, and other benefits of frequent integration (Beck 2000)." Page 704
+
+"The question of whether to comment is a legitimate one. Done poorly, commenting is a waste of time and sometimes harmful. Done well, commenting is worthwhile." Page 818
+
+"Good code is its own best documentation. If the code is bad enough to require extensive comments, try first to improve the code so that it doesn't need extensive comments." Page 818
+
+"Comments should say things about the code that the code can't say about itself—at the summary level or the intent level." Page 818
+
+## 33 Personal Character
+
+"Your employer can't force you to be a good programmer; a lot of times your employer isn't even in a position to judge whether you're good. If you want to be great, you're responsible for making yourself great. It's a matter of your personal character." Page 820
+
+"Keeping routines short reduces the load on your brain. Writing programs in terms of the problem domain rather than in terms of lowlevel implementation details reduces your mental workload." Page 821
+
+"it's been shown that humble programmers who compensate for their fallibilities write code that's easier for themselves and others to understand and that has fewer errors. The real low road is the road of errors and delayed schedules." Page 821
+
+"If your workload consists entirely of short-term assignments that don't develop your skills, be dissatisfied. If you're working in a competitive software market, half of what you now need to know to do your job will be out of date in three years. If you're not learning, you're turning into a dinosaur." Page 822
+
+"If you can't learn at your job, find a new one." Page 822
+
+"The mistake Bert made was not realizing that estimates aren't negotiable. He can revise an estimate to be more accurate, but negotiating with his boss won't change the time it takes to develop a software project." Page 827
+
+"Management is responsible for the big-picture issues of running a company. If a certain software capability is worth $250K to a company and you estimate it will cost $750K to develop, the company shouldn't develop the software. It's management's responsibility to make such judgments." Page 828
+
+"Laziness: The quality that makes you go to great effort to reduce overall energy expenditure. It makes you write labor-saving programs that other people will find useful, and document what you wrote so that you don't have to answer so many questions about it." Page 830
+
+"It's easy to confuse motion with progress, busy-ness with being productive. The most important work in effective programming is thinking, and people tend not to look busy when they're thinking. If I worked with a programmer who looked busy all the time, I'd assume that he was not a good programmer because he wasn't using his most valuable tool, his brain." Page 830
+
+"Try to think of an alternative approach that would circumvent the problem altogether. Rewrite the troublesome section of code from scratch. Come back to it later when your mind is fresh. Fighting computer problems is no virtue. Avoiding them is better." Page 831
+
+"When you first learn something, learn it the right way. When you first do it, you're actively thinking about it and you still have an easy choice between doing it in a good way and doing it in a bad way." Page 833
+
+"The characteristics of a superior programmer have almost nothing to do with talent and everything to do with a commitment to personal development." Page 836
+
+"The characteristics of a superior programmer have almost nothing to do with talent and everything to do with a commitment to personal development." Page 836
+
+"Good character is mainly a matter of having the right habits. To be a great programmer, develop the right habits and the rest will come naturally." Page 836
+
+"Dividing a system into subsystems at the architecture level so that your brain can focus on a smaller amount of the system at one time. Carefully defining class interfaces so that you can ignore the internal workings of the class. Preserving the abstraction represented by the class interface so that your brain doesn't have to remember arbitrary details. Avoiding deep inheritance hierarchies because they are intellectually demanding." Page 837
+
+"The point of having coding conventions is also mainly to reduce complexity. When you can standardize decisions about formatting, loops, variable names, modeling notations, and so on, you release mental resources that you need to focus on more challenging aspects of the programming problem." Page 838
+
+"My message to the serious programmer is: spend a part of your working day examining and refining your own methods. Even though programmers are always struggling to meet some future or past deadline, methodological abstraction is a wise long-term investment. — Robert W. Floyd" Page 840
+
+"A blanket attempt to avoid mistakes is the biggest mistake of all. Design is a process of carefully planning small mistakes in order to avoid making big ones." Page 852
+
+"Team programming is more an exercise in communicating with people than in communicating with a computer. Individual programming is more an exercise in communicating with yourself than with a computer." page 854
