@@ -47,11 +47,53 @@ What is a AWS Well-Architected Framework? The Design principles:
 - Run test;
 
 The main pillars of the AWS Well-Architected Framework are:
-- Opeartional excellence;
+- Operational excellence;
 - Cost optimization;
-- Relaiability;
+- Reliability;
 - Security;
 - Susteinability;
 - Performance efficiency;
 
+#### Operational Excellence
+The main operations about Operational Excellence are:
+- Perform operations as code;
+- Make frequent, small, reversible changes;
+- Refine operations procedures frequently;
+- Anticipate failures;
+- Learn from all operational failures;
+
+
+#### Security
+- Implement a strong identity foundation;
+- Maintain traceability;
+- Apply security at all layers;
+- Automate security best practices;
+- Protect data in transit and at rest;
+- Keep people away from data;
+- Prepare for security events;
+
+#### Reliability
+- Automate recovery procedures;
+- Test recovery procedures;
+- Scale horizontally to increase aggregate workload availability;
+- Stop guessing capacity;
+- Manage change in automation;
+
+#### Performance Efficiency
+- Democratize advanced technologies;
+- Go global in minutes;
+- Use serverless architectures;
+- Experiment more often;
+- Consider mechanical sympathy;
+
+#### Cost Optimization
+- Ability to run systems to deliver business value at the lowest price point;
+
+#### Sustainability
+- Understand your impact;
+- Establish sustainability goals;
+- Maximize utilization;
+- Anticipate and adopt new, more efficient hardware and software offerings;
+- Use managed services;
+- Reduce the downstream impact of your cloud workloads;
 
