@@ -51,7 +51,7 @@ The main pillars of the AWS Well-Architected Framework are:
 - Cost optimization;
 - Reliability;
 - Security;
-- Susteinability;
+- Sustainability;
 - Performance efficiency;
 
 #### Operational Excellence
@@ -61,7 +61,6 @@ The main operations about Operational Excellence are:
 - Refine operations procedures frequently;
 - Anticipate failures;
 - Learn from all operational failures;
-
 
 #### Security
 - Implement a strong identity foundation;
@@ -97,3 +96,30 @@ The main operations about Operational Excellence are:
 - Use managed services;
 - Reduce the downstream impact of your cloud workloads;
 
+## Understand the benefits of and strategies for migration to the AWS Cloud
+
+The 7Rs are seven migration strategies to the cloud:
+- Retire;
+- Retain;
+- Rehost;
+- Relocate;
+- Repurchase;
+- Replatform;
+- Refactor or Well-Architect;
+
+For migration of low latency applications to access files, the recommendation service would be Amazon EFS(file storage) and Amazon RDS(Relational
+database).
+
+For data backups the AWS options are:
+- S3 Glacier;
+- AWS Backup;
+- Storage;
+
+## Cloud Economics
+Total cost of ownership (TCO):
+- Operational expenses: day-to-day costs such as utilities, printer toner, coffee and snacks;
+- Capital expenses: It's a cost associated with creating the longer-term benefits, such as purchasing a building,servers, printers and power backups.
+  There are purchased once and expected to last for several years;
+- Labor costs: It's for staffing an on-premises environment or data-centrers, such as the network operation center technicians to manage the
+infrastructure of the servers;
+- Software licensing costs;
