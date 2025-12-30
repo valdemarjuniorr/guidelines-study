@@ -99,12 +99,12 @@ The main operations about Operational Excellence are:
 ## Understand the benefits of and strategies for migration to the AWS Cloud
 
 The 7Rs are seven migration strategies to the cloud:
-- Retire;
-- Retain;
-- Rehost;
+- Retire: Decommissioning servers that are no longer needed, saving upfront costs and ongoing costs;
+- Retain: Keep the server without migrating to AWS cloud;
+- Rehost: Migrating to AWS server without making any changes;
 - Relocate;
 - Repurchase;
-- Replatform;
+- Replatform: Move to server to AWS cloud and make change to optimize the server;
 - Refactor or Well-Architect;
 
 For migration of low latency applications to access files, the recommendation service would be Amazon EFS(file storage) and Amazon RDS(Relational
