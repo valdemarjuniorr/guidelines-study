@@ -2,7 +2,7 @@
 
 ## The benefits of AWS Cloud
 
-What is cloud computing?
+What is the 5 criteria of cloud computing?
 1. On-demand self-service
 2. Access to the network
 3. Resource pooling
@@ -101,9 +101,10 @@ The main operations about Operational Excellence are:
 The 7Rs are seven migration strategies to the cloud:
 - Retire: Decommissioning servers that are no longer needed, saving upfront costs and ongoing costs;
 - Retain: Keep the server without migrating to AWS cloud;
-- Rehost: Migrating to AWS server without making any changes;
-- Relocate;
-- Repurchase;
+- Rehost: Migrating to AWS server without making any changes. Also known as lift and shift;
+- Relocate: For a large number of servers that are made up of one or more applications;
+- Repurchase: For applications with a different version or product and provides more value than the existing infrastructure. Also known as drop and
+shop;
 - Replatform: Move to server to AWS cloud and make change to optimize the server;
 - Refactor or Well-Architect;
 
@@ -123,3 +124,52 @@ Total cost of ownership (TCO):
 - Labor costs: It's for staffing an on-premises environment or data-centrers, such as the network operation center technicians to manage the
 infrastructure of the servers;
 - Software licensing costs;
+
+## Security and Compliance
+
+### Statements descriptions
+
+Those are the 4 statements for Security and Compliance domain:
+
+- Understand the AWS shared responsibility model;
+- Understand AWS cloud security, governance, and compliance concepts;
+- Identify AWS access management capabilities;
+- Identify components and resources for security;
+
+### Understand the AWS shared responsibility model;
+
+AWS is responsible of the security of the cloud and the client is responsible for the data and the applications in the cloud.
+
+### Understand AWS cloud security, governance, and compliance concepts
+Those services can help users to garantee security, governance and compliance in AWS cloud:
+- Amazon CloudWatch: Which is a monitoring and observability service;
+- AWS CloudTrail: Which is a service that manage, monitoring resources on AWS. For example, If you want to know to deleted a MongoDB instance, you can use CloudTrail to find out who deleted it and when;
+- AWS Config: Which is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources.
+
+### Identify AWS access management capabilities
+
+How root account in AWS is different from IAM users? The root account has full access to all AWS services and resources in the account. IAM users have
+only the permissions that are granted to them by the root account or by other IAM users with appropriate permissions.
+
+#### AWS IAM Features
+- IAM users: Create users in IAM to provide access to AWS services and resources;
+- IAM groups: Create groups in IAM to manage permissions for multiple users;
+- IAM roles: Create roles in IAM to delegate access to AWS services and resources;
+- IAM policies: Create policies in IAM to define permissions for users, groups, and roles;
+- IAM integrations: IAM integrates with other AWS services to provide access control for those services;
+
+When is preferable to use IAM roles instead of IAM users? IAM roles are preferable when you want to delegate access to AWS services and resources without sharing long-term credentials. For example, when you want to grant access to an EC2 instance to access S3 buckets, you can use an IAM role instead of creating an IAM user with access keys.
+
+### Identify components and resources for security
+The differences between Network Access Control List(ACLs) and Security Groups are:
+- Network ACLs are associated with the subnet, not with the resources. They only manage traffic that cross the subnet boundary. They are stateless,
+which in they only sees traffic going in one direction; If you want more directional control, you need to create rules for both inbound and outbound traffic;
+- Security Groups are associated with the resources, not with the subnet. They manage traffic for the resources. They are stateful, which means that
+inbound and outbound traffic are automatically allowed;
+
+#### AWS  Security Services
+- AWS WAF
+- AWS Trusted Advisor
+- Amazon Inspector
+- AWS Marketplace
+- AWS Knowledge Center
