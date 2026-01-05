@@ -138,7 +138,7 @@ Those are the 4 statements for Security and Compliance domain:
 
 ### Understand the AWS shared responsibility model;
 
-AWS is responsible of the security of the cloud and the client is responsible for the data and the applications in the cloud.
+AWS is responsible of the security of the cloud and the client is responsible for the data, permissions to each services and the applications in the cloud.
 
 ### Understand AWS cloud security, governance, and compliance concepts
 Those services can help users to garantee security, governance and compliance in AWS cloud:
@@ -168,8 +168,32 @@ which in they only sees traffic going in one direction; If you want more directi
 inbound and outbound traffic are automatically allowed;
 
 #### AWS  Security Services
-- AWS WAF
+- AWS WAF: It helps to control traffic with rules that you define that block common attack patterns such as SQL injections or cross-site scripting;
 - AWS Trusted Advisor
 - Amazon Inspector
 - AWS Marketplace
 - AWS Knowledge Center
+
+
+## Cloud Technology and Services
+
+### Define methods of deploying and operation in the AWS Cloud
+
+There are some ways to deploy and operate in the AWS Cloud:
+- Programmatic access;
+- AWS Command line interface (CLI);
+- AWS Management Console;
+- Infrastructure as Code (IaC);
+
+The differences between types of cloud computing are:
+
+- Public cloud: A cloud environment which is available to the public that meets the cloud criteria;
+- Multi-cloud: It is a public could, but use multiple cloud providers as AWS, Google Cloud and Microsoft Azure;
+- Private cloud: It is when you use public and private cloud together;
+- Hybrid cloud:
+
+AWS defines as private or public cloud based on it Networks.
+
+**QUESTION**: What do you use to connect public EC2 instances in the public subnet? An Internet Gateway or a NAT Gateway?
+
+Internet Gateway is a horizontal scaled, redundant and highly gateway to allow communication between instances in your VPC and the public internet;
