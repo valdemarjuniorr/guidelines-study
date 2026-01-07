@@ -9,8 +9,6 @@ What is the 5 criteria of cloud computing?
 4. Elasticity
 5. Resource usage monitored and billed
 
-### High availability, fault tolerance, and disaster recovery
-
 #### High availability
 Designing for high availability means designing for minimal downtime. Doesn't mean zero downtime. For example, when an application is down, another
 application instance can start, but for that time, the application is down and not available to users.
@@ -237,3 +235,22 @@ There are those services responsible to Load balancers(LB) and Auto Scaling Grou
 - Gateway Load Balancer (GLB): It is used to deploy, scale, and manage virtual appliances such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems;
 
 When you create a LB, you are creating an entity, one load balancer, but actually creates an ELB node in each AZ that you enable.
+
+## AWS database resources
+
+Those are the four statements for AWS database services:
+- Amazon RDS: Are database as a service which the user don't need to manage the database software or hardware.
+- Amazon Aurora: Is a relational database engine that combines the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open source databases as postgres and mysql. The main benefits of Amazon Aurora of Amazon RDS is Aurora shares cluster storage volume and not local storage.
+- Amazon DynamoDB: Is a key-value and document database that delivers single-digit millisecond performance. It is a not a relational database. It
+support scale-out architecture automatically;
+  - In Memory Database Services: Amazon ElastiCache and Amazon DynamoDB Accelerator (DAX) are the main services for in-memory databases. They are used to improve the performance of web applications by retrieving data from high throughput and low latency in-memory data stores.
+- Amazon Redshift: Is a fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing Business Intelligence (BI) tools. It is used for online analytical processing (OLAP) and big data applications. It based on postgres, but not use it for transactional databases.
+
+### Database migration tools
+
+Those are the the migration tools available in AWS:
+- AWS SnowFamily: They are a collections of services to help users to migrate the large amount of data to AWS cloud. The main services are Snowcone, Snowball and Snowmobile;
+- AWS DAtabase Migration Services (DMS): Manage database migration and schema conversion. This replication process is very admin intensive; The user
+create a source and a target endpoint(replica) and DMS manage the replication process;
+- AWS Schema Conversion Tool (SCT): It is used to convert the database schema from one database engine to another. For example, from Oracle to Amazon Aurora.
+- AWS DataSync: It is used to automate and accelerate moving data between on-premises storage and AWS storage services as S3, EFS and FSx for Windows File Server;
