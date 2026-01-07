@@ -197,3 +197,43 @@ AWS defines as private or public cloud based on it Networks.
 **QUESTION**: What do you use to connect public EC2 instances in the public subnet? An Internet Gateway or a NAT Gateway?
 
 Internet Gateway is a horizontal scaled, redundant and highly gateway to allow communication between instances in your VPC and the public internet;
+
+### Define the AWS global infrastructure
+
+Global resilience services are:
+- Route 53
+- CloudFront
+- IAM
+
+Region resilience services are:
+- AWS AMF
+- AWS Batch
+
+Availability Zone resilience services are:
+- Amazon ABS
+- AWS EC2
+
+### Structure of AWS global infrastructure
+- `Availability Zone(AZ)`: AZ is one or more data centrers with redundant power, networking and connectivity and so on; In every AZ are Data Centrers;
+  If a AZ fails, the others AZs should keep the services running, because they are isolated from each other. AZs are connected to each other with low latency links;
+- `Region`: A geographical area that contains a collection of Availability Zones; Each region is fault tolerant;
+- `Wavelength`: It parts of a region. It has a Wavelength zone which is an isolated zone in the carrier location; Wavelength zones are tied to an AWS region and are extensions lie the Local Zones;
+- `Edge Locations`: Its a global service that cache content closer to end users to reduce latency; Edge Locations are used by CloudFront and Route 53;
+
+### AWS Compute Services
+
+#### AWS EC2
+AWS EC2 is a web service that provides resizable compute capacity in the cloud which is is launch into a specific subnet inside your Amazon VPC. It is designed to make web-scale cloud computing easier for developers. EC2 host access and manage the EC2 instance and it is within a AZ. If the AZ fails, the EC2 host and the EC2 instance will fail too. For networking it is possible to connect different Elastic Network Interfaces (ENI) to an EC2 instance.
+
+The AZ there is a Storage Network which is used to connect EC2 instances to EBS volumes. Those ENI are not allows to access others ENI or EBS from
+another AZ.
+
+#### High availability and scalability
+There are those services responsible to Load balancers(LB) and Auto Scaling Groups(ASG):
+
+- Classic Load Balancer (CLB): It is used to distribute incoming application traffic across multiple EC2 instances in multiple AZs;
+- Application Load Balancer (ALB): It is used to route traffic to different services based on the content of the request;
+- Network Load Balancer (NLB): It is used to handle millions of requests per second while maintaining ultra-low latencies;
+- Gateway Load Balancer (GLB): It is used to deploy, scale, and manage virtual appliances such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems;
+
+When you create a LB, you are creating an entity, one load balancer, but actually creates an ELB node in each AZ that you enable.
