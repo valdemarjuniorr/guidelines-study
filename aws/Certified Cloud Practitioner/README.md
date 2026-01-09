@@ -254,3 +254,39 @@ Those are the the migration tools available in AWS:
 create a source and a target endpoint(replica) and DMS manage the replication process;
 - AWS Schema Conversion Tool (SCT): It is used to convert the database schema from one database engine to another. For example, from Oracle to Amazon Aurora.
 - AWS DataSync: It is used to automate and accelerate moving data between on-premises storage and AWS storage services as S3, EFS and FSx for Windows File Server;
+
+## AWS Network resources
+
+Amazon VPC is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS Cloud. You can launch your AWS resources, such as Amazon EC2 instances, into your VPC. It is possible to connect AWS VPC to an on-premises network using AWS Direct Connect or a VPN connection. By defaulot, each VPC is private and isolated. Every VPC has a router that is high available.
+
+## AWS Storage resources
+
+Types of storage in AWS:
+- Object Storage: Amazon S3 and Amazon Glacier; Global resilience storage; S3 is replicated across multiple AZs in that region; A bucket must have
+unique name across all AWS accounts;
+  - S3 Glacier Deep Archive is the lowest cost storage class and support long term retention within 12 hours of retrieval time;
+- File Storage: Amazon EFS and Amazon FSx; It is ideal for use cases like large content repositories, development environments, media stores, and home directories. EFS is used for linux distro. It is not allowed to use EFS for windows; Instead use FSx for windows files systems; Lustre is used for high performance computing (HPC) and machine learning (ML) workloads that require fast storage with high levels of throughput and IOPS;
+- Block Storage: Amazon EBS and Instance Store. It is very resilience and is separate from the instance hardware. It is recommended for the most
+system boot volumes;
+
+## AWS Artificial Intelligence (AI) and Machine Learning (ML) services
+
+For ML there are those services:
+- Artificial Intelligence (AI) Services: Those services provide pre-trained AI models that are ready to use for developers with no ML expertise. The main services are Amazon Rekognition, Amazon Polly, Amazon Lex, Amazon Comprehend and Amazon Transcribe;
+- Machine Learning (ML) Services: Those services provide a platform for developers and data scientists to build, train, and deploy ML models. The main services are Amazon SageMaker, AWS Deep Learning AMIs, AWS DeepRacer and AWS DeepLens;
+- ML Frameworks and Infrastructure: Those services provide a platform for developers and data scientists to build, train, and deploy ML models using popular ML frameworks. The main services are TensorFlow, PyTorch, Apache MXNet, Chainer and Keras;
+
+## Identify services from other in-scope AWS services categories
+
+- Amazon EventBridge is a serverless event bus that makes it easy to connect applications using data from your own applications, integrated
+Software-as-a-Service (SaaS) applications, and AWS services. EventBridge delivers a stream of real-time data from event sources, such as Zendesk, Datadog, or PagerDuty, and routes that data to targets like AWS Lambda.
+- Amazon Connect is an easy-to-use omnichannel cloud contact center that helps companies provide superior customer service at a lower cost. With Amazon Connect, you can set up a contact center in just a few clicks and start providing better service to your customers.
+- Customer engagement services: Amazon Pinpoint and Amazon Simple Email Service (SES) are the main services for customer engagement. They are used to engage with customers through email, SMS, push notifications, and voice messages.
+  - AWS Activate: It is a program that provides startups with the resources they need to build and grow their businesses on AWS. It offers benefits such as AWS credits, training, technical support, and access to a global network of entrepreneurs and investors.
+  - AWS IQ: It is a service that connects AWS customers with AWS Certified third-party experts for on-demand project work. It helps customers find the right expert for their specific needs and provides a secure platform for collaboration and payment.
+  - AWS Managed Services (AMS): It is a service that helps customers manage their AWS infrastructure and applications. It provides a range of services, including monitoring, patching, backup, and security management, to help customers optimize their AWS environment and reduce operational overhead.
+  - AWS Support: They are a range of support plans that provide customers with access to AWS technical support and guidance. The main support plans are Basic, Developer, Business, and Enterprise.
+- AWS Developer services: They are a range of services that help developers build, test, and deploy applications on AWS. The main services are AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and AWS CodePipeline.
+- AWS end-user computing services: They are a range of services that provide virtual desktops and applications to end-users. The main services are Amazon WorkSpaces and Amazon AppStream 2.0.
+- AWS Frontend web and mobile services: They are a range of services that help developers build, deploy, and manage web and mobile applications on AWS. The main services are AWS Amplify, Amazon API Gateway, and AWS AppSync.
+- AWS IoT Services: They are a range of services that help developers build, deploy, and manage IoT applications on AWS. The main services are AWS IoT Core, AWS IoT Greengrass, and AWS IoT Analytics.
