@@ -290,3 +290,32 @@ Software-as-a-Service (SaaS) applications, and AWS services. EventBridge deliver
 - AWS end-user computing services: They are a range of services that provide virtual desktops and applications to end-users. The main services are Amazon WorkSpaces and Amazon AppStream 2.0.
 - AWS Frontend web and mobile services: They are a range of services that help developers build, deploy, and manage web and mobile applications on AWS. The main services are AWS Amplify, Amazon API Gateway, and AWS AppSync.
 - AWS IoT Services: They are a range of services that help developers build, deploy, and manage IoT applications on AWS. The main services are AWS IoT Core, AWS IoT Greengrass, and AWS IoT Analytics.
+
+## Introduction to billing, pricing and support
+
+### Compare AWS pricing models
+Cost optimization has an ability to run systems to deliver business value at the lowest price point. There are some services to help users to optimize costs in AWS:
+- AWS Budgets: It is used to set custom cost and usage budgets that alert you when you exceed your thresholds;
+- AWS Cost and Usage Report: It is used to create detailed reports about your AWS costs and usage;
+
+AWS also provides cost effective resources like Spot instances, Reserved instances and cost-effective storage like Amazon S3 Glacier and S3 Glacier Archive.
+
+### AWS cost optimization
+- Right sizing: It is the process of matching instance types and sizes to your workload requirements to optimize performance and cost;
+- Increasing elasticity: It is the process of using Auto Scaling to automatically adjust capacity to maintain steady, predictable performance at the lowest possible cost;
+- Choose the right pricing model: It is the process of selecting the most cost-effective pricing model for your workloads, such as On-Demand,
+Reserved, or Spot Instances. Spot instances are the cheapest option, but they can be interrupted by AWS with a two-minute warning when AWS needs the capacity back;
+
+### Pillars of Cost optimization
+- Right-sizing;
+- Match storage to usage;
+- Data transfer;
+- Measure, monitor and improve;
+
+### Billing, budgets and cost management
+
+- AWS Cost Exporter: It is a tool that enables you to view and analyze your AWS costs and usage. It provides detailed reports that can help you identify cost-saving opportunities and optimize your AWS spending.
+- AWS Cost and Usage Report: It is a tool that provides detailed information about your AWS costs and usage. It allows you to create custom reports
+that can help you understand your spending patterns and identify areas for cost optimization.
+- AWS Billing Conductor: It is a tool that helps you manage your AWS billing and payments. It provides features such as consolidated billing, cost allocation tags, and payment methods to help you streamline your billing processes and optimize your AWS spending.
+
