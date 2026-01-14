@@ -4,6 +4,14 @@
 
 ## The Benefits of AWS Cloud
 
+There are those benefits when using AWS Cloud:
+- You pay as you go;
+- Benefit from massive economies of scale; AWS buy hardware in bulk and pass the savings to the customers;
+- Stop guessing capacity;
+- Increase speed and agility;
+- Stop spending money on running and maintaining data centers;
+- Go global in minutes;
+
 ### What are the 5 Criteria of Cloud Computing?
 
 1. On-demand self-service
@@ -283,7 +291,7 @@ AWS defines as private or public cloud based on its networks.
 - **`Availability Zone (AZ)`**: An AZ is one or more data centers with redundant power, networking, and connectivity. In every AZ are data centers. If an AZ fails, the other AZs should keep the services running because they are isolated from each other. AZs are connected to each other with low latency links.
 - **`Region`**: A geographical area that contains a collection of Availability Zones. Each region is fault tolerant.
 - **`Wavelength`**: Part of a region. It has a Wavelength zone which is an isolated zone in the carrier location. Wavelength zones are tied to an AWS region and are extensions like the Local Zones.
-- **`Edge Locations`**: A global service that caches content closer to end users to reduce latency. Edge Locations are used by `CloudFront` and `Route 53`.
+- **`Edge Locations`**: A global service that caches content closer to end users to reduce latency and they are located outside of AWS regions. Edge Locations are used by `CloudFront` and `Route 53`.
 
 ---
 
@@ -294,6 +302,21 @@ AWS defines as private or public cloud based on its networks.
 `AWS EC2` is a web service that provides resizable compute capacity in the cloud, which is launched into a specific subnet inside your `Amazon VPC`. It is designed to make web-scale cloud computing easier for developers. `EC2` hosts access and manage the `EC2` instance, and it is within an AZ. If the AZ fails, the `EC2` host and the `EC2` instance will fail too. For networking, it is possible to connect different Elastic Network Interfaces (ENI) to an `EC2` instance.
 
 In the AZ, there is a Storage Network which is used to connect `EC2` instances to `EBS` volumes. Those ENIs are not allowed to access other ENIs or `EBS` from another AZ.
+
+**QUESTION**
+
+What is multi-tenancy in context of AWS EC2 instances?
+Multi-tenancy allows multiple virtual machines to sahre resources on the same physical host, with isolation between them.
+
+##### Instance Types
+
+- **Memory Optimized**: It is designed for high-memory workloads and offer the performance needed to handle large volumes of data efficiently, making
+them the best choice for real-time analytics;
+- **Storage Optimized**: It is designed for workloads that require high-disk throughput and low-latency access to large datasets. This makes them the best
+  choice for data analytics applications;
+- **Savings Plans**: It is designed for critical workloads that need consistent capacity and predictable pricing;
+- **Spot Instances**: It is designed for flexible, interruption-tolerant workloads. It is the most cost-effective option, but it can be interrupted by AWS;
+- **Reserved Instances**: It is designed for applications with steady-state or predictable usage. It provides a significant discount (up to 75%) compared to On-Demand pricing;
 
 ---
 
@@ -463,4 +486,26 @@ AWS also provides cost-effective resources like Spot instances, Reserved instanc
 - **`AWS Billing Conductor`**: A tool that helps you manage your AWS billing and payments. It provides features such as consolidated billing, cost allocation tags, and payment methods to help you streamline your billing processes and optimize your AWS spending.
 
 ---
+
+
+## Networking
+
+Amazon VPC lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
+The benefits of using `Amazon VPC` are:
+- **Increase security**;
+- **Save time**;
+- **Control environment**;
+
+A virtual private gateway is the component that allows protected internet traffic to enter into the VPC. This is perfect to restrict access to only
+protected internet traffic.
+
+Those are the definitions of key networking components in AWS:
+- **Subnet**: A range of IP addresses in your VPC. You can launch AWS resources into a specified subnet. It can be public or private.
+ - **private subnet**: A subnet that is not connected to the internet. For example, a database server.
+ - **public subnet**: A subnet that is connected to the internet. For example, a web server or web site.
+
+To allow traffic from the public internet to flow into and out your VPC, you must attach what is called an internet gateway to your VPC.
+
+**`AWS Direct Connect`** is a cloud service that makes it easy to establish a dedicated network connection from your on-premises infrastructure to AWS, providing the bandwitdth for large amounts of data transfer.
+
 
