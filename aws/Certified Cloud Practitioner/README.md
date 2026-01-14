@@ -227,8 +227,8 @@ The root account has full access to all AWS services and resources in the accoun
 
 **The differences between Network Access Control Lists (ACLs) and Security Groups:**
 
-- **Network ACLs**: Associated with the subnet, not with the resources. They only manage traffic that crosses the subnet boundary. They are stateless, which means they only see traffic going in one direction. If you want more directional control, you need to create rules for both inbound and outbound traffic
-- **Security Groups**: Associated with the resources, not with the subnet. They manage traffic for the resources. They are stateful, which means that inbound and outbound traffic are automatically allowed
+- **Network ACLs**: Associated with the subnet, not with the resources. They only manage traffic that crosses the subnet boundary. They are stateless, which means they only see traffic going in one direction. If you want more directional control, you need to create rules for both inbound and outbound traffic. Every single packet that crosses its border regardless any circumstance will be evaluated against the rules in the ACL.
+- **Security Groups**: Associated with the resources, not with the subnet. They manage traffic for specific AWS resources. They are stateful, which means that inbound and outbound traffic are automatically allowed
 
 #### AWS Security Services
 
@@ -508,4 +508,4 @@ To allow traffic from the public internet to flow into and out your VPC, you mus
 
 **`AWS Direct Connect`** is a cloud service that makes it easy to establish a dedicated network connection from your on-premises infrastructure to AWS, providing the bandwitdth for large amounts of data transfer.
 
-
+**`AWS Global Accelerator`** is a networking service that improves the availability and performance of the applications with local or global users. It provides static IP addresses that act as a fixed entry point to your application endpoints in AWS, such as `EC2` instances, `Elastic Load Balancers`, or `S3` buckets.
