@@ -339,7 +339,7 @@ These are the four main AWS database services:
 
 ### Amazon RDS
 
-Database as a service where the user doesn't need to manage the database software or hardware.
+Database as a service where the user doesn't need to manage the database software or hardware. Amazon RDS automatically handles patching as part of its managed services offering over AZs. Self-managed patching would increase operational overhead rather than reduce it, which defeats one of the main benefits of using it.
 
 ### Amazon Aurora
 
@@ -356,6 +356,12 @@ A key-value and document database that delivers single-digit millisecond perform
 ### Amazon Redshift
 
 A fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing Business Intelligence (BI) tools. It is used for online analytical processing (OLAP) and big data applications. It is based on PostgreSQL, but don't use it for transactional databases.
+
+### Amazon Neptune
+
+A fully managed, purpose-built graph database service that manages highly connnected data sets, like those used in social networking applications. It
+excels at understanding complex relationships that are difficult to identify in traditional relational databases like user connections, friends
+networks and interaction patterns.
 
 ---
 
@@ -387,11 +393,30 @@ These are the migration tools available in AWS:
 
 #### File Storage
 
-- **`Amazon EFS`** and **`Amazon FSx`**: Ideal for use cases like large content repositories, development environments, media stores, and home directories. `EFS` is used for Linux distributions. It is not allowed to use `EFS` for Windows; instead, use `FSx for Windows File Server`. `Lustre` is used for high-performance computing (HPC) and machine learning (ML) workloads that require fast storage with high levels of throughput and IOPS.
+- **`Amazon EFS`** and **`Amazon FSx`**: Ideal for use cases like large content repositories, development environments, media stores, and home directories. `EFS` is used for Linux distributions. It is not allowed to use `EFS` for Windows; instead, use `FSx for Windows File Server`. `Lustre` is used for high-performance computing (HPC) and machine learning (ML) workloads that require fast storage with high levels of throughput and IOPS. It can be accessed by multiple `EC2` instances at the same time.
 
 #### Block Storage
 
 - **`Amazon EBS`** and **Instance Store**: Very resilient and is separate from the instance hardware. It is recommended for most system boot volumes.
+  It provides high availability and durability by automatically replicating volumes within the same AZ.
+
+**`EBS snapshots`** are point-in-time copies of EBS volumes that can be used for regular backups, creating duplicate volumes for testing, and enabling fast
+disaster recovery by restoring entire volumes from snapshots.
+
+### AWS Storage Gateway
+
+There are three types of storage gateways:
+
+- **File Gateway**: Used for file-based workloads. It provides a file interface to store files as objects in `S3` using the NFS and SMB protocols.
+- **Volume Gateway**: Used for block-based workloads. It provides block storage to on-premises applications using the iSCSI protocol.
+- **Tape Gateway**: Used for backup and archival workloads. It provides a virtual tape library (VTL) interface to store backup data in `S3` and
+`Glacier`.
+
+### AWS Data Lifecycle Manager
+
+It is used to automate the creating, retention, and deletion of EBS snapshots and EBS backed Amazon Machine Images (AMIs) according to a schedule
+defined in lifecycle polices.
+
 
 ---
 
@@ -486,7 +511,6 @@ AWS also provides cost-effective resources like Spot instances, Reserved instanc
 - **`AWS Billing Conductor`**: A tool that helps you manage your AWS billing and payments. It provides features such as consolidated billing, cost allocation tags, and payment methods to help you streamline your billing processes and optimize your AWS spending.
 
 ---
-
 
 ## Networking
 
