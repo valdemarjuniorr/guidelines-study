@@ -240,7 +240,6 @@ The root account has full access to all AWS services and resources in the accoun
 
 ---
 
-
 ## Cloud Technology and Services
 
 ### Define Methods of Deploying and Operating in the AWS Cloud
@@ -417,12 +416,11 @@ There are three types of storage gateways:
 It is used to automate the creating, retention, and deletion of EBS snapshots and EBS backed Amazon Machine Images (AMIs) according to a schedule
 defined in lifecycle polices.
 
-
 ---
 
 ## AWS Artificial Intelligence (AI) and Machine Learning (ML) Services
 
-For ML, there are these services:
+With ML training is possible a model that can be applied to new data to make predictions or decisions based on the patterns it is learned. For ML, there are these services:
 
 ### Artificial Intelligence (AI) Services
 
@@ -434,7 +432,7 @@ These services provide a platform for developers and data scientists to build, t
 
 ### ML Frameworks and Infrastructure
 
-These services provide a platform for developers and data scientists to build, train, and deploy ML models using popular ML frameworks. The main services are TensorFlow, PyTorch, Apache MXNet, Chainer, and Keras.
+These services provide a platform for developers and data scientists to build, train, and deploy ML models using popular ML frameworks. The main services are `TensorFlow`, `PyTorch`, `Apache MXNet`, `Chainer`, and `Keras`.
 
 ---
 
@@ -533,3 +531,14 @@ To allow traffic from the public internet to flow into and out your VPC, you mus
 **`AWS Direct Connect`** is a cloud service that makes it easy to establish a dedicated network connection from your on-premises infrastructure to AWS, providing the bandwitdth for large amounts of data transfer.
 
 **`AWS Global Accelerator`** is a networking service that improves the availability and performance of the applications with local or global users. It provides static IP addresses that act as a fixed entry point to your application endpoints in AWS, such as `EC2` instances, `Elastic Load Balancers`, or `S3` buckets.
+
+## Data analytics
+
+### Services
+
+For data analytics, these are the main services in AWS:
+
+- **`Amazon Athena`**: It query data in S3 using SQL and it is a serverless service.
+- **`Amazon Redshift`**: It is a fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing Business Intelligence (BI) tools.
+- **`Amazon Kinesis`**: It is a platform for streaming data on AWS, offering powerful services to make it easy to load and analyze streaming data, and also providing the ability to build custom streaming applications for specialized needs.
+- **`AWS Glue`**: It is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.
