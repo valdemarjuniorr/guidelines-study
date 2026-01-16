@@ -185,6 +185,46 @@ These are the 4 statements for the Security and Compliance domain:
 - Identify AWS access management capabilities
 - Identify components and resources for security
 
+### Authentication vs Authorization
+
+Authentication is responsible to identify of a user or entity through credentials. Authorization is responsible to granting authenticated users with
+certain access to rights and permissions to resources.
+
+All authorization are denied by default and the _least privilege principle_ must be applied. It means that a user is granted access only to what
+they needed.
+
+#### AWS IAM Features
+
+- **IAM users**: Create users in `IAM` to provide access to AWS services and resources;
+- **IAM groups**: Create groups in `IAM` to manage permissions for multiple users;
+- **IAM roles**: Create roles in `IAM` to delegate access to AWS services and resources. This role can assume to gain a temporary access to
+permissions;
+- **IAM policies**: Create policies in `IAM` to define permissions for users, groups, and roles;
+- **IAM integrations**: `IAM` integrates with other AWS services to provide access control for those services;
+
+**When is it preferable to use IAM roles instead of IAM users?**
+
+`IAM` roles are preferable when you want to delegate access to AWS services and resources without sharing long-term credentials. For example, when you want to grant access to an `EC2` instance to access `S3` buckets, you can use an `IAM` role instead of creating an `IAM` user with access keys.
+
+To centralize your credentials and API keys on AWS there is th service called **`AWS Secrets Manager`**. It helps you protect access to your applications, services, and IT resources without the upfront cost and complexity of managing your own hardware security module (HSM) infrastructure.
+
+**QUESTION**
+
+What an application hosted in AWS can do to avoid DDos(Distributed Denial of Service) attacks?
+
+_Security groups make sure only traffic from authenticated users is allowed into the system, while an ELB distributes incoming traffic to prevent any single frontend server from being overwhelmed. Operating at the AWS network level, these components leverage the full capacity of the AWS Region to help absorb large-scale attacks._
+
+#### Detection and response services
+
+Those are the main services for detection and response in AWS:
+
+- **`Amazon Inspector`**: It helps improve the security and compliance of applications by running automated security assessments for EC2 instances, containers, and Lambada functions;
+- **`Amazon GuardDuty`**: It is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect AWS accounts and workloads;
+- **`Amazon Detective`**: After the threat has been detected, you can use it to further investigate the root cause. It helps you analyze threats with interactive visualizations contained in a unified AWS Management Console.
+- **`Amazon Security Hub`**: It brings multiple security services together into a single place and format. You can quickly see your security and compliance state in one comprehensive view.
+- **`Amazon Shield`**: It is managed DDoS protection service that safeguards applications running on AWS from common, frequently occurring types of DDoS
+attacks at no cost;
+
 ---
 
 ### Understand the AWS Shared Responsibility Model
@@ -208,18 +248,6 @@ These services can help users to guarantee security, governance, and compliance 
 **How is the root account in AWS different from IAM users?**
 
 The root account has full access to all AWS services and resources in the account. `IAM` users have only the permissions that are granted to them by the root account or by other `IAM` users with appropriate permissions.
-
-#### AWS IAM Features
-
-- **IAM users**: Create users in `IAM` to provide access to AWS services and resources
-- **IAM groups**: Create groups in `IAM` to manage permissions for multiple users
-- **IAM roles**: Create roles in `IAM` to delegate access to AWS services and resources
-- **IAM policies**: Create policies in `IAM` to define permissions for users, groups, and roles
-- **IAM integrations**: `IAM` integrates with other AWS services to provide access control for those services
-
-**When is it preferable to use IAM roles instead of IAM users?**
-
-`IAM` roles are preferable when you want to delegate access to AWS services and resources without sharing long-term credentials. For example, when you want to grant access to an `EC2` instance to access `S3` buckets, you can use an `IAM` role instead of creating an `IAM` user with access keys.
 
 ---
 
