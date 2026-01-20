@@ -140,19 +140,31 @@ The main operations about Operational Excellence are:
 
 ## Understand the Benefits of and Strategies for Migration to the AWS Cloud
 
+- **`AWS CAF`**: The Cloud Adoption Framework(CAF) a framework that brings AWS experience and best practices to companies preparing to migrate to the AWS. It provides tools to help
+  accelerate the migration journey, organize resources, and align management during the transition.
+
 ### The 7Rs Migration Strategies
 
 The 7Rs are seven migration strategies to the cloud:
 
-- **Retire**: Decommissioning servers that are no longer needed, saving upfront costs and ongoing costs
-- **Retain**: Keep the server without migrating to AWS cloud
-- **Rehost**: Migrating to AWS server without making any changes. Also known as "lift and shift"
-- **Relocate**: For a large number of servers that are made up of one or more applications
-- **Repurchase**: For applications with a different version or product and provides more value than the existing infrastructure. Also known as "drop and shop"
-- **Replatform**: Move to server to AWS cloud and make changes to optimize the server
-- **Refactor or Well-Architect**: Complete redesign and refactoring
+- **Rehost**: Migrating to AWS server without making any changes. Also known as "lift and shift";
+- **Relocate**: For a large number of servers that are made up of one or more applications;
+- **Replatform**: Move to server to AWS cloud and make changes to optimize the server. Also known as "lift, tinker and shift";
+- **Refactor or Well-Architect**: Complete redesign and refactoring your application fully or the infrastructure;
+- **Repurchase**: It involves moving from a traditional license to a Software-as-a-Service(SaaS) model. For example, a business might choose to implement the repurchansing strategy by migration from a CRM systems to a new sales force software.
+- **Retain**: Keep the server without migrating to AWS cloud;
+- **Retire**: Decommissioning servers that are no longer needed, saving upfront costs and ongoing costs;
 
 For migration of low latency applications to access files, the recommended service would be `Amazon EFS` (file storage) and `Amazon RDS` (Relational database).
+
+### Migration services and tools
+
+- **`Migration Evaluator`**: It is a migration assessment service that helps you create a business case for AWS planning and migration. It is the
+beginning of your migration process;
+- **`AWS Application Discovery`**: It helps _enterprise customers plan migration_ projects by gathering information about their on-premises data centers;
+- **`Migration Hub`**: It is a centralized hub to take you from discovery, assessment, planning, and execution of your migration. It provides tools, guidance and automated recommendations to collaborate with your team and track your migration;
+- **`Application Migration Service`**: it a tool to move and improve your on-premises and cloud-based applications. It helps customers streamline,
+expedite and reduce the cost of migrating and modernizing applications;
 
 ### Data Backup Options
 
@@ -233,16 +245,6 @@ AWS is responsible for the security **of** the cloud, and the client is responsi
 
 ---
 
-### Understand AWS Cloud Security, Governance, and Compliance Concepts
-
-These services can help users to guarantee security, governance, and compliance in AWS cloud:
-
-- **`Amazon CloudWatch`**: A monitoring and observability service
-- **`AWS CloudTrail`**: A service that manages and monitors resources on AWS. For example, if you want to know who deleted a MongoDB instance, you can use `CloudTrail` to find out who deleted it and when
-- **`AWS Config`**: A service that enables you to assess, audit, and evaluate the configurations of your AWS resources
-
----
-
 ### Identify AWS Access Management Capabilities
 
 **How is the root account in AWS different from IAM users?**
@@ -261,7 +263,7 @@ The root account has full access to all AWS services and resources in the accoun
 #### AWS Security Services
 
 - **`AWS WAF`**: Helps to control traffic with rules that you define that block common attack patterns such as SQL injections or cross-site scripting
-- **`AWS Trusted Advisor`**
+- **`AWS Trusted Advisor`**: it is a service that you can use that evaluate your resources against five categories: cost optimization, performance, security, fault tolerance, and service limits;
 - **`Amazon Inspector`**
 - **`AWS Marketplace`**
 - **`AWS Knowledge Center`**
@@ -399,8 +401,9 @@ These are the migration tools available in AWS:
 - **`AWS Snow Family`**: A collection of services to help users migrate large amounts of data to AWS cloud. The main services are Snowcone, Snowball, and Snowmobile.
 - **`AWS Database Migration Service (DMS)`**: Manages database migration and schema conversion. This replication process is very admin intensive. The user creates a source and a target endpoint (replica), and DMS manages the replication process.
 - **`AWS Schema Conversion Tool (SCT)`**: Used to convert the database schema from one database engine to another. For example, from Oracle to `Amazon Aurora`.
-- **`AWS DataSync`**: Used to automate and accelerate moving data between on-premises storage and AWS storage services such as `S3`, `EFS`, and `FSx for Windows File Server`.
-
+- **`AWS DataSync`**: Used to automate,  schedule and accelerate moving data between on-premises storage and AWS storage services such as `S3`, `EFS`, and `FSx for Windows File Server`.
+- **`AWS Transfer Family`**: It makes possible to seamlessly manage and share data with simple, secure and scalable file transfers. This service
+provides fully managed support for secure file transfer over FTP, Secure File Transfer protocol(SFTP) and other protocols;
 ---
 
 ## AWS Network Resources
@@ -472,7 +475,7 @@ These services provide a platform for developers and data scientists to build, t
 
 ### Customer Service and Engagement
 
-- **`Amazon Connect`**: An easy-to-use omnichannel cloud contact center that helps companies provide superior customer service at a lower cost. With `Amazon Connect`, you can set up a contact center in just a few clicks and start providing better service to your customers.
+- **`Amazon Connect`**: An easy-to-use omnichannel cloud contact center that helps companies provide superior customer service at a lower cost. With `Amazon Connect`, you can set up a contact center in just a few clicks and start providing better service to your customers using AI.
 - **Customer engagement services**: `Amazon Pinpoint` and `Amazon Simple Email Service (SES)` are the main services for customer engagement. They are used to engage with customers through email, SMS, push notifications, and voice messages.
 
 ### AWS Support Programs
@@ -502,22 +505,15 @@ These services provide a platform for developers and data scientists to build, t
 
 ## Introduction to Billing, Pricing, and Support
 
-### Compare AWS Pricing Models
-
-Cost optimization has the ability to run systems to deliver business value at the lowest price point. There are some services to help users optimize costs in AWS:
-
-- **`AWS Budgets`**: Used to set custom cost and usage budgets that alert you when you exceed your thresholds.
-- **`AWS Cost and Usage Report`**: Used to create detailed reports about your AWS costs and usage.
-
-AWS also provides cost-effective resources like Spot instances, Reserved instances, and cost-effective storage like `Amazon S3 Glacier` and `S3 Glacier Archive`.
-
----
+Pricing factors into numerous service categories, but the driving factors of cost are compute, storage, and data transfer.
 
 ### AWS Cost Optimization
 
 - **Right sizing**: The process of matching instance types and sizes to your workload requirements to optimize performance and cost.
 - **Increasing elasticity**: The process of using `Auto Scaling` to automatically adjust capacity to maintain steady, predictable performance at the lowest possible cost.
 - **Choose the right pricing model**: The process of selecting the most cost-effective pricing model for your workloads, such as On-Demand, Reserved, or Spot Instances. Spot instances are the cheapest option, but they can be interrupted by AWS with a two-minute warning when AWS needs the capacity back.
+
+AWS also provides cost-effective resources like Spot instances, Reserved instances, and cost-effective storage like `Amazon S3 Glacier` and `S3 Glacier Archive`.
 
 ---
 
@@ -532,9 +528,13 @@ AWS also provides cost-effective resources like Spot instances, Reserved instanc
 
 ### Billing, Budgets, and Cost Management
 
+Cost optimization has the ability to run systems to deliver business value at the lowest price point. There are some services to help users optimize costs in AWS:
+
 - **`AWS Cost Explorer`**: A tool that enables you to view and analyze your AWS costs and usage. It provides detailed reports that can help you identify cost-saving opportunities and optimize your AWS spending.
 - **`AWS Cost and Usage Report`**: A tool that provides detailed information about your AWS costs and usage. It allows you to create custom reports that can help you understand your spending patterns and identify areas for cost optimization.
 - **`AWS Billing Conductor`**: A tool that helps you manage your AWS billing and payments. It provides features such as consolidated billing, cost allocation tags, and payment methods to help you streamline your billing processes and optimize your AWS spending.
+
+When it comes to AWS pricing, customers pay as they go and can save when they commit to a specific amount of usage for a certain period of time. They can also get volume-based discounts as their usage increases.
 
 ---
 
@@ -570,3 +570,25 @@ For data analytics, these are the main services in AWS:
 - **`Amazon Redshift`**: It is a fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing Business Intelligence (BI) tools.
 - **`Amazon Kinesis`**: It is a platform for streaming data on AWS, offering powerful services to make it easy to load and analyze streaming data, and also providing the ability to build custom streaming applications for specialized needs.
 - **`AWS Glue`**: It is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.
+
+---
+
+## Metrics and Monitoring
+
+### Understand AWS Cloud Security, Governance, and Compliance Concepts
+
+These services can help users to guarantee security, governance, and compliance in AWS cloud:
+
+- **`Amazon CloudWatch`**: A monitoring and observability service. With CloudWatch dashboards you can create and visualize your metrics and get notified about changes in your AWS resources;
+- **`AWS CloudTrail`**: A service that manages and monitors resources on AWS. For example, if you want to know who deleted a MongoDB instance, you can use `CloudTrail` to find out who deleted it and when. It provides a **CloudTrail Events** which is record significant activities in an AWS account and **CloudTrail Logs** for monitoring API activities for an AWS account;
+- **`AWS Config`**: A service that enables you to assess, audit, and evaluate the configurations and evaluates them against the configurations you want to implement of your AWS resources;
+- **`AWS Audit Manager`**: It is a service that continually audits your AWS usage to simplify risk and compliance assessments. It helps collect evidence and manage audit data;
+
+If you want to enforce and manage rules across organizations and accounts for security, you can use **AWS Control Tower** which is a service to enforce
+and manage governance rules for security, operations, and compliance at scale across all your organizations and accounts in AWS.
+
+- **`AWS Service Catalog`**: It allows create, share and organize from a curated catalog of AWS resources. You can deploy baseline networking resources and
+security tools for new AWS accounts o you can govern consistently across your organization.
+- **`AWS Licensing Manager`**: It is a service that makes it easier to manage software licenses from vendors such as Microsoft, SAP, Oracle, and IBM across AWS and your on-premises environments.
+
+---
