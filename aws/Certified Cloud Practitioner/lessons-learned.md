@@ -12,8 +12,20 @@ certification exam.
 Two concepts design principles related to "Operational Excellence", pillar of the Well-Architected Framework are _Enable traceability_ and _Perform
 operations as code_.
 
-AWS Direct Connect establishes a dedicated, private network connection between your data center and AWS, ensure consistently high throughtpyt, low
+AWS Direct Connect establishes a dedicated, private network connection between your data center and AWS, ensure consistently high throughput, low
 jitter, and minimal latency. It does not use the public internet. Choose AWS Kinesis for real-time data ingestion, not for direct network connection.
+
+AWS Professional Services is a global team of experts who work directly with enterprise customers to plan, implement and optimize complex cloud
+solutions such as High Performance Computing (HPC) on AWS.
+
+To enable AWS Trusted Advisor to automatically alerts via email whenever new detect an issue, you can configure directly in notifications settings in
+the Trusted Advisor dashboard.
+
+Amazon Elastic Block Store(EBS) are replicated within its AZ, but not across AZs. To achieve high availability across AZs, you must create snaphosts
+and manually replicate them to other AZs.
+
+Amazon DynamoDB read consistency model to display the most accurate and up-to-date data is _Strongly Consistent_ reads. This is critical in real-time
+systems like online games, where the players need to see accurate scores instantly after any update.
 
 ### Cloud Technology and Services
 
@@ -41,7 +53,8 @@ Amazon Neptune is a fully managed graph database service optimized for storing a
 
 Amazon QuickSight is fully managed BI service which enables to create and publish interactive dashboards with visualizations that are easy to explore.
 
-Amazon S3 Transfer Acceleration is a feature designed to speed up file uploads and downloads between clients and S3 over long distances.
+Amazon S3 Transfer Acceleration is a feature designed to speed up file uploads and downloads between clients and S3 over long distances or for teams
+located across other countries.
 
 _Multipart upload_ allows to upload large objects files as sets of parts, in parallel and reassemble them automatically at the destination on S3 bucket.
 
@@ -68,12 +81,32 @@ HSM cluster managed by AWS.
 AWS Cognito User Pools is managed user directory that enables developers to add sign-up and sign-in features to web and mobile applications. AWS
 Cognito Identity Polls is for authorization and not for authentication.
 
+Amazon S3 Glacier console does not support uploading files directly. Files must be uploaded using AWS CLI, SDKs or third-party tools.
+
+AWS Data Exchange is managed service for securely finding, subscribing to and exchanging datasets between AWS customers and data providers.
+
+AWS DataSync allows automated, secure, online tranfers of large datasets from on-premises storage to AWS. The customer might have reliable internet
+connection.
+
 ### Security and Compliance
 
 When provisioning a security certificate from AWS Certificate Manager (ACM), a `CNAME` record would need to be created and the administrator would need
 to acknowledge a verification email sent to an address of their choice.
 
+AWS Network Firewall is a managed, stateful firewall that helps inspect and filter VPC traffic enabling to deploy essential network protections for
+your VPCs.
+
+The best way to grant appropriate permissions to EC2 interact with S3 bucket, without hardcoding credentials, is using IAM roles. When you assign an
+IAM role to an EC2, the instance automatically receives temporary security credentials to access AWS resources, as S3. The order do give permissions
+is: Creating an IAM policy with the required permissions, creating an IAM role and attaching the policy to the role, and finally assigning the role to
+the EC2 instance.
 
 ### Billing, pricing and support
 
 AWS Billing Conductor it helps to grouped and shown to each client, applying specific pricing models per client, and generate invoices based on those custom rates. It is ideal when offering services to resellers or business units who need tailored invoices.
+
+EC2 Dedicated hosts provides access to physical server where your EC2 instances run. This includes visibility into sockets, core and host-level
+placement. This is critical for licensing models that are tied to physical serve.
+
+AWS Prescriptive Guidance provides detailed and proven methods for cloud migration, modernization and cost optimization, offering playbooks,
+architectural patterns and technical guides created by AWS experts and partners.
