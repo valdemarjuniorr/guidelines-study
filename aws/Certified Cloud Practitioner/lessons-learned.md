@@ -21,11 +21,16 @@ solutions such as High Performance Computing (HPC) on AWS.
 To enable AWS Trusted Advisor to automatically alerts via email whenever new detect an issue, you can configure directly in notifications settings in
 the Trusted Advisor dashboard.
 
-Amazon Elastic Block Store(EBS) are replicated within its AZ, but not across AZs. To achieve high availability across AZs, you must create snaphosts
+Amazon Elastic Block Store(EBS) are replicated within its AZ, but not across AZs. To achieve high availability across AZs, you must create snapshots
 and manually replicate them to other AZs.
 
 Amazon DynamoDB read consistency model to display the most accurate and up-to-date data is _Strongly Consistent_ reads. This is critical in real-time
 systems like online games, where the players need to see accurate scores instantly after any update.
+
+AWS Service Catalog helps organizations create and manage portfolios of pre-approved IT resources, such as a multi-tier application stack like web,
+app, database and so on.
+
+The AWS Cloud Adoption Framework (CAF) is guidance process to help with Business, People, Platform and Security.
 
 ### Cloud Technology and Services
 
@@ -41,7 +46,7 @@ For S3 self-created resources are only accessible to the user by default and ser
 
 To access S3 files temporarily can be provided using query string authentication.
 
-Amazon Macie is a tool to protect data in S3 and not in EC2 instances.
+Amazon Macie is a tool to protect data, like security and privacy using Machine Learning, in S3 and not in EC2 instances.
 
 AWS CodePipeline is a CD/CI service that automates the build, test, and deployment stages of your release process and it does not provision customer infrastructure itself. It can call other services like CloudFormation, Elastic Beanstalk or ECS.
 
@@ -87,6 +92,17 @@ AWS Data Exchange is managed service for securely finding, subscribing to and ex
 
 AWS DataSync allows automated, secure, online tranfers of large datasets from on-premises storage to AWS. The customer might have reliable internet
 connection.
+
+EC2 User Data scripts are scripts that runs during the instance launch process. You can update user data while the instance is running, as long as it uses an EBS root volume.
+
+S3 Glacier Deep Archive is designed for long-term data archiving at the lowest storage cost among all AWS storage classes. Retrieval time is slower(up to 12-14 hours).
+
+Amazon AppStream is designed to stream desktop applications to end-users via a browser, without needing to rewrite the application. It converts
+traditional apps into SaaS easily, support high availability, scalability and integrates with user management systems like SAML 2.0.
+
+AWS SageMaker is a fully managed service designed for building, training and deploying ML models it can helps dectecting fraud patterns in banking transactions for example. It allows: build ML models that learn patterns of normal vs suspicious activity, those models are real-time inference endpoints.
+
+Amazon Kinesis Data Firehose it designed for loading streaming data into storage services like S3, Redshift or Elasticsearch.
 
 ### Security and Compliance
 

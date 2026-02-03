@@ -140,8 +140,7 @@ The main operations about Operational Excellence are:
 
 ## Understand the Benefits of and Strategies for Migration to the AWS Cloud
 
-- **`AWS CAF`**: The Cloud Adoption Framework(CAF) a framework that brings AWS experience and best practices to companies preparing to migrate to the AWS. It provides tools to help
-  accelerate the migration journey, organize resources, and align management during the transition.
+- **`AWS CAF`**: The Cloud Adoption Framework(CAF) a framework that brings AWS experience and best practices to companies preparing to migrate to the AWS. It provides tools to help accelerate the migration journey, organize resources, and align management during the transition. The main perspectives are Business, People, Governance, Platform, Security, and Operations.
 
 ### The 7Rs Migration Strategies
 
@@ -401,7 +400,7 @@ These are the migration tools available in AWS:
 - **`AWS Snow Family`**: A collection of services to help users migrate large amounts of data to AWS cloud. The main services are Snowcone, Snowball, and Snowmobile.
 - **`AWS Database Migration Service (DMS)`**: Manages database migration and schema conversion. This replication process is very admin intensive. The user creates a source and a target endpoint (replica), and DMS manages the replication process.
 - **`AWS Schema Conversion Tool (SCT)`**: Used to convert the database schema from one database engine to another. For example, from Oracle to `Amazon Aurora`.
-- **`AWS DataSync`**: Used to automate,  schedule and accelerate moving data between on-premises storage and AWS storage services such as `S3`, `EFS`, and `FSx for Windows File Server`.
+- **`AWS DataSync`**: Used to automate, schedule and accelerate moving data between on-premises storage and AWS storage services such as `S3`, `EFS`, and `FSx for Windows File Server`.
 - **`AWS Transfer Family`**: It makes possible to seamlessly manage and share data with simple, secure and scalable file transfers. This service
 provides fully managed support for secure file transfer over FTP, Secure File Transfer protocol(SFTP) and other protocols;
 ---
@@ -588,7 +587,7 @@ If you want to enforce and manage rules across organizations and accounts for se
 and manage governance rules for security, operations, and compliance at scale across all your organizations and accounts in AWS.
 
 - **`AWS Service Catalog`**: It allows create, share and organize from a curated catalog of AWS resources. You can deploy baseline networking resources and
-security tools for new AWS accounts o you can govern consistently across your organization.
+security tools for new AWS accounts or you can govern consistently across your organization.
 - **`AWS Licensing Manager`**: It is a service that makes it easier to manage software licenses from vendors such as Microsoft, SAP, Oracle, and IBM across AWS and your on-premises environments.
 
 ---
