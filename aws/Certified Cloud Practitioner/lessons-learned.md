@@ -104,6 +104,8 @@ AWS SageMaker is a fully managed service designed for building, training and dep
 
 Amazon Kinesis Data Firehose it designed for loading streaming data into storage services like S3, Redshift or Elasticsearch.
 
+Amazon LightSail is a virtual private server which can be used to quickly launch applications in AWS at a low cost. It can be used to launch simple web sites and set up a test environment.
+
 ### Security and Compliance
 
 When provisioning a security certificate from AWS Certificate Manager (ACM), a `CNAME` record would need to be created and the administrator would need
