@@ -32,6 +32,12 @@ app, database and so on.
 
 The AWS Cloud Adoption Framework (CAF) is guidance process to help with Business, People, Platform and Security.
 
+Amazon Aurora scales up to 128 TB and it is fully managed by Amazon RDS, handling backups, patching and failover automatically.
+
+Amazon EBS volumes store their backups as snapshots in Amazon S3, but the volumes themselves are not stored in S3.
+
+To enable S3 replication, it is not necessary the bucket owner of the destination must have both source and destination AWS regions enabled for their account. Only the source bucket owner needs access to both regions, as replication and control are handed from the source side.
+
 ### Cloud Technology and Services
 
 AWS Compute Optimizer helps to identifying underutilized EC2 instances and right-sizing them, based on ML analyzing historical utilization
@@ -75,49 +81,58 @@ HTTP-based content such as dynamic web applications, images and videos.
 AWS System Manager enables users to group AWS resources and view them based on application context, event across different Regions). It provides a unified operational dashboard for
 automation, configuration management of cloud resources.
 
-Amazon Dectective is purpose-built for deep investigation and root cause analysis of security incidents. It automatically coolects and correlates data
-from multiple AWS services like CloudTrail, GuardDuty, VPC Flow Logs.
+Amazon Detective is purpose-built for deep investigation and root cause analysis of security incidents. It automatically collects and correlates data from multiple AWS services like CloudTrail, GuardDuty, VPC Flow Logs.
 
 AWS IoT Greengrass is a solution for environments where intermittent connectivity and low-latency local response are critical. It extends AWS to edege devices so they can act locally on the data they generate.
 
-AWS CloudHSM is a hardware-based security module that allows you to perform cryptographic operations like SSL/TLS oofloading directly on a dedicated
-HSM cluster managed by AWS.
+AWS CloudHSM is a hardware-based security module that allows you to perform cryptographic operations like SSL/TLS offloading directly on a dedicated HSM(Hardware Security Module) cluster managed by AWS.
 
-AWS Cognito User Pools is managed user directory that enables developers to add sign-up and sign-in features to web and mobile applications. AWS
-Cognito Identity Polls is for authorization and not for authentication.
+AWS Cognito User Pools is managed user directory that enables developers to add sign-up and sign-in features to web and mobile applications. AWS Cognito Identity Polls is for authorization and not for authentication.
 
 Amazon S3 Glacier console does not support uploading files directly. Files must be uploaded using AWS CLI, SDKs or third-party tools.
 
 AWS Data Exchange is managed service for securely finding, subscribing to and exchanging datasets between AWS customers and data providers.
 
-AWS DataSync allows automated, secure, online tranfers of large datasets from on-premises storage to AWS. The customer might have reliable internet
-connection.
+AWS DataSync allows automated, secure, online tranfers of large datasets from on-premises storage to AWS. The customer might have reliable internet connection.
 
 EC2 User Data scripts are scripts that runs during the instance launch process. You can update user data while the instance is running, as long as it uses an EBS root volume.
 
 S3 Glacier Deep Archive is designed for long-term data archiving at the lowest storage cost among all AWS storage classes. Retrieval time is slower(up to 12-14 hours).
 
-Amazon AppStream is designed to stream desktop applications to end-users via a browser, without needing to rewrite the application. It converts
-traditional apps into SaaS easily, support high availability, scalability and integrates with user management systems like SAML 2.0.
+Amazon AppStream is designed to stream desktop applications to end-users via a browser, without needing to rewrite the application. It converts traditional apps into SaaS easily, support high availability, scalability and integrates with user management systems like SAML 2.0.
 
-AWS SageMaker is a fully managed service designed for building, training and deploying ML models it can helps dectecting fraud patterns in banking transactions for example. It allows: build ML models that learn patterns of normal vs suspicious activity, those models are real-time inference endpoints.
+AWS SageMaker is a fully managed service designed for building, training and deploying ML models it can helps detecting fraud patterns in banking transactions for example. It allows: build ML models that learn patterns of normal vs suspicious activity, those models are real-time inference endpoints.
+
+AWS Lex is designed for building chatbots and conversational interfaces using voice and text. It uses Automatic Speech Recognition(ASR) and natural language understanding(NLU) to interpret user intent and respond appropriately.
+
+AWS Polly is a text-to-speech service that converts text into realistic voice.
+
+AWS Kendra is a search service that helps retrieve answers from documents using NLP (Natural Language Processing).
 
 Amazon Kinesis Data Firehose it designed for loading streaming data into storage services like S3, Redshift or Elasticsearch.
 
 Amazon LightSail is a virtual private server which can be used to quickly launch applications in AWS at a low cost. It can be used to launch simple web sites and set up a test environment.
+
+The default number of Network ACLs you can create per VPC is 200, regardless of how many AZs the VPC spans. You can request an increase through a Service Quota request. Network ACLs limits apply at the VPC level, not per AZ.
+
+The protocol that uses low bandwidth, handles spotty network conditions, and works well for devices with limited power and memory is MQTT (Message Queuing Telemetry Transport). It is used in AWS IoT core for communication between IoT devices and the cloud.
+
+Amazon EFS is a serverless, fully managed, POSIX-compliant file system that clients mount using NFSv4/v4.1 protocol, suitable for many linux workloads and can be accessed from EC2 and on-premises via VPN/Direct Connect. Amazon FSx for Lustre is a POSIX-compliant, high-performance parallel file system for linux/HPC wordkloads, also mounted for linux clients and commonly liked with S3. Amazon EBS is illustrated separately as block storage for a single EC2 instance.
+
+In AWS Batch, the _priority parameter of the job queue_ determines the order in which jobs are considered for scheduling when multiple queues share the same compute resources. A higher numerical priority value means that queue's jobs are evaluated first.
+
+With Amazon EFS you can store media assets that can be accessed and processed in real time and to achieve sub-millisecond latencies it necessary to configure EFS One Zone storage class with General Purpose performance mode. The Max I/O performance modee is only available with Standard storage class. One Zone always uses General Purpose mode by design.
 
 ### Security and Compliance
 
 When provisioning a security certificate from AWS Certificate Manager (ACM), a `CNAME` record would need to be created and the administrator would need
 to acknowledge a verification email sent to an address of their choice.
 
-AWS Network Firewall is a managed, stateful firewall that helps inspect and filter VPC traffic enabling to deploy essential network protections for
-your VPCs.
+AWS Network Firewall is a managed, stateful firewall that helps inspect and filter VPC traffic enabling to deploy essential network protections for your VPCs.
 
-The best way to grant appropriate permissions to EC2 interact with S3 bucket, without hardcoding credentials, is using IAM roles. When you assign an
-IAM role to an EC2, the instance automatically receives temporary security credentials to access AWS resources, as S3. The order do give permissions
-is: Creating an IAM policy with the required permissions, creating an IAM role and attaching the policy to the role, and finally assigning the role to
-the EC2 instance.
+The best way to grant appropriate permissions to EC2 interact with S3 bucket, without hardcoding credentials, is using IAM roles. When you assign an IAM role to an EC2, the instance automatically receives temporary security credentials to access AWS resources, as S3. The order do give permissions is: Creating an IAM policy with the required permissions, creating an IAM role and attaching the policy to the role, and finally assigning the role to the EC2 instance.
+
+AWS System Manager Parameter Store helps store plain-text or encrypted configuration values securely using AWS KMS integration. It is ideal for low-cost, lightweight secret storage. It is free for standard parameters.
 
 ### Billing, pricing and support
 
@@ -128,3 +143,5 @@ placement. This is critical for licensing models that are tied to physical serve
 
 AWS Prescriptive Guidance provides detailed and proven methods for cloud migration, modernization and cost optimization, offering playbooks,
 architectural patterns and technical guides created by AWS experts and partners.
+
+The support plan that provides 24/7 access to technical support via phone, chat and email are **Business** and **Enterprise** support plans.

@@ -180,8 +180,7 @@ For data backups, the AWS options are:
 
 - **Operational expenses**: Day-to-day costs such as utilities, printer toner, coffee, and snacks
 - **Capital expenses**: Costs associated with creating longer-term benefits, such as purchasing a building, servers, printers, and power backups. These are purchased once and expected to last for several years
-- **Labor costs**: Staffing for an on-premises environment or data centers, such as the network operation center technicians to manage the infrastructure of the servers
-- **Software licensing costs**
+- **Labor costs**: Staffing for an on-premises environment or data centers, such as the network operation center technicians to manage the infrastructure of the servers **Software licensing costs**
 
 ---
 
@@ -217,7 +216,7 @@ permissions;
 
 `IAM` roles are preferable when you want to delegate access to AWS services and resources without sharing long-term credentials. For example, when you want to grant access to an `EC2` instance to access `S3` buckets, you can use an `IAM` role instead of creating an `IAM` user with access keys.
 
-To centralize your credentials and API keys on AWS there is th service called **`AWS Secrets Manager`**. It helps you protect access to your applications, services, and IT resources without the upfront cost and complexity of managing your own hardware security module (HSM) infrastructure.
+To centralize your credentials and API keys on AWS there is the service called **`AWS Secrets Manager`**. It helps you protect access to your applications, services, and IT resources without the upfront cost and complexity of managing your own hardware security module (HSM) infrastructure.
 
 **QUESTION**
 
@@ -233,8 +232,7 @@ Those are the main services for detection and response in AWS:
 - **`Amazon GuardDuty`**: It is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect AWS accounts and workloads;
 - **`Amazon Detective`**: After the threat has been detected, you can use it to further investigate the root cause. It helps you analyze threats with interactive visualizations contained in a unified AWS Management Console.
 - **`Amazon Security Hub`**: It brings multiple security services together into a single place and format. You can quickly see your security and compliance state in one comprehensive view.
-- **`Amazon Shield`**: It is managed DDoS protection service that safeguards applications running on AWS from common, frequently occurring types of DDoS
-attacks at no cost;
+- **`Amazon Shield`**: It is managed DDoS protection service that safeguards applications running on AWS from common, frequently occurring types of DDoS attacks at no cost;
 
 ---
 
@@ -261,8 +259,8 @@ The root account has full access to all AWS services and resources in the accoun
 
 #### AWS Security Services
 
-- **`AWS WAF`**: Helps to control traffic with rules that you define that block common attack patterns such as SQL injections or cross-site scripting
-- **`AWS Trusted Advisor`**: it is a service that you can use that evaluate your resources against five categories: cost optimization, performance, security, fault tolerance, and service limits;
+- **`AWS WAF(Web Application Firewall)`**: It Helps to control traffic with rules that you define that block common attack patterns such as SQL injections or cross-site scripting
+- **`AWS Trusted Advisor`**: It is a service that you can use that evaluate your resources against five categories: cost optimization, performance, security, fault tolerance, and service limits;
 - **`Amazon Inspector`**
 - **`AWS Marketplace`**
 - **`AWS Knowledge Center`**
@@ -532,6 +530,7 @@ Cost optimization has the ability to run systems to deliver business value at th
 - **`AWS Cost Explorer`**: A tool that enables you to view and analyze your AWS costs and usage. It provides detailed reports that can help you identify cost-saving opportunities and optimize your AWS spending.
 - **`AWS Cost and Usage Report`**: A tool that provides detailed information about your AWS costs and usage. It allows you to create custom reports that can help you understand your spending patterns and identify areas for cost optimization.
 - **`AWS Billing Conductor`**: A tool that helps you manage your AWS billing and payments. It provides features such as consolidated billing, cost allocation tags, and payment methods to help you streamline your billing processes and optimize your AWS spending.
+- **`AWS Budgets`**: A tool that helps to monitor reservation utilization and trigger alerts when it drops below the defined threshold.
 
 When it comes to AWS pricing, customers pay as they go and can save when they commit to a specific amount of usage for a certain period of time. They can also get volume-based discounts as their usage increases.
 
