@@ -134,6 +134,14 @@ The best way to grant appropriate permissions to EC2 interact with S3 bucket, wi
 
 AWS System Manager Parameter Store helps store plain-text or encrypted configuration values securely using AWS KMS integration. It is ideal for low-cost, lightweight secret storage. It is free for standard parameters.
 
+IAM Identity Center provides centralized access management across multiple AWS accounts and integrates with external identity providers(e.g.: Azure AD, Okta). It supports SSO, user/group-based permissions, and automated provisioning. It is ideal when you need to manage access to both AWS accounts and third-party application from a single location.
+
+AWS IAM Access Analyzer is designed to help you analyze permissions granted using IAM policies. It uses logic-based reasoning to determine what resources are shared with external entities and offers clear, actionable recommendations to help reduce broad or unintended access.
+
+AWS Systems Manager Session Manager is a secure and interactive shell and CLI access tool for EC2. It lets you connect to your instances without Opening port 22(SSH), managing or rotating SSH keys and needing a bastion host.
+
+To share consistent permissions across several accounts by reusing an IAM policy from one account to another, you can use IAM roles and trust policies for cross-account access.
+
 ### Billing, pricing and support
 
 AWS Billing Conductor it helps to grouped and shown to each client, applying specific pricing models per client, and generate invoices based on those custom rates. It is ideal when offering services to resellers or business units who need tailored invoices.
