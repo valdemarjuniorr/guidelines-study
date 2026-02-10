@@ -109,6 +109,8 @@ AWS Polly is a text-to-speech service that converts text into realistic voice.
 
 AWS Kendra is a search service that helps retrieve answers from documents using NLP (Natural Language Processing).
 
+Amazon OpenSearch Service supports vector search usging the k-NN(k-Nearest Neighbors) plugin, allowing to store high-dimensional vector embeddings and performing similarity search queries.
+
 Amazon Kinesis Data Firehose it designed for loading streaming data into storage services like S3, Redshift or Elasticsearch.
 
 Amazon LightSail is a virtual private server which can be used to quickly launch applications in AWS at a low cost. It can be used to launch simple web sites and set up a test environment.
@@ -122,6 +124,21 @@ Amazon EFS is a serverless, fully managed, POSIX-compliant file system that clie
 In AWS Batch, the _priority parameter of the job queue_ determines the order in which jobs are considered for scheduling when multiple queues share the same compute resources. A higher numerical priority value means that queue's jobs are evaluated first.
 
 With Amazon EFS you can store media assets that can be accessed and processed in real time and to achieve sub-millisecond latencies it necessary to configure EFS One Zone storage class with General Purpose performance mode. The Max I/O performance modee is only available with Standard storage class. One Zone always uses General Purpose mode by design.
+
+AWS Compute Optimizer uses ML to analyze historical utilization metrics(CPU, memory, network) and then recommends right-sizing EC2 instances, Auto-Scaling groups, EBS volumes and lambda functions. It helps to reduce costs while improving performance.
+
+By default, DynamoDB reads are eventually consistent which may, very briefly, return a stale value immediately after a successful write. If you need the latest value right after an update in the same region, set the read to strongly consistent.
+
+AWS site-to-site VPN create a secure, encrypted tunnel over the public internet between your on-premises network and your VPC. This allows private data transmission and is a common and cost-effective way for enterprises to stablish hybrid cloud connectivity.
+
+Elastic Network Interfaces(ENI) is a virtual network interface adapter that you can attach to EC2 instances in your VPC.
+
+AWS Transit Gateway acts as a hub that interconnects your VPCs and your on-premises network through a single gateway. Instead of managing complex peering relationships between each VPC and the on-premises data center.
+
+A Customer Gateway (CGW) represents the customer's end of the VPN connection. It is the on-premises VPN device that the customer configures to stablish an IPsec VPN tunnel with AWS.
+
+VPC Peering allows you to connect two VPCs, even in different regions, using AWS' private global network, without traversing the public internet, and
+without requiring a VPN or hardware device. It is cost-effective and simple for point-to-point communication between two VPCs.
 
 ### Security and Compliance
 
@@ -153,3 +170,7 @@ AWS Prescriptive Guidance provides detailed and proven methods for cloud migrati
 architectural patterns and technical guides created by AWS experts and partners.
 
 The support plan that provides 24/7 access to technical support via phone, chat and email are **Business** and **Enterprise** support plans.
+
+Consolidated Billing is a feature within AWS Organizations that enables a company to combine usage across multiple accounts into a single bill. Each single account retains its wown services and resources, but cost are aggregated under a Management Account(main payer). This makes billing simpler and also provides cost tracking per individual account, ensuring full visibility.
+
+AWS Cost Anomaly Dectetion uses ML to analyze your AWs spending patterns and automatically detect unusual charges. It sends alerts via email or SNS when anomalies are found.
