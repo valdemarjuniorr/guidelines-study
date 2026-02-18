@@ -12,23 +12,17 @@ certification exam.
 Two concepts design principles related to "Operational Excellence", pillar of the Well-Architected Framework are _Enable traceability_ and _Perform
 operations as code_.
 
-AWS Direct Connect establishes a dedicated, private network connection between your data center and AWS, ensure consistently high throughput, low
-jitter, and minimal latency. It does not use the public internet. Choose AWS Kinesis for real-time data ingestion, not for direct network connection.
+AWS Direct Connect establishes a dedicated, private network connection between your data center and AWS, ensure consistently high throughput, low jitter, and minimal latency. It does not use the public internet. Choose AWS Kinesis for real-time data ingestion, not for direct network connection.
 
-AWS Professional Services is a global team of experts who work directly with enterprise customers to plan, implement and optimize complex cloud
-solutions such as High Performance Computing (HPC) on AWS.
+AWS Professional Services is a global team of experts who work directly with enterprise customers to plan, implement and optimize complex cloud solutions such as High Performance Computing (HPC) on AWS.
 
-To enable AWS Trusted Advisor to automatically alerts via email whenever new detect an issue, you can configure directly in notifications settings in
-the Trusted Advisor dashboard.
+To enable AWS Trusted Advisor to automatically alerts via email whenever new detect an issue, you can configure directly in notifications settings in the Trusted Advisor dashboard.
 
-Amazon Elastic Block Store(EBS) are replicated within its AZ, but not across AZs. To achieve high availability across AZs, you must create snapshots
-and manually replicate them to other AZs.
+Amazon Elastic Block Store(EBS) are replicated within its AZ, but not across AZs. To achieve high availability across AZs, you must create snapshots and manually replicate them to other AZs.
 
-Amazon DynamoDB read consistency model to display the most accurate and up-to-date data is _Strongly Consistent_ reads. This is critical in real-time
-systems like online games, where the players need to see accurate scores instantly after any update.
+Amazon DynamoDB read consistency model to display the most accurate and up-to-date data is _Strongly Consistent_ reads. This is critical in real-time systems like online games, where the players need to see accurate scores instantly after any update.
 
-AWS Service Catalog helps organizations create and manage portfolios of pre-approved IT resources, such as a multi-tier application stack like web,
-app, database and so on.
+AWS Service Catalog helps organizations create and manage portfolios of pre-approved IT resources, such as a multi-tier application stack like web, app, database and so on.
 
 The AWS Cloud Adoption Framework (CAF) is guidance process to help with Business, People, Platform and Security.
 
@@ -37,6 +31,8 @@ Amazon Aurora scales up to 128 TB and it is fully managed by Amazon RDS, handlin
 Amazon EBS volumes store their backups as snapshots in Amazon S3, but the volumes themselves are not stored in S3.
 
 To enable S3 replication, it is not necessary the bucket owner of the destination must have both source and destination AWS regions enabled for their account. Only the source bucket owner needs access to both regions, as replication and control are handed from the source side.
+
+To receive AWS Trusted Advisor Notifications, you need to be set up from the dashboard providing a list of recipients and selecting resource items for which status is required.
 
 ### Cloud Technology and Services
 
@@ -159,18 +155,22 @@ AWS Systems Manager Session Manager is a secure and interactive shell and CLI ac
 
 To share consistent permissions across several accounts by reusing an IAM policy from one account to another, you can use IAM roles and trust policies for cross-account access.
 
+AWS WAF can integrate with CloudFront, Application Load Balancer(ALB), API Gateway and AWS AppSync to protect web applications from common web exploits and bots.
+
 ### Billing, pricing and support
 
 AWS Billing Conductor it helps to grouped and shown to each client, applying specific pricing models per client, and generate invoices based on those custom rates. It is ideal when offering services to resellers or business units who need tailored invoices.
 
-EC2 Dedicated hosts provides access to physical server where your EC2 instances run. This includes visibility into sockets, core and host-level
-placement. This is critical for licensing models that are tied to physical serve.
+EC2 Dedicated hosts provides access to physical server where your EC2 instances run. This includes visibility into sockets, core and host-level placement. This is critical for licensing models that are tied to physical serve.
 
-AWS Prescriptive Guidance provides detailed and proven methods for cloud migration, modernization and cost optimization, offering playbooks,
-architectural patterns and technical guides created by AWS experts and partners.
+AWS Prescriptive Guidance provides detailed and proven methods for cloud migration, modernization and cost optimization, offering playbooks, architectural patterns and technical guides created by AWS experts and partners.
 
 The support plan that provides 24/7 access to technical support via phone, chat and email are **Business** and **Enterprise** support plans.
 
-Consolidated Billing is a feature within AWS Organizations that enables a company to combine usage across multiple accounts into a single bill. Each single account retains its wown services and resources, but cost are aggregated under a Management Account(main payer). This makes billing simpler and also provides cost tracking per individual account, ensuring full visibility.
+Consolidated Billing is a feature within AWS Organizations that enables a company to combine usage across multiple accounts into a single bill. Each single account retains its own services and resources, but cost are aggregated under a Management Account(main payer). This makes billing simpler and also provides cost tracking per individual account, ensuring full visibility.
 
 AWS Cost Anomaly Dectetion uses ML to analyze your AWs spending patterns and automatically detect unusual charges. It sends alerts via email or SNS when anomalies are found.
+
+A Master account remain free of any resources, but nothing stops the owner of the Master account from creating resources, for example, create a S3 bucket.
+
+The best way to make Mobile app access resources like S3 or DynamoDB is using Security Token Service (STS) with Identity Federation that will allow an user to access to resources withing a session.

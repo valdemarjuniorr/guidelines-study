@@ -385,7 +385,7 @@ A fully managed data warehouse that makes it simple and cost-effective to analyz
 
 ### Amazon Neptune
 
-A fully managed, purpose-built graph database service that manages highly connnected data sets, like those used in social networking applications. It
+A fully managed, purpose-built graph database service that manages highly connected data sets, like those used in social networking applications. It
 excels at understanding complex relationships that are difficult to identify in traditional relational databases like user connections, friends
 networks and interaction patterns.
 
