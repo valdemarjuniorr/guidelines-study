@@ -16,5 +16,34 @@ Building a machine learning involves data collection and preparation, selecting 
 
 ![The Machine Learning process](assets/ml-training-data-flow.png)
 
+### Machine Learning categories
 
+There are three broad categories of ML:
+- `Supervised Learning`: In supervised learning, the algorithms are trained on labeled data. The goal is to learn a mapping function that can predict the output for new, unseen input data.
+- `Unsupervised Learning`: It refers to algorithms that learn from unlabeled data. The goal is to discover inherent patterns, structures, or relationships within the input data.
+- `Reinforcement Learning`: It is given only a performance score as guidance and semi-supervised learning, where only a portion of training data is labeled. The feedback is provided in the form of rewards or penalties for its actions, and the machine learns from this feedback to improve its decision-making over time.
+
+### Deep Learning fundamentals
+
+The field of deep learning is inspired by the structure and function of the brain. It involves the use of artificial neural networks, which are computational models that are designed to mimic the way the human brain processes information.
+
+![DL Neural Network](assets/dl-neural-network.png)
+
+### Generative AI fundamentals
+
+Generative AI is powered by models that are pre-trained on internet-scale data, and these models area called foundation models(FMs). You can adapt a single FM to perform multiple tasks, such as text generation, image generation, and code generation. There are eight FM lifecycles:
+- Data selection
+- Pre-training
+- Optimization
+- Evaluation
+- Deployment
+- Feedback and Continuous improvement
+
+
+#### Retrieval-augmented generation (RAG)
+
+RAG is a technique that supplies domain-relevant data as context to produce responses based on that data. This technique is similar to fine-tuning, but RAG retrieves a small set of relevant documents and uses that to provide context to answer the user prompt.
+
+
+## AWS Infrastructure and Technologies
 
