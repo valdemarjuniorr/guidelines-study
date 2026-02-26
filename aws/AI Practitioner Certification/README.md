@@ -14,7 +14,7 @@ Generative AI is a branch of artificial intelligence that focus on creating new 
 
 Building a machine learning involves data collection and preparation, selecting an appropriate algorithm, training the model on the prepared data, and evaluating its performance through testing and iteration.
 
-![The Machine Learning process](assets/ml-tranining-data-flow.png)
+![The Machine Learning process](assets/ml-training-data-flow.png)
 
 
 
