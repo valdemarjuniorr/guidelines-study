@@ -39,11 +39,59 @@ Generative AI is powered by models that are pre-trained on internet-scale data, 
 - Deployment
 - Feedback and Continuous improvement
 
-
 #### Retrieval-augmented generation (RAG)
 
 RAG is a technique that supplies domain-relevant data as context to produce responses based on that data. This technique is similar to fine-tuning, but RAG retrieves a small set of relevant documents and uses that to provide context to answer the user prompt.
 
-
 ## AWS Infrastructure and Technologies
 
+### Amazon SageMaker
+
+With SageMaker, you can build, train, and deploy ML models for any use case with fully managed infrastructure, tools, and workflows. It removes the heavy lifting from each step of the ML process to make it easier to develop high-quality models.
+
+### Amazon Comprehend
+
+It uses ML and natural language processing(NLP) to help you uncover the insights and relationships in your unstructured data. It can perform:
+- Identifies the language of the text;
+- Extracts key phrases, places, people, brands, or events;
+- Understand how positive or negative the text is;
+- Analyzes text using tokenization and parts of  speech;
+- And automatically organizes a collection of text files by topic;
+
+### Amazon Translate
+
+It is a neural machine translation service that delivers fast, high-quality, and affordable language translation which uses deep learning models to deliver more accurate and more natural-sounding translation statistical and rule-based translation algorithms.
+
+### Amazon Textract
+
+It is a service that automatically extracts text and data from scanned documents It goes beyond optical character recognition (OCR) to also identify the contents of fields in forms and information stored in tables.
+
+### Amazon Lex
+
+It is a fully managed AI service to design, build, text, and deploy conversation interfaces into any application using voice and text like chatbots. It provides the advanced deep learning functionalities of automatic speech recognition (ASR) for converting speech to text, and natural language understanding(NLU) to recognize the intent of the text and respond to the user in a natural way.
+
+### Amazon Polly
+
+It is a service that turns text into lifelike speech. It lets you create application that talks, so you can build entirely new categories of speech-enabled products and it uses DL to synthesize speech that sounds like human voice.
+
+### Amazon Transcribe
+
+It is an automatic speech recognition (ASR) service for automatically converting speech to text. It can describe audio files with timestamps so that you can quickly locate the audio in the original file by searching for the text or transcript audio stream in real time.
+
+### Amazon Rekognition
+
+It facilitates adding image and video analysis to your applications. It uses prove, highly scalable, DL-based that requires no ML expertise to use.
+
+### Amazon Kendra
+
+It is an intelligent search service powered by ML. It reimagines enterprise search for your websites and applications.
+
+### Amazon Personalize
+
+It is a ML service that developers can use to create individualized recommendations for customers who use their applications.
+
+### AWS DeepRacer
+
+It is a 1/18th scale race car that gives you an interesting and fun way to get started with reinforcement learning (RL) which is an advanced ML
+technique that takes a very different approach to training models that other ML methods. Its superpower is that it learns very complex behaviors
+without requiring any labeled training data, and it can make short-term decisions while optimizing for a longer-term goal.
