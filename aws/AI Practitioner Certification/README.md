@@ -124,7 +124,7 @@ Designed to improve developer productivity, it provides ML-powered code recommen
 
 It refers to practices and principles that ensure that AI systems are transparent and trustworthy while mitigating potential risks and negative outcomes. Those should be considered in all lifecycle which include:
 
-![Lifecycle of responsible AI](assets/responsible-ai-lifecycle.png)
+![Lifecycle of responsible AI](assets/lifecycle-responsbile-ai.png)
 
 ### Core dimensions of responsible AI
 
