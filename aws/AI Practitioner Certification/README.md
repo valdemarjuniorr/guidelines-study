@@ -23,6 +23,8 @@ There are three broad categories of ML:
 - `Unsupervised Learning`: It refers to algorithms that learn from unlabeled data. The goal is to discover inherent patterns, structures, or relationships within the input data.
 - `Reinforcement Learning`: It is given only a performance score as guidance and semi-supervised learning, where only a portion of training data is labeled. The feedback is provided in the form of rewards or penalties for its actions, and the machine learns from this feedback to improve its decision-making over time.
 
+![ML Techniques with their subcategories](assets/ml-techniques.png)
+
 ### Deep Learning fundamentals
 
 The field of deep learning is inspired by the structure and function of the brain. It involves the use of artificial neural networks, which are computational models that are designed to mimic the way the human brain processes information.
@@ -48,6 +50,10 @@ RAG is a technique that supplies domain-relevant data as context to produce resp
 ### Amazon SageMaker
 
 With SageMaker, you can build, train, and deploy ML models for any use case with fully managed infrastructure, tools, and workflows. It removes the heavy lifting from each step of the ML process to make it easier to develop high-quality models.
+
+#### SageMaker JumpStart
+
+It helps you quickly get started with ML providing a set of solutions for the most common cases, which can be rapidly deployed. It is also supports one-click deployment and fine-tuning of more that 150 popular open-source models such as natural language processing, object detection, and image classification models.
 
 ### Amazon Comprehend
 
@@ -92,6 +98,36 @@ It is a ML service that developers can use to create individualized recommendati
 
 ### AWS DeepRacer
 
-It is a 1/18th scale race car that gives you an interesting and fun way to get started with reinforcement learning (RL) which is an advanced ML
-technique that takes a very different approach to training models that other ML methods. Its superpower is that it learns very complex behaviors
-without requiring any labeled training data, and it can make short-term decisions while optimizing for a longer-term goal.
+It is a 1/18th scale race car that gives you an interesting and fun way to get started with reinforcement learning (RL) which is an advanced ML technique that takes a very different approach to training models that other ML methods. Its superpower is that it learns very complex behaviors without requiring any labeled training data, and it can make short-term decisions while optimizing for a longer-term goal.
+
+### Amazon Bedrock
+
+It a fully managed service that makes FMs from Amazon and leading AI startups available through an API. It is serverless experience that you can get started experimenting with FMs, privately customize them with your own data, and seamlessly integrate and deploy FMs into your application.
+
+### Amazon Q
+
+It can help you get fast, relevant answers to pressing questions, solve problems, generate content, and take actions using the data and expertise found in your company's information repositories, code, and enterprise systems. It provides immediate, relevant information and advice to help streamline tasks, speed decisions-making, and help spark creativity and innovation.
+
+#### Amazon Q Developer
+
+Designed to improve developer productivity, it provides ML-powered code recommendations to accelerate development of coding.
+
+## Factors to consider when selecting a AI model
+
+- Model types;
+- Performance requirements;
+- Capabilities;
+- Constraints;
+- Compliance;
+
+## What is responsible AI?
+
+It refers to practices and principles that ensure that AI systems are transparent and trustworthy while mitigating potential risks and negative outcomes. Those should be considered in all lifecycle which include:
+
+![Lifecycle of responsible AI](assets/responsible-ai-lifecycle.png)
+
+### Core dimensions of responsible AI
+
+The core dimensions of responsible AI include:
+
+![Core dimensions of responsible AI](assets/core-dimensions-ai.png)
