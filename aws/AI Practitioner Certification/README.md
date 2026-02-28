@@ -122,12 +122,13 @@ Designed to improve developer productivity, it provides ML-powered code recommen
 
 ## What is responsible AI?
 
-It refers to practices and principles that ensure that AI systems are transparent and trustworthy while mitigating potential risks and negative outcomes. Those should be considered in all lifecycle which include:
-
-![Lifecycle of responsible AI](assets/lifecycle-responsible-ai.png)
+It refers to practices and principles that ensure that AI systems are transparent and trustworthy while mitigating potential risks and negative outcomes. Those should be considered in all lifecycle which include Design, Development, Deployment, Monitoring and Evaluation.
 
 ### Core dimensions of responsible AI
 
 The core dimensions of responsible AI include:
 
 ![Core dimensions of responsible AI](assets/core-dimensions-ai.png)
+
+- `Fairness`: It is crucial for developing responsible AI systems, because they will promote inclusion, prevent discrimination, uphold responsible values and legal norms, and build trust with society.
+- `Explainability`: It refers to the ability of an IA model to clearly explain or provide justification for its internal mechanisms and decisions so that it is understandable to humans.
