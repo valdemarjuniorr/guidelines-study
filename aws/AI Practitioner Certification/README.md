@@ -147,5 +147,24 @@ The core dimensions of responsible AI include:
 
 ### Amazon services and tools for responsible AI
 
-- `Amazon SageMaker AI`: it is a fully managed ML service which data scientists and developers can quickly and confidently build, train and deploy ML models into a production-ready hosted environment. It supports bring-your-own-algorithms and frameworks, and it also offers flexible distributed training options that adjust to your specific workflows.
 - `Amazon Bedrock`: It is a fully managed service that makes available high-performing FMs from leading AI startups and Amazon for your use through a unified API. You can choose from a wide range of FMs to find the model that is vest suited for your case.
+- `Amazon SageMaker AI`: it is a fully managed ML service which data scientists and developers can quickly and confidently build, train and deploy ML models into a production-ready hosted environment. It supports bring-your-own-algorithms and frameworks, and it also offers flexible distributed training options that adjust to your specific workflows.
+
+SageMaker AI provides a governance tool to help you implement AI responsibly. These tools give you tighter control and visibility over your AI models.
+There governance tools include:
+
+- `Amazon SageMaker Role Manager`: With it administrators can define minimum permissions in minutes.
+- `Amazon SageMaker Model Cards`: You can capture, retrieve, and share essential model information, such as intended uses, risk ratings and training details, from conception to deployment.
+- `Amaon SageMaker Model Dashboard`: It keeps you team informed on model behavior in production, all in one place.
+
+`AI Service Card` are a form of documentation on responsible AI. They provide teams with a single place to find information on the intended use cases
+and limitations, responsible AI design choices, and deployment and performance optimization best practices for AWS AI services.
+
+### Principles of Human-Centered Design(HCD) for Explainable AI
+
+The following are key principles of human-centered design for explainable AI:
+- `Design for amplified decision-making`: It supports decision-makers in high-stakes situations to maximize the benefits of using technology while minimizing potential risks and errors that humans can make under stress or high-pressure environments;
+- `Design for unbiased decision-making`: It aims to ensure that the design of decision-making processes is free from biases that can influence the outcomes.
+- `Design for human and AI learning`: It can create more effective AI systems that includes cognitive apprenticeship, personalization, and user-centered design.
+
+## Developing ML solutions
