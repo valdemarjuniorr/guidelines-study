@@ -124,6 +124,12 @@ Designed to improve developer productivity, it provides ML-powered code recommen
 
 It refers to practices and principles that ensure that AI systems are transparent and trustworthy while mitigating potential risks and negative outcomes. Those should be considered in all lifecycle which include Design, Development, Deployment, Monitoring and Evaluation.
 
+### Accuracy of models
+
+*Bias* in a model means that the model is missing important features of the datasets. It is to basic. Bias is measured by the difference between the expected predictions of the model and the true values we are trying to predict. If the difference is narrow, then the model has low bias. If the difference is wide, then the model has high bias.
+
+Variance refers to the model's sensitivity to fluctuations or noise in the training data. The model might consider noise in the data to be important in the output. When variance is high, the model becomes so familiar with the training data that it can make predictions with high accuracy. However, when you introduce new data to the model, the model's accuracy drops. This introduces the problem of overfitting. It means when a model performs well on the training data but does not perform well on the evaluation data.
+
 ### Core dimensions of responsible AI
 
 The core dimensions of responsible AI include:
@@ -132,3 +138,14 @@ The core dimensions of responsible AI include:
 
 - `Fairness`: It is crucial for developing responsible AI systems, because they will promote inclusion, prevent discrimination, uphold responsible values and legal norms, and build trust with society.
 - `Explainability`: It refers to the ability of an IA model to clearly explain or provide justification for its internal mechanisms and decisions so that it is understandable to humans.
+- `Privacy and Secyrity`: It refers to data that is protected from theft and exposure. When proper implemented and deployed in an AI system, users can trust their data is not going to be compromised and used without their authorization.
+- `Transparency`: It communicates information about an AI system so stakeholders can make informed choices about their use of the system. Some of this information includes development processes, system capabilities and limitations.
+- `Veracity and robustness`: It refers to the mechanisms to ensure an AI system operates reliably, even with unexpected situations, uncertainty and errors.
+- `Governance`:  It is a set of processes that are used to define, implement, and enforce responsible AI practices within an organization.
+- `Safety`: It refers to the development of algorithms, models and systems in such a way that they are responsible, safe and beneficial for individuals and society as a whole.
+- `Controllability`: It refers to the ability to monitor and guide an AI system's behavior to align with human values and intent. It involves developing architectures that are controllable, so that any unintended issues can be managed and addressed.
+
+### Amazon services and tools for responsible AI
+
+- `Amazon SageMaker AI`: it is a fully managed ML service which data scientists and developers can quickly and confidently build, train and deploy ML models into a production-ready hosted environment. It supports bring-your-own-algorithms and frameworks, and it also offers flexible distributed training options that adjust to your specific workflows.
+- `Amazon Bedrock`: It is a fully managed service that makes available high-performing FMs from leading AI startups and Amazon for your use through a unified API. You can choose from a wide range of FMs to find the model that is vest suited for your case.
