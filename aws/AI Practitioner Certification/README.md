@@ -193,6 +193,28 @@ Amazon SageMaker AI is a fully managed ML service which you can perform:
 
 #### Model evaluation
 
-There are tow very common ML algorithms for evaluation: classification and regression.
+There are tow very common ML algorithms for evaluation:
 - `Classification`: It is a type of supervised learning where the goal is to predict a categorical label for a given input. Common evaluation metrics for classification include _accuracy_, _precision_, _recall_, and _F1 score_.
 - `Regression`: It is a type of supervised learning where the goal is to predict a continuous value for a given input. Common evaluation metrics for regression include _mean absolute error (MAE)_, _mean squared error (MSE)_, and _R-squared_.
+
+### Model deployment
+
+It refers the integration of the model and its resources into a production environment so that can be used to create predictions.
+
+### Fundamental concepts of MLOps
+
+It combines people, technology and processes to deliver collaborative ML solutions. It refers to the practice of operationalizing and streamlining the
+end-to-end ML lifecycle from model development and deployment to monitoring and maintenance. It helps ensure that models are not just developed but
+also deployed, monitored and retrained systematically and repeatedly.
+
+![MLOps lifecycle](assets/mlops.png)
+
+#### Sagemaker AI pipelines
+
+- **`Sagemaker Data Wrangler`** is a LCNC tool that provides an end-to-end solution to import, prepare, transform, featurize and analyze data by using a web interface.
+- **`SageMaker AI Processing API`** enables data scientists runs scripts and notebooks to process, transform and analyze datasets.
+- **`SageMaker Feature Store`** helps data scientists tot create, share and manage features for ML development.
+- **`SageMaker Experiments`** helps to experiment with multiple combinations of data, algorithms and parameters, all while observing the impact of incremental changes on model accuracy.
+- **`SageMaker AI Processing`** refers to the capabilities to run data pre-processing and post-processing, feature engineering and model evaluation tasks on the SageMaker AI platform.
+- **`SageMaker Model Registry`** you can catalog models, manage model versions, manage the approval status of a model, or deploy to production.
+- **`SageMaker Model Monitor`** you can monitor the quality of SageMaker AI ML models in production.
