@@ -168,3 +168,31 @@ The following are key principles of human-centered design for explainable AI:
 - `Design for human and AI learning`: It can create more effective AI systems that includes cognitive apprenticeship, personalization, and user-centered design.
 
 ## Developing ML solutions
+
+When evaluating models, bias and variance are two important factors to consider. Bias refers to the error introduced by approximating a real-world problem with a simplified model. Variance refers to the error introduced by the model's sensitivity to fluctuations in the training data. A balanced model have low bias and low variance:
+
+![Bias and Variance](assets/balacend_evaluation_model.png)
+
+### Lifecycles
+
+This process includes the following stages:
+- Business goal identification;
+- ML problem framing;
+- Data processing (data collection, data preprocessing, and feature engineering)
+- Model development (training, tuning, and evaluation)
+- Model deployment (inference and prediction)
+- Model monitoring;
+- Model retraining;
+
+#### Amazon SageMaker AI
+
+Amazon SageMaker AI is a fully managed ML service which you can perform:
+- Collect and prepare data;
+- Build and train ML models;
+- Deploy the models and monitor the performance of their predictions;
+
+#### Model evaluation
+
+There are tow very common ML algorithms for evaluation: classification and regression.
+- `Classification`: It is a type of supervised learning where the goal is to predict a categorical label for a given input. Common evaluation metrics for classification include _accuracy_, _precision_, _recall_, and _F1 score_.
+- `Regression`: It is a type of supervised learning where the goal is to predict a continuous value for a given input. Common evaluation metrics for regression include _mean absolute error (MAE)_, _mean squared error (MSE)_, and _R-squared_.
