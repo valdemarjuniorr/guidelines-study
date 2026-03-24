@@ -218,3 +218,13 @@ also deployed, monitored and retrained systematically and repeatedly.
 - **`SageMaker AI Processing`** refers to the capabilities to run data pre-processing and post-processing, feature engineering and model evaluation tasks on the SageMaker AI platform.
 - **`SageMaker Model Registry`** you can catalog models, manage model versions, manage the approval status of a model, or deploy to production.
 - **`SageMaker Model Monitor`** you can monitor the quality of SageMaker AI ML models in production.
+
+## Improving the performance of an FM
+
+To improve the performance of a foundation model (FM), you can use the following techniques:
+- Prompt engineering: It is the fastest way to harness the power of large language models by interacting with an LLM through prompts (a series of questions, statements or instructions), you can adjust LLM output behavior based on the specific context of the output that you want to achieve.
+- Prompt techniques: they are strategies used to guide generative AI models.
+- Retrieval Augmented Generation (RAG): It is a natural language processing (NLP) technique that combines the capabilities of retrieval systems and generative languages models to produce high-quality and informative text outputs.
+- Fine-tuning: It refers to the process of taking a pre-trained LM and further training it on a specific task or domain-specific dataset.
+- Creating a FM from scratch: It involves training a completely new model architecture on a custom dataset, without using any pre-existing models or weights. This approach is used when there are no suitable pre-trained models available for the specific task or domain or when the requirements for accuracy, performance or customization are exceptionally high.
+
