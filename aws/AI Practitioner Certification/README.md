@@ -228,3 +228,29 @@ To improve the performance of a foundation model (FM), you can use the following
 - Fine-tuning: It refers to the process of taking a pre-trained LM and further training it on a specific task or domain-specific dataset.
 - Creating a FM from scratch: It involves training a completely new model architecture on a custom dataset, without using any pre-existing models or weights. This approach is used when there are no suitable pre-trained models available for the specific task or domain or when the requirements for accuracy, performance or customization are exceptionally high.
 
+### Performance metrics
+
+There are some performance metrics to evaluate the performance of a model:
+- `Accuracy`: How often does the AI generate correct or desired outputs?
+- `Precision and recall`: For classification tasks, how well does the AI identify relevant information?
+- `Fluency and Coherence`: For text generation, how natural and understandable are the outputs?
+- `Image quality`: For image generation, how realistic and aesthetically pleasing are the images?
+
+Efficiency metrics:
+- `Inference time`: How long does it take the AI to generate an output?
+- `Cost per output`: What is the cost of generating each output, considering computational resources and infrastructure?
+
+## Evaluation metrics
+
+### Text generation
+
+There are some evaluation metrics to evaluate the performance of a model:
+- `ROUGE (Recall-Oriented understudy for Gisting Evaluation)`: It is a set of metrics used to evaluate the quality of generated text by comparing it to reference texts. It measures the overlap of n-grams, word sequences, and word pairs between the generated text and the reference texts.
+- `BLEU (Bilingual Evaluation Understudy)`: It is a metric used to evaluate the quality of machine-generated translations by comparing them to human reference translations. It measures the precision of n-grams in the generated translation against the reference translations.
+- `BERTScore`: It is a metric that evaluates the quality of generated text by comparing it to reference texts using contextual embeddings from the BERT model. It measures the similarity between the generated text and the reference texts based on their contextual representations. E.g.: Evaluating the quality of a generated story or article.
+
+### Image generation
+
+For image generation, some evaluation metrics include:
+- `Inception Score(IS)`: Measure the quality and diversity of generated images based on their classification by an Inception network;
+- `Fréchet Inception Distance (FID)`: Measure the distance between the distribution of generated images and real images in the feature space;
