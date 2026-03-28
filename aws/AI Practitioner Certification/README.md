@@ -92,6 +92,10 @@ It facilitates adding image and video analysis to your applications. It uses pro
 
 It is an intelligent search service powered by ML. It reimagines enterprise search for your websites and applications.
 
+### Amazon Augmented AI(A2I)
+
+It is a fully managed service that makes it easy to build the workflows required for human review of ML predictions. It provides built-in human review workflows for common use cases such as content moderation and document analysis, and you can also create custom workflows to fit your specific needs.
+
 ### Amazon Personalize
 
 It is a ML service that developers can use to create individualized recommendations for customers who use their applications.
@@ -209,14 +213,16 @@ also deployed, monitored and retrained systematically and repeatedly.
 
 ![MLOps lifecycle](assets/mlops.png)
 
+It is a set of practices that combines ML, DevOps and Data Engineering to automate and streamline the ML lifecycle.
+
 #### Sagemaker AI pipelines
 
 - **`Sagemaker Data Wrangler`** is a LCNC tool that provides an end-to-end solution to import, prepare, transform, featurize and analyze data by using a web interface.
 - **`SageMaker AI Processing API`** enables data scientists runs scripts and notebooks to process, transform and analyze datasets.
-- **`SageMaker Feature Store`** helps data scientists tot create, share and manage features for ML development.
+- **`SageMaker Feature Store`** helps data scientists to create, share and manage features for ML development.
 - **`SageMaker Experiments`** helps to experiment with multiple combinations of data, algorithms and parameters, all while observing the impact of incremental changes on model accuracy.
 - **`SageMaker AI Processing`** refers to the capabilities to run data pre-processing and post-processing, feature engineering and model evaluation tasks on the SageMaker AI platform.
-- **`SageMaker Model Registry`** you can catalog models, manage model versions, manage the approval status of a model, or deploy to production.
+- **`SageMaker Model Registry`** you can catalog models, manage model versions, tracking, manage the approval status of a model, or deploy to production.
 - **`SageMaker Model Monitor`** you can monitor the quality of SageMaker AI ML models in production.
 
 ## Improving the performance of an FM
@@ -240,6 +246,18 @@ Efficiency metrics:
 - `Inference time`: How long does it take the AI to generate an output?
 - `Cost per output`: What is the cost of generating each output, considering computational resources and infrastructure?
 
+What is the differences between Precision and Recall?
+_Precision focuses on minimizing falser positives. High precision means fewer incorrect positive prediction. Recall focuses on minimizing false negatives. High recall means fewer missed actual positives_.
+
+There is a trade-off which is improving one cane decrease the other.
+
+#### When to use which metric
+
+- `Accuracy`: Useful when classes are balanced. Can be misleading with imbalanced datasets.
+- `Precision `: Important when minimizing false positives is crucial. E.g.: Email spam detection, where you want to avoid marking legitimate emails as spam.
+- `Recall`: Important when minimizing false negatives is crucial. E.g.: Medical diagnosis.
+- `F1-score`: Useful when balancing precision and recall is important. E.g.: Information retrieval.
+
 ## Evaluation metrics
 
 ### Text generation
@@ -254,3 +272,42 @@ There are some evaluation metrics to evaluate the performance of a model:
 For image generation, some evaluation metrics include:
 - `Inception Score(IS)`: Measure the quality and diversity of generated images based on their classification by an Inception network;
 - `Fréchet Inception Distance (FID)`: Measure the distance between the distribution of generated images and real images in the feature space;
+
+## AWS Services for Robust AI Security
+
+AI systems present unique security challenges, from protecting sensitive training data to defending against adversarial attacks. AWS provides a comprehensive set of services to help you secure your AI infrastructure, models and data throughout the AI lifecycle like AWS SageMaker, AWS Macie, IAM and AWS GuardDuty.
+
+### Security best practices for AI
+
+- `Principle of least privilege`: Grant only the necessary permissions to users and services;
+- `Defente in depth`: Implement multiple layers of security, including network security, data encryption and access control;
+- `Regular security assessments`: Conduct regular security audits and vulnerability scans;
+- `Security training`: Train your team on AI security best practices and awareness;
+
+### AWS services for securing AI systems
+
+- `AWS Security Hub`: Centralized security management, dashboard and monitoring for your AWS environment. It provides to review all security findings and to create and run automated playbooks to remediate issues;
+- `AWS KMS`: It encrypts data and gives customers the choice and control of using AWS managed keys or customer-managed keys to protect their data;
+- `Amazon GuardDuty`: It is a threat detection service that monitors for suspicious activity and unauthorized behavior to protect AWS accounts, workloads and data;
+- `AWS Shield Advanced`: It helps protect workloads against DDoS events and includes AWS WAF and AWS Firewall Manager;
+
+## AWS Services for Data Governance
+
+The importance of governance and compliance for AI systems are:
+- Managing, optimizing and scaling the organizational AI initiative is at the core of the governance perspective. It is crucial instrument to build trust.
+- They are important for AI systems used in business to ensure responsible and trustworthy AI practices. It is essential to have robust governance frameworks and compliance measures in place to mitigate risks like bias, privacy violations and unintended consequences.
+- Governance helps organizations establish clear policies, guidelines and oversight mechanisms to ensure AI systems align with legal and regulatory requirements, in addition to ethical principles and societal values.
+
+There are some governance strategies that it is important to establish and follow to ensure responsible AI practices:
+- `Policies`: Develop clear and comprehensive policies that outline the organizations' approach to generative AI, including principles, guidelines and responsible AI considerations;
+- `Review cadence`: Implement a regular review process to assess the performance, safety and responsible AI implications of the generative AI solutions;
+- `Review strageties`: Develop a comprehensive review strategies that cover both technical and non-technical aspects of the generative AI solutions like model performance, data quality and the robustness of the algorithms and organizational policies, responsible AI principles and regulatory requirements;
+- `Transparency standards`: Commit to maintaining high standards of transparency in the development and deployment of generative AI solutions;
+- `Tem training requirements`: Ensure that all team members involved in the development and deployment of generative AI solutions are adequately trained on relevant policies, guidelines and best practices;
+
+Those AWS services can help you with data governance for AI systems:
+
+- `Amazon DataZone`: Create a data catalog, manage data access policies, and ensure data quality for your AI applications;
+- `AWS Glue Data Catalog`: Organize, discover and share data assets across your organization;
+- `Amazon Macie`: Discover and protect sensitive data within your AI datasets;
+- `AWS Lake Formation`: Build a secure data lake and manage data access permissions;
