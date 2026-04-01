@@ -311,3 +311,22 @@ Those AWS services can help you with data governance for AI systems:
 - `AWS Glue Data Catalog`: Organize, discover and share data assets across your organization;
 - `Amazon Macie`: Discover and protect sensitive data within your AI datasets;
 - `AWS Lake Formation`: Build a secure data lake and manage data access permissions;
+
+## Essentials of Prompt Engineering
+
+Inference parameters fit into a range of categories, with the most common being _randomness_, _diversity_ and _length_.
+
+### Randomness and diversity
+
+These parameters control the randomness and diversity of the generated output. They include:
+- `Temperature`: It controls the randomness or creativity of the output. A higher temperature value (e.g., 1.0) will result in more random and creative outputs, while a lower temperature value (e.g., 0.2) will produce more focused and deterministic outputs.
+- `Top P`: It is a setting that controls the diversity of the text by limiting the number of words that the model can choose from based on their probabilities. With a low Top P setting the model will only consider words that make up part of the total probability distribution. This can help the output to be more focused and coherent. With a high Top P setting the model will consider a wider range of words, which can lead to more creative and diverse outputs.
+- `Top K`: It is a setting that controls the diversity of the text by limiting the number of words that the model can choose from based on their probabilities. With a low Top K setting the model will only consider the top K most probable words, which can help to make the output more focused and coherent. With a high Top K setting the model will consider a wider range of words, which can lead to more creative and diverse outputs.
+
+### Length
+
+The length inference parameter category refers to the settings that control the maximum length of the generated output and specify the stop sequences that signal the end of the generation process. There are tow types of parameters in this category:
+
+- `Maximum length`: It determines the maximum number of tokens that the model can generate during the inference process. It prevents the model from generating excessive or infinite output, which could lead to resource exhaustion or undesirable behavior.
+- `Stop sequences`: They are special tokens or sequences of tokens that signal the model to stop generating further output. When the model encounters a stop sequence during the inference process, it will terminate the generation regardless of the maximum length setting.
+
