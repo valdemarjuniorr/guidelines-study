@@ -16,6 +16,10 @@ The knowledge base in Retrieval-Augmented Generation(RAG) is act as a source of 
 
 Throughput allows the company to reserve a specific capacity  for their Bedrock models, ensuring that they can handle the increased traffic even during peak periods. This eliminates the risk of delays and provides a consistent experience for customers.
 
+Those factors are crucial to a AI technology to be considered trustworthy: `Fairness`, `Transparency`, `Accountability` and `Privacy`.
+
+Red teaming is an adversarial approach specifically aimed at proactively identifying weaknesses and vulnerabilities in a system. It involves simulating real-world attacks and adversarial scenarios to expose potential flaws that might be exploited my malicious actors or lead to unintended harmful consequences.
+
 ## Fundamentals of AI and ML
 
 The N-gram transformation with a window size of 3 from the input _"This product is amazing and exceeded my expectations"_ is: ["This product is", "product is amazing", "is amazing and", "amazing and exceeded", "and exceeded my", "exceeded my expectations"]. A trigram is a sequence of three consecutive works.
@@ -34,6 +38,8 @@ In Amazon Rekognition there is a feature designed for detecting scene changes in
 The best ML algorithm to predict customer churn is _Decision tree_ and _Support Vector Machine(SVM). Decision tree are well-suited for classification tasks and can handle both numerical and categorical data. Support Vector Machine(SVM) are powerful classification algorithms that can handle high-dimensional data and non-linear relationships, making them effective for binary classification problems like churn prediction, especially when the data is well-separated.
 
 Amazon SageMaker K-Means clustering algorithm is specifically designed for unsupervised learning tasks like customer segmentation. It can analyze customer spending patterns in Redshift, for example, and identify distinct groups of clusters.
+
+The k-NN (k-Nearest Neighbors) plugin is specifically designed to extend the capabilities of Amazon OpenSearch Service by enabling efficient k-nearest neighbor search. This type of serach is fundamental for finding documents or items that are most similar to a given query, based on their vector embeddings.
 
 ## Fundamentals of Gen AI
 
@@ -60,6 +66,8 @@ Amazon Comprehend is the natural language processing(NLP) designed to extract in
 
 `AutoML` refers the automation of typical steps in the model development workflow, eliminating often tedious and time-consuming steps involved in building ML models, such as data preprocessing, feature engineering, algorithm selection, hyperparameter tuning and even model evaluation.
 
+The concept of `knowledge cutoff` is when an LLM provides outdated information about a recent event.
+
 ## Applications of FMs
 
 The Exploratory Data Analysis (EDA) is the investigative phase of the ML pipeline where you delve into your dataset to understand its structure, distributions and relationships between variables which involves visualizing the data through plots and charts, calculating summary statistics and identifying potential outliers or anomalies.
@@ -75,7 +83,15 @@ Those AWS services support storing and querying vector embeddings: Amazon S3 wit
 
 The purpose of Diffusion in a diffusion model is a process where Gaussian noise is gradually added to the original image over multiple steps. This creates a sequence of increasingly noisy images, culminating in an image that is almost pure noise.
 
-The role of _Amazon Multimodel Embeddings G1_ is specifically designed to generate numerical representations(embeddings) for both textual and visual data
+The role of _Amazon Multimodel Embeddings G1_ is specifically designed to generate numerical representations(embeddings) for both textual and visual data.
+
+The optimal number of epochs for fine-tuning is Validation output accuracy and Validation Loss. This metric directly measure how well your model is performing on unseen data. A higher validation accuracy generally indicates a better model.
+
+The deployment strategy as known as `Shadow Deployment` is a technique where the new model version runs in parallel with the existing one, receiving the same input, but its output is not sent back to the user. Instead, the output is typically logged or analyzed offline
+
+Amazon SageMaker Autoscaling Policies are designed to automatic scaling of SageMaker endpoints based on predefined metrics and thresholds.
+
+`Quantization` is the process of reducing the number of bits used to represent the model's wights and activations to reduce the memory footprint of the model, enabling faster loading and inference, especially on resource-constrained devices.
 
 ## Security, Compliance and Governance for AI Solutions
 
@@ -86,3 +102,5 @@ CloudTrail Lake is managed data lake taht allows users to store and query CloudT
 In a multi-tenant applications which uses DynamoDB table the best approach to ensure which tentant access only their own data is through IAM policies. It involves providing each business with unique credentials that have permissions restricted to their specific data in DynamoDB, enforcing access control directly at the database level, ensuring strong data isolation between tenants.
 
 The ensure the secure connectivity between your application and Amazon Bedrock you can use AWS VPC Endpoints which enables establish a private connection. This ensure that your data travels within the secure AWS network backbone, avoiding the public internet.
+
+In the AWS Shared Responsibility Model, customers are responsible for the security of their applications and the data they process within those applications. It includes protecting against prompt injection, which involves carefully handling user input and implementing secure coding practices.
