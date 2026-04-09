@@ -68,6 +68,10 @@ Amazon Comprehend is the natural language processing(NLP) designed to extract in
 
 The concept of `knowledge cutoff` is when an LLM provides outdated information about a recent event.
 
+The best algorithm for customer churn prediction is Decision Tree and Support Vector Machine(SVM). Decision Tree are well-suited for classification tasks and can handle both numerical and categorical data. Support Vector Machine(SVM) are powerful classification algorithms that can handle high-dimensional data and non-linear relationships. Effective for binary classification problems like churn prediction, especially when the data is well-separated.
+
+Amazon SageMaker's K-Means clustering algorithm is specifically designed for unsupervised learning tasks like customer segmentation. It can analyze customer spending patterns in Redshift and identify distinct groups or clusters.
+
 ## Applications of FMs
 
 The Exploratory Data Analysis (EDA) is the investigative phase of the ML pipeline where you delve into your dataset to understand its structure, distributions and relationships between variables which involves visualizing the data through plots and charts, calculating summary statistics and identifying potential outliers or anomalies.
@@ -85,7 +89,7 @@ The purpose of Diffusion in a diffusion model is a process where Gaussian noise 
 
 The role of _Amazon Multimodel Embeddings G1_ is specifically designed to generate numerical representations(embeddings) for both textual and visual data.
 
-The optimal number of epochs for fine-tuning is Validation output accuracy and Validation Loss. This metric directly measure how well your model is performing on unseen data. A higher validation accuracy generally indicates a better model.
+The optimal number of epochs for fine-tuning is _Validation output accuracy_ and _Validation Loss_. This metric directly measure how well your model is performing on unseen data. A higher validation accuracy generally indicates a better model.
 
 The deployment strategy as known as `Shadow Deployment` is a technique where the new model version runs in parallel with the existing one, receiving the same input, but its output is not sent back to the user. Instead, the output is typically logged or analyzed offline
 
