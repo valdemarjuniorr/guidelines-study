@@ -20,6 +20,10 @@ Those factors are crucial to a AI technology to be considered trustworthy: `Fair
 
 Red teaming is an adversarial approach specifically aimed at proactively identifying weaknesses and vulnerabilities in a system. It involves simulating real-world attacks and adversarial scenarios to expose potential flaws that might be exploited my malicious actors or lead to unintended harmful consequences.
 
+Jailbraking a FM refers to manipulating the model through crafted prompts to bypass its safety mechanisms and generate responses that it would normally restrict, such as offensive, harmful or unethical content.
+
+Amazon Kendra is an intelligent search service designed to simplify the integration of natural language search capabilities into your applications, including chatbots. It can connect to a variety of data sources, such as knowledge bases, to deliver accurate and relevant search results.
+
 ## Fundamentals of AI and ML
 
 The N-gram transformation with a window size of 3 from the input _"This product is amazing and exceeded my expectations"_ is: ["This product is", "product is amazing", "is amazing and", "amazing and exceeded", "and exceeded my", "exceeded my expectations"]. A trigram is a sequence of three consecutive works.
@@ -40,6 +44,14 @@ The best ML algorithm to predict customer churn is _Decision tree_ and _Support 
 Amazon SageMaker K-Means clustering algorithm is specifically designed for unsupervised learning tasks like customer segmentation. It can analyze customer spending patterns in Redshift, for example, and identify distinct groups of clusters.
 
 The k-NN (k-Nearest Neighbors) plugin is specifically designed to extend the capabilities of Amazon OpenSearch Service by enabling efficient k-nearest neighbor search. This type of serach is fundamental for finding documents or items that are most similar to a given query, based on their vector embeddings.
+
+The agent is the core decision-maker in a reinforcement learning system. It interacts with the environment, observes its current state, takes actions based on its policy and receives rewards or penalties based on the outcomes of those actions. The agent's primary goal is to learn from these experiences and improve its policy over time to maximize its cumulative reward.
+
+Root Mean Square Error (RMSE) is a metric specifically designed for regression problems, where the goal is to predict a continuous numerical value. It measures the average magnitude of the errors between the predicted values and the actual values. In the context of classifying emails as spam or not spam, the output is categorical, not a continuous numerical value. For this scenarios metrics like Accuracy, Precision, Recall or F1 Score would be more appropriate for evaluating the performance of the model.
+
+A/B testing' core purpose is to conduct controlled experiments in a real-world setting by directing a portion of live traffic to a new model variant while the majority still goes to the existing model. This helps you make data-driven decisions about whether to fully adopt the new model, make further improvements or stick with the existing one.
+
+Computer Vision is a field of AI that enables computers to "see" and interpret images. It involves techniques for analyzing and understanding visual information to extract relevant features from images. It makes computer vision ideal for building applications that automatically tags and categorizes images in a large photo library, for example.
 
 ## Fundamentals of Gen AI
 
@@ -72,6 +84,17 @@ The best algorithm for customer churn prediction is Decision Tree and Support Ve
 
 Amazon SageMaker's K-Means clustering algorithm is specifically designed for unsupervised learning tasks like customer segmentation. It can analyze customer spending patterns in Redshift and identify distinct groups or clusters.
 
+Three ways the human feedback can be collected during Human-in-the-loop (HITL) process are:
+- To fine-tune the LLMs and improve their performance;
+- To identify potential biases or inconsistencies in the models;
+- To track changes in model performance over time;
+
+Reranking algorithms are designed to refine the initial set of search results retrieved based on semantic similarity. By applying reranking techniques, the system can prioritize documents that area not only highly relevant to the query but also diverse in content. This ensures that users receive a broader range of pertinent information, reducing redundancy and improving the overall quality of the search results.
+
+Word2Vec algorithm aims to learn word representations that capture semantic and syntactic relationships between words.
+
+Amazon SageMaker JumpStart is a hub that offers a wide array of pre-built and customizable solutions, algorithms, and models. These cover various ML and Gen AI use cases. It provides a quick and easy way to get started with common ML tasks and accelerates development by providing ready-to-use solutions.
+
 ## Applications of FMs
 
 The Exploratory Data Analysis (EDA) is the investigative phase of the ML pipeline where you delve into your dataset to understand its structure, distributions and relationships between variables which involves visualizing the data through plots and charts, calculating summary statistics and identifying potential outliers or anomalies.
@@ -97,14 +120,32 @@ Amazon SageMaker Autoscaling Policies are designed to automatic scaling of SageM
 
 `Quantization` is the process of reducing the number of bits used to represent the model's wights and activations to reduce the memory footprint of the model, enabling faster loading and inference, especially on resource-constrained devices.
 
+Amazon SageMaker Ground Truth is a service specifically designed to facilitate human-in-the-loop ML tasks, including collecting and managing human feedback for techniques like Reinforcement Learning from Human Feedback(RLHF).
+
+The differences between Fine-tuning and Parameter-Efficient Finr-Tuning (PEFT) are:
+- Fine-tuning: You update all the parameters of the pre-trained model during the adaptation process and it can be computationally expensive and memory-intensive, especially for Large models.
+- Parameter-Efficient Fine-Tuning(PEFT): It focuses on updating only a small subset of the parameters or adding new parameters in a computationally efficient way, leading to significant savings in resources.
+
+Amazon Titan Text is a Gen LLM on Amazon Bedrock specifically designed to handle a variety of text generation tasks, making it well-suited for responding to diverse prompts and questions and capable of summarization, text generation, classification, open-ended Q&A and information extraction.
+
+Amazon SageMaker Clarify is designed to help you identify and address potential biases in your ML models. It provides tools and techniques for analyzing the model's behavior, understanding feature importance and generating explanations for predictions.
+
+Self-attention is at the heart of the Transformer architecture's ability to understand context and relationships within a sequence of data. It allow the model to focus on specific parts of the input sequence based on their relevance.
+
+The encoder-decoder models are particularly well-suited for text summarization and machine translation tasks. The encoder processes the input sequence and captures its meaning, while the decoder generates the output sequence based on the encoded representation.
+
 ## Security, Compliance and Governance for AI Solutions
 
 The Amazon Bedrock's data privacy does not use the customer data to train or improve the Bedrock Service or the underlying FMs. It means that data is kept confidential and used solely for your own applications.
 
-CloudTrail Lake is managed data lake taht allows users to store and query CloudTrail events using SQL-like syntax. Customers can ingest CloudTrail events into CLoudTrail Lake to analyze API Activity, including user interactions with _Amazon Bedrock_.
+CloudTrail Lake is managed data lake that allows users to store and query CloudTrail events using SQL-like syntax. Customers can ingest CloudTrail events into CLoudTrail Lake to analyze API Activity, including user interactions with _Amazon Bedrock_.
 
 In a multi-tenant applications which uses DynamoDB table the best approach to ensure which tentant access only their own data is through IAM policies. It involves providing each business with unique credentials that have permissions restricted to their specific data in DynamoDB, enforcing access control directly at the database level, ensuring strong data isolation between tenants.
 
 The ensure the secure connectivity between your application and Amazon Bedrock you can use AWS VPC Endpoints which enables establish a private connection. This ensure that your data travels within the secure AWS network backbone, avoiding the public internet.
 
 In the AWS Shared Responsibility Model, customers are responsible for the security of their applications and the data they process within those applications. It includes protecting against prompt injection, which involves carefully handling user input and implementing secure coding practices.
+
+The primary goal of Reinforcement LEarning from Human Feedback(RLHF) is to align the model's output with human values and preferences.
+
+`Area Under the ROC Curve (AUC)` is a powerful metric for evaluating classification models, especially when you need to understand the trade-off between true positive rate(sensitivity) and false positive rate(1-specificity). The ROC curve plots the true positive rate against the false positive rate at various classification thresholds and the AUC represents the overall area under this curve. A higher AUC indicates a better model that can effectively distinguish between the positive and negative classes across different thresholds.

@@ -320,8 +320,8 @@ Inference parameters fit into a range of categories, with the most common being 
 
 These parameters control the randomness and diversity of the generated output. They include:
 - `Temperature`: It controls the randomness or creativity of the output. A higher temperature value (e.g., 1.0) will result in more random and creative outputs, while a lower temperature value (e.g., 0.2) will produce more focused and deterministic outputs.
-- `Top P`: It is a setting that controls the diversity of the text by limiting the number of words that the model can choose from based on their probabilities. With a low Top P setting the model will only consider words that make up part of the total probability distribution. This can help the output to be more focused and coherent. With a high Top P setting the model will consider a wider range of words, which can lead to more creative and diverse outputs.
-- `Top K`: It is a setting that controls the diversity of the text by limiting the number of words that the model can choose from based on their probabilities. With a low Top K setting the model will only consider the top K most probable words, which can help to make the output more focused and coherent. With a high Top K setting the model will consider a wider range of words, which can lead to more creative and diverse outputs.
+- `Top P`: It is a setting that controls the diversity of the text by selecting from the smallest set of words whose cumulative probability exceeds a threshold (P). With a low Top P value, the model considers only the most probable words, making the output more focused and coherent. With a high Top P value, the model considers a larger set of possible words, which can lead to more diverse and creative outputs.
+- `Top K`: It is a setting that controls the diversity of the text by limiting the selection to the top K most probable words. With a low Top K value, the model chooses from a small set of highly probable words, making the output more focused and predictable. With a high Top K value, the model considers a larger number of candidate words, increasing diversity and creativity.
 
 ### Length
 
