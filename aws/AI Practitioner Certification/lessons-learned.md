@@ -53,6 +53,8 @@ A/B testing' core purpose is to conduct controlled experiments in a real-world s
 
 Computer Vision is a field of AI that enables computers to "see" and interpret images. It involves techniques for analyzing and understanding visual information to extract relevant features from images. It makes computer vision ideal for building applications that automatically tags and categorizes images in a large photo library, for example.
 
+AWS Glue Data Catalog directly supports reliable, repeatable and auditable ML data piplines by providing a centralized metadata repository that allows you to organize, discover and manage your data assets. It enables you to create and maintain a catalog of your data sources, including their schemas, formats and locations. This ensures that your ML pipelines can easily access and utilize the necessary data while maintaining data governance and compliance standards.
+
 ## Fundamentals of Gen AI
 
 The benefits of using Gen AI in summarization of CloudWatch logs is:
@@ -95,6 +97,26 @@ Word2Vec algorithm aims to learn word representations that capture semantic and 
 
 Amazon SageMaker JumpStart is a hub that offers a wide array of pre-built and customizable solutions, algorithms, and models. These cover various ML and Gen AI use cases. It provides a quick and easy way to get started with common ML tasks and accelerates development by providing ready-to-use solutions.
 
+The benefits of ongoing pre-training of FMs on domain-specific data allows the FM to continue learning from new and relevant text data, especially from the target domain. It helps the model to adapt its internal representations, improve understanding of domain-specific terminology and ultimately deliver better results when fine-tuned for specific downstream tasks.
+
+Amazon SageMaker Inference Recommender automates load testing and benchmarking across a range of SageMaker instance types and endpoint configurations(real-time, serverless, multi-model) and it helps you:
+- Automatically evaluate model performance(lantency, throughtput);
+- Get recommendations for best cost-performance match;
+- Avoid manual testing or trial-and-error deployments;
+
+Bedrock with RAG via Knowledge Bases enables Gen AI with context injection using enterprise data(like docs in S3) where:
+- No fine-tuning is required;
+- Fully managed setup(no infrastructure maintenance);
+- Reduces hallucinations using RAG;
+- Works out-of--the-box with top FMs like Claude, Llama 3 or Titan;
+
+Amazon Bedrock with private customization ans AWS PrivateLink provides:
+- HIPPA eligibility and GDPR compliance;
+- Encryption at rest and in transit by default;
+- Optional KMS key integration;
+- Support for PrivateLink to eliminate public internet exposure;
+- No-code customization of FM without training;
+
 ## Applications of FMs
 
 The Exploratory Data Analysis (EDA) is the investigative phase of the ML pipeline where you delve into your dataset to understand its structure, distributions and relationships between variables which involves visualizing the data through plots and charts, calculating summary statistics and identifying potential outliers or anomalies.
@@ -133,6 +155,8 @@ Amazon SageMaker Clarify is designed to help you identify and address potential 
 Self-attention is at the heart of the Transformer architecture's ability to understand context and relationships within a sequence of data. It allow the model to focus on specific parts of the input sequence based on their relevance.
 
 The encoder-decoder models are particularly well-suited for text summarization and machine translation tasks. The encoder processes the input sequence and captures its meaning, while the decoder generates the output sequence based on the encoded representation.
+
+Amazon Rekognition Custom Labels is a feature that allows you to train custom image(hosted in S3) classification models using your own labeled dataset. It enables you to create models that are tailored to your specific use case and can recognize objects or scenes that are relevant to your application.
 
 ## Security, Compliance and Governance for AI Solutions
 
