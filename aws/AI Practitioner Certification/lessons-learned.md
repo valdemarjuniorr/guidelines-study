@@ -56,6 +56,14 @@ The *agent* is the core decision-maker in a *reinforcement learning* system. It 
 
 ***AWS Glue Data Catalog*** directly supports reliable, repeatable and auditable *ML data pipelines* by providing a centralized metadata repository that allows you to organize, discover and manage your data assets. It enables you to create and maintain a catalog of your data sources, including their *schemas*, formats and locations. This ensures that your *ML pipelines* can easily access and utilize the necessary data while maintaining data governance and compliance standards.
 
+The Reinforcement Learning(RL) helps to navigate complex and unpredictable aML model through trial-and-error methods. The model is *awarded* and *punished* for the decision it makes and therefore this makes the model to *learn* by trial-and-error technique.
+
+The metrics `Mean Absolute Error` and `Mean Absolute Percentage Error` are specifically designed for *regression problems* where the goal is to predict a continuous numerical value. They measure the average magnitude of the errors between the predicted values and the actual values, with MAE providing an absolute error measure and MAPE expressing the error as a percentage of the actual values.
+
+`Linear Regression` is a supervised learning algorithm. It aims to find the best-fitting linear relationship between a dependent variable and one or more independent variables. It requires labeled data to train the model.
+
+`K-Means Clustering` is a classic unsupervised learning algorithm. It aims to partition n observations into k clusters in which earc observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. It identifies patterns and groupings within the data based on inherent similarities.
+
 ## Fundamentals of Generative AI
 
 The benefits of using *Gen AI* in summarization of ***CloudWatch*** logs are:
