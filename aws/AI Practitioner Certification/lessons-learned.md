@@ -133,7 +133,7 @@ The benefits of ongoing *pre-training* of *FMs* on domain-specific data allows t
 - Support for ***PrivateLink*** to eliminate public internet exposure
 - No-code customization of *FM* without training
 
-## Applications of Foundation Models
+## Applications of FMs
 
 The *Exploratory Data Analysis (EDA)* is the investigative phase of the *ML pipeline* where you delve into your dataset to understand its structure, distributions and relationships between variables which involves visualizing the data through plots and charts, calculating summary statistics and identifying potential outliers or anomalies.
 
