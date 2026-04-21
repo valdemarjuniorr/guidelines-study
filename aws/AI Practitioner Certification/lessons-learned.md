@@ -176,6 +176,18 @@ The *encoder-decoder models* are particularly well-suited for text summarization
 
 ***Amazon Rekognition Custom Labels*** is a feature that allows you to train custom image (hosted in ***S3***) classification models using your own labeled dataset. It enables you to create models that are tailored to your specific use case and can recognize objects or scenes that are relevant to your application.
 
+The major limitations of Gen AI is _Knowledge Cutoff_ and _Hallucinations_.
+
+Those are relevant metrics for evaluating the performance of a *classification model*:
+- `Perplexity`: Probably of a model to generate the given sequence of words. This metric is commonly used to assess the performance of language models, where a lower perplexity indicates a better fit to the data.
+- `F1 score`: Balances the _precision_ and _recall_ of the model.
+- `BERT score`: Measure the semantic similarity between the _reference_ and the _generated_ text.
+- `Mean Squared Error(MSE)`: Average of the squared difference between predicted and actual values.
+
+***Amazon SageMaker Automatic Model Tuning*** is specifically designed to automate the process of finding the best hyperparameters for a machine learning model. It runs multiple training jobs with different hyperparameter combinations and selects the model that performs best based on a defined objective metric.
+
+***Amazon Bedrock Model Distillation*** involves transferring knowledge from an existing model, not training a completely new one from scratch.
+
 ## Security, Compliance and Governance for AI Solutions
 
 ***Amazon Bedrock's*** data privacy does not use the customer data to train or improve the ***Bedrock*** Service or the underlying *FMs*. It means that data is kept confidential and used solely for your own applications.
