@@ -217,13 +217,11 @@ It refers to the integration of the model and its resources into a production en
 
 *MLOps* combines people, technology and processes to deliver collaborative *ML* solutions. It refers to the practice of operationalizing and streamlining the end-to-end *ML lifecycle* from model development and deployment to monitoring and maintenance. It helps ensure that models are not just developed but also deployed, monitored and retrained systematically and repeatedly.
 
-![MLOps lifecycle](assets/mlops.png)
-
 It is a set of practices that combines *ML*, *DevOps* and *Data Engineering* to automate and streamline the *ML lifecycle*.
 
 #### ***SageMaker AI*** Pipelines
 
-- ***SageMaker Data Wrangler***: It is a *LCNC* tool that provides an end-to-end solution to import, prepare, transform, featurize and analyze data by using a web interface.
+- ***SageMaker Data Wrangler***: It is a *Low-Code/No-Code(LCNC)* tool that provides an end-to-end solution to import, prepare, transform, featurize and analyze data by using a web interface.
 - ***SageMaker AI Processing API***: It enables data scientists to run scripts and notebooks to process, transform and analyze datasets.
 - ***SageMaker Feature Store***: It helps data scientists to create, share and manage features for *ML* development.
 - ***SageMaker Experiments***: It helps to experiment with multiple combinations of data, *algorithms* and parameters, all while observing the impact of incremental changes on model accuracy.
