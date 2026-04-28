@@ -34,7 +34,7 @@ There are some *algorithms* to optimize the model's performance by tuning its *h
 - **Bayesian Optimization**: It is an advanced method that leverages a probabilistic model to steer the search for optimal *hyperparameters*. It learns from past evaluations to select the next set of values to test.
 - **Random Search**: It involves randomly sampling *hyperparameter* values from a defined range and evaluating the model's performance for each set of sampled values.
 
-![algorithms to Optmize models performance by tuning its hyperparameters](assets/hyperparameter-algorithms-to-improve-ai.png)
+![algorithms to Optmize models performance by tuning its hyperparameters](assets/hyperparameter-algorithms-to-improve-ai.jpeg)
 
 ***Amazon Transcribe*** is specifically designed for *automatic speech recognition (ASR)*, making it the ideal choice for converting spoken language in videos into text that can then be analyzed by *LLMs* or other *AI models*.
 
