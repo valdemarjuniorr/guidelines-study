@@ -129,12 +129,9 @@ The benefits of ongoing *pre-training* of *FMs* on domain-specific data allows t
 The *Exploratory Data Analysis (EDA)* is the investigative phase of the *ML pipeline* where you delve into your dataset to understand its structure, distributions and relationships between variables which involves visualizing the data through plots and charts, calculating summary statistics and identifying potential outliers or anomalies.
 
 There are three techniques for *model compression*:
-
 - **Pruning**: It involves removing redundant or less important parameters from the model, effectively reducing its size and computational requirements.
 - **Quantization**: It reduces the *precision* of the model's weights, representing them with fewer bits. This leads to a smaller memory footprint and often faster *inference*, making it a common *model compression* technique.
 - **Distillation**: It involves training a smaller "student" model to mimic the behavior of a larger "teacher" model. This allows you to deploy a more compact and efficient model while retaining a significant portion of the original model's performance.
-
-The context of *FM* the key application is to enable the creation of Account Summaries, providing comprehensive and personalized insights into customer accounts by integrating data from various sources.
 
 These AWS services support storing and querying *vector embeddings*: ***Amazon S3*** with *S3 Vectors*, ***Amazon OpenSearch Service*** and ***Amazon RDS for PostgreSQL*** with *pgvector extension*.
 
@@ -148,12 +145,9 @@ The deployment strategy known as *Shadow Deployment* is a technique where the ne
 
 ***Amazon SageMaker Autoscaling Policies*** are designed for automatic scaling of ***SageMaker*** *endpoints* based on predefined metrics and thresholds.
 
-*Quantization* is the process of reducing the number of bits used to represent the model's weights and activations to reduce the memory footprint of the model, enabling faster loading and *inference*, especially on resource-constrained devices.
-
 ***Amazon SageMaker Ground Truth*** is a service specifically designed to facilitate *human-in-the-loop ML* tasks, including collecting and managing human feedback for techniques like *Reinforcement Learning from Human Feedback (RLHF)*.
 
 The differences between *Fine-tuning* and *Parameter-Efficient Fine-Tuning (PEFT)* are:
-
 - **Fine-tuning**: You update all the parameters of the *pre-trained model* during the adaptation process and it can be computationally expensive and memory-intensive, especially for large models.
 - **Parameter-Efficient Fine-Tuning (PEFT)**: It focuses on updating only a small subset of the parameters or adding new parameters in a computationally efficient way, leading to significant savings in resources.
 
@@ -192,13 +186,5 @@ To ensure the secure connectivity between your application and ***Amazon Bedrock
 In the *AWS Shared Responsibility Model*, customers are responsible for the security of their applications and the data they process within those applications. It includes protecting against *prompt injection*, which involves carefully handling user input and implementing secure coding practices.
 
 The primary goal of *Reinforcement Learning from Human Feedback (RLHF)* is to align the model's output with human values and preferences.
-
-*Area Under the ROC Curve (AUC)* is a powerful metric for evaluating *classification models*, especially when you need to understand the trade-off between *true positive rate (sensitivity)* and *false positive rate (1-specificity)*. The *ROC curve* plots the *true positive rate* against the *false positive rate* at various classification thresholds and the *AUC* represents the overall area under this curve. A higher *AUC* indicates a better model that can effectively distinguish between the positive and negative classes across different thresholds.
-
-The ensure the secure connectivity between your application and Amazon Bedrock you can use AWS VPC Endpoints which enables establish a private connection. This ensure that your data travels within the secure AWS network backbone, avoiding the public internet.
-
-In the AWS Shared Responsibility Model, customers are responsible for the security of their applications and the data they process within those applications. It includes protecting against prompt injection, which involves carefully handling user input and implementing secure coding practices.
-
-The primary goal of Reinforcement LEarning from Human Feedback(RLHF) is to align the model's output with human values and preferences.
 
 `Area Under the ROC Curve (AUC)` is a powerful metric for evaluating classification models, especially when you need to understand the trade-off between true positive rate(sensitivity) and false positive rate(1-specificity). The ROC curve plots the true positive rate against the false positive rate at various classification thresholds and the AUC represents the overall area under this curve. A higher AUC indicates a better model that can effectively distinguish between the positive and negative classes across different thresholds.
