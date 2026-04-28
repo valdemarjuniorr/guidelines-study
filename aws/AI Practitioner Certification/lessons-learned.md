@@ -10,11 +10,9 @@ A ***SageMaker Model Card*** serves as a comprehensive documentation hub for a *
 
 ***SageMaker*** *real-time hosting services* are specifically designed to provide persistent *endpoints* that are always available and ready to serve predictions with low *latency*. They are optimized for handling individual prediction requests in real time, making them ideal for applications that require immediate responses, such as chatbots, recommendation engines and fraud detection systems.
 
-To enhance a chatbot's capabilities is using *Retrieval-Augmented Generation (RAG)* to enhance the responses with relevant and factual information from their knowledge base.
+To enhance a chatbot's capabilities is using *Retrieval-Augmented Generation (RAG)* to enhance the responses with relevant and factual information from their knowledge base. The knowledge base in *Retrieval-Augmented Generation (RAG)* acts as a source of domain-specific information for the model to reference during the generation process.
 
-The knowledge base in *Retrieval-Augmented Generation (RAG)* acts as a source of domain-specific information for the model to reference during the generation process.
-
-*Throughput* allows the company to reserve a specific capacity for their ***Bedrock*** models, ensuring that they can handle the increased traffic even during peak periods. This eliminates the risk of delays and provides a consistent experience for customers.
+*Provisioned Throughput* allows the company to reserve a specific capacity for their ***Bedrock*** models, ensuring that they can handle the increased traffic even during peak periods. This eliminates the risk of delays and provides a consistent experience for customers.
 
 These factors are crucial for an *AI* technology to be considered trustworthy: **Fairness**, **Transparency**, **Accountability** and **Privacy**.
 
@@ -35,6 +33,8 @@ There are some *algorithms* to optimize the model's performance by tuning its *h
 - **Grid Search**: It involves defining a grid of possible *hyperparameter* values and systematically evaluating the model's performance for each combination of values. It is a brute-force approach that can be computationally expensive but guarantees finding the best combination within the defined grid.
 - **Bayesian Optimization**: It is an advanced method that leverages a probabilistic model to steer the search for optimal *hyperparameters*. It learns from past evaluations to select the next set of values to test.
 - **Random Search**: It involves randomly sampling *hyperparameter* values from a defined range and evaluating the model's performance for each set of sampled values.
+
+![algorithms to Optmize models performance by tuning its hyperparameters](assets/hyperparameter-algorithms-to-improve-ai.png)
 
 ***Amazon Transcribe*** is specifically designed for *automatic speech recognition (ASR)*, making it the ideal choice for converting spoken language in videos into text that can then be analyzed by *LLMs* or other *AI models*.
 
