@@ -56,18 +56,19 @@ The *agent* is the core decision-maker in a *reinforcement learning* system. It 
 
 ***AWS Glue Data Catalog*** directly supports reliable, repeatable and auditable *ML data pipelines* by providing a centralized metadata repository that allows you to organize, discover and manage your data assets. It enables you to create and maintain a catalog of your data sources, including their *schemas*, formats and locations. This ensures that your *ML pipelines* can easily access and utilize the necessary data while maintaining data governance and compliance standards.
 
-The Reinforcement Learning(RL) helps to navigate complex and unpredictable aML model through trial-and-error methods. The model is *awarded* and *punished* for the decision it makes and therefore this makes the model to *learn* by trial-and-error technique.
+The Reinforcement Learning(RL) helps to navigate complex and unpredictable ML model through trial-and-error methods. The model is *awarded* and *punished* for the decision it makes and therefore this makes the model to *learn* by trial-and-error technique.
 
 The metrics `Mean Absolute Error` and `Mean Absolute Percentage Error` are specifically designed for *regression problems* where the goal is to predict a continuous numerical value. They measure the average magnitude of the errors between the predicted values and the actual values, with MAE providing an absolute error measure and MAPE expressing the error as a percentage of the actual values.
 
 `Linear Regression` is a supervised learning algorithm. It aims to find the best-fitting linear relationship between a dependent variable and one or more independent variables. It requires labeled data to train the model.
 
-`K-Means Clustering` is a classic unsupervised learning algorithm. It aims to partition n observations into k clusters in which earc observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. It identifies patterns and groupings within the data based on inherent similarities.
+`K-Means Clustering` is a classic unsupervised learning algorithm. It aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. It identifies patterns and groupings within the data based on inherent similarities.
+
+![K-Means Clustering algorithms](assets/k-means-clustering-algorithms.jpeg)
 
 ## Fundamentals of Generative AI
 
 The benefits of using *Gen AI* in summarization of ***CloudWatch*** logs are:
-
 - Accelerate incident triage by providing a concise overview of recent log events
 - Enable proactive identification of potential issues or anomalies
 - Facilitate better collaboration and communication among teams
@@ -75,7 +76,6 @@ The benefits of using *Gen AI* in summarization of ***CloudWatch*** logs are:
 *ROUGE (Recall-Oriented Understudy for Gisting Evaluation)* is a widely adopted metric specifically designed for evaluating the quality of automatic summarization systems. It compares the generated summary against one or more human-written reference summaries by calculating the overlap of *n-grams*. Higher *ROUGE scores* generally indicate a better match between the generated summary and the reference summaries.
 
 The prompt technique to mitigate overly long and verbose responses are:
-
 - Specify a concise response format in the prompt
 - Limit the model's *token* generation capacity
 
@@ -84,7 +84,6 @@ The technique to enhance the accuracy and reliability of *Gen AI models* in summ
 The combination that best supports the goal of boosting agent productivity and reducing after-call work using *Gen AI* is ***Amazon Q in Connect*** which is a *Gen AI* assistant embedded in ***Amazon Connect*** that helps agents by providing real-time guidance, summarizing conversations and automating post-call documentation. ***Amazon Connect Contact Lens*** provides real-time analytics, sentiment analysis and transcription, which enhance the context and accuracy of *generative AI* outputs.
 
 The differences between *Few-shot prompting* and *Zero-shot prompting* are:
-
 - **Few-shot Prompting**: It incorporates examples to guide the model.
 - **Zero-shot Prompting**: It relies solely on the model's pre-existing knowledge without providing any examples, making it more challenging for the model to generate accurate responses, especially for complex tasks or those requiring specific domain knowledge.
 
@@ -94,39 +93,31 @@ The differences between *Few-shot prompting* and *Zero-shot prompting* are:
 
 The concept of *knowledge cutoff* is when an *LLM* provides outdated information about a recent event.
 
-The best *algorithm* for customer churn prediction is *Decision Tree* and *Support Vector Machine (SVM)*. *Decision Trees* are well-suited for *classification tasks* and can handle both numerical and categorical data. *Support Vector Machines (SVM)* are powerful *classification algorithms* that can handle high-dimensional data and non-linear relationships, effective for binary classification problems like churn prediction, especially when the data is well-separated.
-
-***Amazon SageMaker's*** *K-Means clustering algorithm* is specifically designed for *unsupervised learning* tasks like customer segmentation. It can analyze customer spending patterns in ***Redshift*** and identify distinct groups or clusters.
-
 Three ways the human feedback can be collected during *Human-in-the-Loop (HITL)* process are:
-
 - To *fine-tune* the *LLMs* and improve their performance
 - To identify potential *biases* or inconsistencies in the models
 - To track changes in model performance over time
 
 *Reranking algorithms* are designed to refine the initial set of search results retrieved based on *semantic similarity*. By applying *reranking* techniques, the system can prioritize documents that are not only highly relevant to the query but also diverse in content. This ensures that users receive a broader range of pertinent information, reducing redundancy and improving the overall quality of the search results.
 
-*Word2Vec algorithm* aims to learn word representations that capture *semantic* and *syntactic* relationships between words.
+*Word2Vec algorithm* aims to learn word representations that capture *semantic* and *syntactic* relationships between words. It allows AI to understand relationships between words based on context, for example, "King" and "man" + "woman" and "queen".
 
 ***Amazon SageMaker JumpStart*** is a hub that offers a wide array of pre-built and customizable solutions, *algorithms*, and models. These cover various *ML* and *Gen AI* use cases. It provides a quick and easy way to get started with common *ML* tasks and accelerates development by providing ready-to-use solutions.
 
 The benefits of ongoing *pre-training* of *FMs* on domain-specific data allows the *FM* to continue learning from new and relevant text data, especially from the target domain. It helps the model to adapt its internal representations, improve understanding of domain-specific terminology and ultimately deliver better results when *fine-tuned* for specific downstream tasks.
 
 ***Amazon SageMaker Inference Recommender*** automates load testing and benchmarking across a range of ***SageMaker*** instance types and *endpoint* configurations (*real-time*, *serverless*, *multi-model*) and it helps you:
-
 - Automatically evaluate model performance (*latency*, *throughput*)
 - Get recommendations for best cost-performance match
 - Avoid manual testing or trial-and-error deployments
 
 ***Bedrock*** with *RAG* via *Knowledge Bases* enables *Gen AI* with context injection using enterprise data (like docs in ***S3***) where:
-
 - No *fine-tuning* is required
 - Fully managed setup (no infrastructure maintenance)
 - Reduces *hallucinations* using *RAG*
 - Works out-of-the-box with top *FMs* like Claude, Llama 3 or Titan
 
 ***Amazon Bedrock*** with private customization and ***AWS PrivateLink*** provides:
-
 - *HIPAA* eligibility and *GDPR* compliance
 - Encryption at rest and in transit by default
 - Optional ***KMS*** key integration
