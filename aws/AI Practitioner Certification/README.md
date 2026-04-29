@@ -269,7 +269,7 @@ There is a trade-off which is improving one can decrease the other.
 
 ### Text Generation
 
-There are some *evaluation metrics* to evaluate the performance of a model:
+There are some *evaluation metrics* to evaluate the performance of a model specially for Natural Language Processing(NLP):
 
 - **ROUGE (Recall-Oriented Understudy for Gisting Evaluation)**: It is a set of metrics used to evaluate the quality of generated text by comparing it to reference texts. It measures the overlap of *n-grams*, word sequences, and word pairs between the generated text and the reference texts.
 - **BLEU (Bilingual Evaluation Understudy)**: It is a metric used to evaluate the quality of machine-generated translations by comparing them to human reference translations. It measures the *precision* of *n-grams* in the generated translation against the reference translations.

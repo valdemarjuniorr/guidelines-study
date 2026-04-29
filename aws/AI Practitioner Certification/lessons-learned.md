@@ -29,7 +29,6 @@ The *N-gram* transformation with a window size of 3 from the input *"This produc
 One option to deploy in ***Amazon SageMaker*** is *Serverless Inference*, which is the optimal choice for workloads characterized by fluctuating traffic patterns with idle periods. It automatically scales compute resources up or down based on demand. This makes it cost-effective for applications with unpredictable or intermittent use patterns.
 
 There are some *algorithms* to optimize the model's performance by tuning its *hyperparameters*:
-
 - **Grid Search**: It involves defining a grid of possible *hyperparameter* values and systematically evaluating the model's performance for each combination of values. It is a brute-force approach that can be computationally expensive but guarantees finding the best combination within the defined grid.
 - **Bayesian Optimization**: It is an advanced method that leverages a probabilistic model to steer the search for optimal *hyperparameters*. It learns from past evaluations to select the next set of values to test.
 - **Random Search**: It involves randomly sampling *hyperparameter* values from a defined range and evaluating the model's performance for each set of sampled values.
@@ -56,9 +55,9 @@ The *agent* is the core decision-maker in a *reinforcement learning* system. It 
 
 ***AWS Glue Data Catalog*** directly supports reliable, repeatable and auditable *ML data pipelines* by providing a centralized metadata repository that allows you to organize, discover and manage your data assets. It enables you to create and maintain a catalog of your data sources, including their *schemas*, formats and locations. This ensures that your *ML pipelines* can easily access and utilize the necessary data while maintaining data governance and compliance standards.
 
-The Reinforcement Learning(RL) helps to navigate complex and unpredictable ML model through trial-and-error methods. The model is *awarded* and *punished* for the decision it makes and therefore this makes the model to *learn* by trial-and-error technique.
+The Reinforcement Learning(RL) helps to navigate complex and unpredictable ML model through trial-and-error methods. The model is *awarded* or *punished* for the decision it makes and therefore this makes the model to *learn* by trial-and-error technique.
 
-The metrics `Mean Absolute Error` and `Mean Absolute Percentage Error` are specifically designed for *regression problems* where the goal is to predict a continuous numerical value. They measure the average magnitude of the errors between the predicted values and the actual values, with MAE providing an absolute error measure and MAPE expressing the error as a percentage of the actual values.
+The metrics `Mean Absolute Error` and `Mean Absolute Percentage Error` are specifically designed for *regression problems* where the goal is to predict a continuous numerical value. They measure the average magnitude of the errors between the predicted values and the actual values. With MAE providing an absolute error measure and MAPE expressing the error as a percentage of the actual values.
 
 `Linear Regression` is a supervised learning algorithm. It aims to find the best-fitting linear relationship between a dependent variable and one or more independent variables. It requires labeled data to train the model.
 
@@ -73,15 +72,15 @@ The benefits of using *Gen AI* in summarization of ***CloudWatch*** logs are:
 - Enable proactive identification of potential issues or anomalies
 - Facilitate better collaboration and communication among teams
 
-*ROUGE (Recall-Oriented Understudy for Gisting Evaluation)* is a widely adopted metric specifically designed for evaluating the quality of automatic summarization systems. It compares the generated summary against one or more human-written reference summaries by calculating the overlap of *n-grams*. Higher *ROUGE scores* generally indicate a better match between the generated summary and the reference summaries.
+*ROUGE (Recall-Oriented Understudy for Gisting Evaluation)* is a widely adopted metric specifically designed for evaluating the quality of automatic summarization systems. It compares the generated summary against one or more human-written reference summaries by calculating the overlap of *n-grams*. Higher *ROUGE scores* generally indicate a better match between the generated summary and the reference summaries. This metric is specifically used for *Natural Language Processing(NLP)* and *Natural Language Generation(NLG)* tasks.
 
-The prompt technique to mitigate overly long and verbose responses are:
+The prompt technique to mitigate overly long and verbose responses in a FM are:
 - Specify a concise response format in the prompt
 - Limit the model's *token* generation capacity
 
 The technique to enhance the accuracy and reliability of *Gen AI models* in summarizing customer reviews and extracting actions is *Prompt Engineering* and *Fine-tuning* the *foundation models* on domain-specific data.
 
-The combination that best supports the goal of boosting agent productivity and reducing after-call work using *Gen AI* is ***Amazon Q in Connect*** which is a *Gen AI* assistant embedded in ***Amazon Connect*** that helps agents by providing real-time guidance, summarizing conversations and automating post-call documentation. ***Amazon Connect Contact Lens*** provides real-time analytics, sentiment analysis and transcription, which enhance the context and accuracy of *generative AI* outputs.
+The combination that best supports the goal of boosting agent productivity and reducing after-call work using *Gen AI* is ***Amazon Q in Amazon Connect*** which is a *Gen AI* assistant embedded in ***Amazon Connect*** that helps agents by providing real-time guidance, summarizing conversations and automating post-call documentation. ***Amazon Connect Contact Lens*** provides real-time analytics, sentiment analysis and transcription, which enhance the context and accuracy of *generative AI* outputs.
 
 The differences between *Few-shot prompting* and *Zero-shot prompting* are:
 - **Few-shot Prompting**: It incorporates examples to guide the model.
@@ -153,9 +152,9 @@ The differences between *Fine-tuning* and *Parameter-Efficient Fine-Tuning (PEFT
 
 ***Amazon Titan Text*** is a *Gen LLM* on ***Amazon Bedrock*** specifically designed to handle a variety of text generation tasks, making it well-suited for responding to diverse prompts and questions and capable of summarization, text generation, classification, open-ended Q&A and information extraction.
 
-***Amazon SageMaker Clarify*** is designed to help you identify and address potential *biases* in your *ML models*. It provides tools and techniques for analyzing the model's behavior, understanding *feature importance* and generating explanations for predictions.
+***Amazon SageMaker Clarify*** is designed to help identifying and addressing potential *biases* in your *ML models*. It provides tools and techniques for analyzing the model's behavior, understanding *feature importance* and generating explanations for predictions.
 
-*Self-attention* is at the heart of the *Transformer architecture's* ability to understand context and relationships within a sequence of data. It allows the model to focus on specific parts of the input sequence based on their relevance.
+*Self-attention* is at the heart of the *Transformer architecture's* ability to understand context and relationships within a sequence of data. It allows the model to compute a weighted representation of an input sequence by letting every token interact with all other tokens simultaneously to focus on specific parts of the input sequence based on their relevance.
 
 The *encoder-decoder models* are particularly well-suited for text summarization and machine translation tasks. The *encoder* processes the input sequence and captures its meaning, while the *decoder* generates the output sequence based on the *encoded representation*.
 
