@@ -161,7 +161,6 @@ The core dimensions of *responsible AI* include:
 ***Amazon SageMaker AI*** provides a governance tool to help you implement *AI* responsibly. These tools give you tighter control and visibility over your *AI models*.
 
 These governance tools include:
-
 - ***Amazon SageMaker Role Manager***: With it administrators can define minimum permissions in minutes.
 - ***Amazon SageMaker Model Cards***: You can capture, retrieve, and share essential model information, such as intended uses, risk ratings and training details, from conception to deployment.
 - ***Amazon SageMaker Model Dashboard***: It keeps your team informed on model behavior in production, all in one place.
@@ -222,10 +221,10 @@ It is a set of practices that combines *ML*, *DevOps* and *Data Engineering* to 
 #### ***SageMaker AI*** Pipelines
 
 - ***SageMaker Data Wrangler***: It is a *Low-Code/No-Code(LCNC)* tool that provides an end-to-end solution to import, prepare, transform, featurize and analyze data by using a web interface.
+- ***SageMaker AI Processing***: It refers to the capabilities to run data pre-processing and post-processing, *feature engineering* and model evaluation tasks on the ***SageMaker AI*** platform.
 - ***SageMaker AI Processing API***: It enables data scientists to run scripts and notebooks to process, transform and analyze datasets.
 - ***SageMaker Feature Store***: It helps data scientists to create, share and manage features for *ML* development.
 - ***SageMaker Experiments***: It helps to experiment with multiple combinations of data, *algorithms* and parameters, all while observing the impact of incremental changes on model accuracy.
-- ***SageMaker AI Processing***: It refers to the capabilities to run data pre-processing and post-processing, *feature engineering* and model evaluation tasks on the ***SageMaker AI*** platform.
 - ***SageMaker Model Registry***: You can catalog models, manage model versions, tracking, manage the approval status of a model, or deploy to production.
 - ***SageMaker Model Monitor***: You can monitor the quality of ***SageMaker AI ML*** models in production.
 
@@ -233,7 +232,7 @@ It is a set of practices that combines *ML*, *DevOps* and *Data Engineering* to 
 
 To improve the performance of a *foundation model (FM)*, you can use the following techniques:
 
-- **Prompt Engineering**: It is the fastest way to harness the power of *large language models* by interacting with an *LLM* through prompts (a series of questions, statements or instructions), you can adjust *LLM* output behavior based on the specific context of the output that you want to achieve.
+- **Prompt Engineering**: It is the fastest way to harness the power of *large language models* by interacting with them through prompts (a series of questions, statements or instructions). Through this process, you can adjust *LLM* output behavior based on the specific context of the input that you want to achieve.
 - **Prompt Techniques**: They are strategies used to guide *generative AI models*.
 - **Retrieval-Augmented Generation (RAG)**: It is a *natural language processing (NLP)* technique that combines the capabilities of *retrieval systems* and *generative language models* to produce high-quality and informative text outputs.
 - **Fine-Tuning**: It refers to the process of taking a *pre-trained LM* and further training it on a specific task or domain-specific dataset.
@@ -242,7 +241,6 @@ To improve the performance of a *foundation model (FM)*, you can use the followi
 ### Performance Metrics
 
 There are some *performance metrics* to evaluate the performance of a model:
-
 - **Accuracy**: How often does the *AI* generate correct or desired outputs?
 - **Precision and Recall**: For *classification tasks*, how well does the *AI* identify relevant information?
 - **Fluency and Coherence**: For text generation, how natural and understandable are the outputs?
@@ -270,7 +268,6 @@ There is a trade-off which is improving one can decrease the other.
 ### Text Generation
 
 There are some *evaluation metrics* to evaluate the performance of a model specially for Natural Language Processing(NLP):
-
 - **ROUGE (Recall-Oriented Understudy for Gisting Evaluation)**: It is a set of metrics used to evaluate the quality of generated text by comparing it to reference texts. It measures the overlap of *n-grams*, word sequences, and word pairs between the generated text and the reference texts.
 - **BLEU (Bilingual Evaluation Understudy)**: It is a metric used to evaluate the quality of machine-generated translations by comparing them to human reference translations. It measures the *precision* of *n-grams* in the generated translation against the reference translations.
 - **BERTScore**: It is a metric that evaluates the quality of generated text by comparing it to reference texts using *contextual embeddings* from the *BERT model*. It measures the similarity between the generated text and the reference texts based on their *contextual representations*. E.g.: Evaluating the quality of a generated story or article.
@@ -337,7 +334,7 @@ These parameters control the *randomness* and *diversity* of the generated outpu
 
 ### Length Parameters
 
-The length *inference parameter* category refers to the settings that control the maximum length of the generated output and specify the stop sequences that signal the end of the generation process. There are two types of parameters in this category:
+The length *inference parameter* category refers to the settings that control the maximum length of the generated output and specify the stop sequences signal to the end of the generation process. There are two types of parameters in this category:
 
 - **Maximum Length**: It determines the maximum number of *tokens* that the model can generate during the *inference process*. It prevents the model from generating excessive or infinite output, which could lead to resource exhaustion or undesirable behavior.
 - **Stop Sequences**: They are special *tokens* or sequences of *tokens* that signal the model to stop generating further output. When the model encounters a *stop sequence* during the *inference process*, it will terminate the generation regardless of the maximum length setting.
