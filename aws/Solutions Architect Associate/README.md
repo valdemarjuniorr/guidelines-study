@@ -142,6 +142,8 @@ EC2 placement groups are a logical grouping of instances within a single Availab
 - `Partition`: It is recommended for applications that require high availability and fault tolerance.
 - `Spread`: It is recommended for applications that require high availability and fault tolerance.
 
+![Placement Groups](assets/ec2-placement-groups.jpeg)
+
 All those types of placement groups are used to optimize the network performance of your instances.
 
 Which are the rules and limitations of placement groups?
