@@ -199,4 +199,31 @@ A `ENA` can have:
 A `EFA` can have:
 - Achieve the application performance of an on-prem HPC cluster, with the scalability, flexibility and elasticity of the cloud.
 - `ENA` with added capabilities(additional OS-bypass functionality).
-- OS-bypass is an access model that allows HTPC and ML applications to communicate directly with the NIC hardware, low-latency transport functionality.
+- OS-bypass is an access model that allows HPC and ML applications to communicate directly with the NIC hardware, low-latency transport functionality.
+
+#### AWS Elastic Load Balancing(ELB)
+
+Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses. It can handle the varying load of your application traffic in a single Availability Zone or across multiple Availability Zones. The benefits of using ELB are:
+- Increased availability and reliability;
+- Improved performance;
+- Reduced costs;
+- Increased scalability and security;
+- Easier management;
+
+The types of ELB are:
+
+![Types of ELB](assets/elb-types.png)
+
+##### Cross Zone Load Balancing
+
+It distributes traffic across multiple AZ in a single AWS region. It helps to improve the availability and performance of your applications by preventing a single AZ from becoming a bottleneck.
+
+![Cross Zone Load Balacing](assets/cross-zone-load-balancing.png)
+
+The downside of using cross zone load balancing requires distributing EC2 instances across multiple AZs, adding complexity to application architecture and increasing costs due to inter-AZ data transfer fees.
+
+##### ELB Stickiness
+
+Stick sessions allow you to route requests to the same target in a target group. This is useful for applications that require session persistence, such as shopping carts or user profiles. The downside of using stick sessions is that it can lead to uneven load distribution and reduced availability if the target becomes unhealthy or fails.
+
+![ELB Stick Sessions](assets/session-stickiness-diagram.jpg)
