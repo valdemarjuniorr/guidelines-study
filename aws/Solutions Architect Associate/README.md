@@ -178,6 +178,25 @@ Differences between public and elastic IP addresses are, public automatically as
 #### AWS ENI, ENA and EFA
 
 Those are network interfaces card options for EC2 instances and they mean:
-- `Elastic Network Interface(ENI)`: It is a basic network interface that you can have.
-- `Elastic Network Adapter(ENA)`: It uses a single root IO virtualization(RIO) to provide high performance networking.
-- `Elastic Fabric Adapter(EFA)`: It uses to accelerate high performance computing(HPC) and machine learning(ML) applications. It provides low latency and high throughput for inter-instance communication.
+- `Elastic Network Interface(ENI)`: It is a basic network interface that you can have. It is used in web servers and database servers and no high-performance requirements.
+- `Elastic Network Adapter(ENA)`: It uses a single root IO virtualization(RIO) to provide high performance networking. It is used in applications that require higher bandwidth and lower inter-instance latency and it is supported on limited EC2 instance types (HVM only).
+- `Elastic Fabric Adapter(EFA)`: It uses to accelerate high performance computing(HPC) and machine learning(ML) applications. It provides low latency and high throughput for inter-instance communication. It is used for high performance computing(HPC), such as ML and tightly coupled applications.
+
+A `ENI` can have:
+- A primary private IPv4 address from the IPv4 address range of your VPC.
+- One or more secondary private IPv4 addresses from the IPv4 address range of your VPC.
+- One Elastic IP address per private IPv4 address.
+- One public IPv4 address and one or more IPv6 addresses.
+- One or more security groups.
+- A MAC address.
+
+A `ENA` can have:
+- Custom network interface optimized to deliber high thrtoughput packet per second(PPS) performance and low latency.
+- There are two implementations:
+  - Elastic Network Adapter(ENA), which support network speeds of up to 100 Gbps.
+  - Intel 82599 Virtual Function(VF) interface, which support network speeds of up to 10 Gbps.
+
+A `EFA` can have:
+- Achieve the application performance of an on-prem HPC cluster, with the scalability, flexibility and elasticity of the cloud.
+- `ENA` with added capabilities(additional OS-bypass functionality).
+- OS-bypass is an access model that allows HTPC and ML applications to communicate directly with the NIC hardware, low-latency transport functionality.
