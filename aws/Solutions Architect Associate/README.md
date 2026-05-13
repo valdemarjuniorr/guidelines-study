@@ -227,3 +227,19 @@ The downside of using cross zone load balancing requires distributing EC2 instan
 Stick sessions allow you to route requests to the same target in a target group. This is useful for applications that require session persistence, such as shopping carts or user profiles. The downside of using stick sessions is that it can lead to uneven load distribution and reduced availability if the target becomes unhealthy or fails.
 
 ![ELB Stick Sessions](assets/session-stickiness-diagram.jpg)
+
+##### Application Load Balancer(ALB)
+
+ALB is a single point of contact for clients requests, distributing application traffic across multiple targets, such as EC2 instances, in multiple AZ which increases application availability, adding listeners to your ALB to route requests on defined ports and protocols using routing roles. Roles have a priority, one or more actions, and one or more conditions. Each role has a default action. ALB use health checks per target group that check the health of the targets.
+
+![Application Load Balancer Components](assets/alb-components.png)
+
+##### Network Load Balancer(NLB)
+
+NLB operates at layer four of the Open Systems Interconnection(OSI) model. It can handle millions of requests per second on TCP, TLS and UDP. To use a TLS listener on NLB, must deploy at least one server certificate on the NLB; uses a server certificate to terminate the front-end connection and decrypt requests from clients before sending them to the targets. When an AZ is enabled for a NLB, the NLB creates a LB node in the AZ.
+
+By default, each NLB node distributes traffic across only the registered targets in its AZ. If cross-zone load balancing is enabled, each LB node distributes traffic across the registered targets in all enabled AZs.
+
+With TCP traffic, the NLB selects a target using a flow hash algorithm based on the protocol, source IP address, source port, destination IP address, destination port and TCP sequence number. It support long-lived TCP connections, good for Websocket applications and applications that communicate via TCP instead of HTTP or HTTPS.
+
+With UDP traffic, NLB selects a target using a flow hash algorithm based on the protocol, source IP address, source port, destination IP address and destination port. UDP traffic flow has the same source and destination, so it is consistently routed to a single target throughout its life. Different UDP flow have different source UP addresses and ports, therefore they can be routed to different targets. When you create a NLB you can specify one Elastic IP address per subnet using a subnet mapping.
