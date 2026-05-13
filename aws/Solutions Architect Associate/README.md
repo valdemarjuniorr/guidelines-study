@@ -162,3 +162,22 @@ For sharing placement groups:
 - To share in your AWS Organization, you must enable sharing with AWS Organizations.
 - You are responsible for managing the instances owned by you in a shared placement group.
 - You can not modify instances and capacity reservations that are associated with a shared placement group but not owned by you.
+
+#### Public, Private and Elastic IP Addresses
+
+##### IP Addressing in VPC
+
+By default, EC2 and VPC use the IPv4 addressing protocol. When you create a VPC, you must to assing it an IPv4 CIDR block. To connect to your instance over the internet or enable communication between your instance and other AWS services that have public endpoints, assign a globally-unique public IPv4 address to your instance. In order to have your instances communicate with the internet, you need to attach an internet gateway to your VPC and it will communicate through IPv4, IPv6 or both.
+
+The differences between IPv4 and IPv6 are:
+- `IPv4`: VPC cider block site can be from 16 to 28 and the subnet cider block is 16 to 28. They are allowed to use elastic IP addresses
+- `IPv6`: VPC cider block is fixed at 56 and the subnet cider block is fixed at 64. There are not any distinguishes between private and public IP addresses. All IP addresses are public. In IPv6, you can not use elastic IP addresses because all IP addresses are public and globally unique.
+
+Differences between public and elastic IP addresses are, public automatically assigned to instances in a default VPC and they are released when the instance is stopped or terminated. Elastic IP addresses are static and they are associated with your AWS account. You can associate an elastic IP address with an instance or a network interface and it will remain associated until you choose to disassociate it. For Elastic IP addresses, you are charged for each hour that the address is not associated with a running instance and for each GB of data transferred out of the address.
+
+#### AWS ENI, ENA and EFA
+
+Those are network interfaces card options for EC2 instances and they mean:
+- `Elastic Network Interface(ENI)`: It is a basic network interface that you can have.
+- `Elastic Network Adapter(ENA)`: It uses a single root IO virtualization(RIO) to provide high performance networking.
+- `Elastic Fabric Adapter(EFA)`: It uses to accelerate high performance computing(HPC) and machine learning(ML) applications. It provides low latency and high throughput for inter-instance communication.
