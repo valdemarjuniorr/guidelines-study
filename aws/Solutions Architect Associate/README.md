@@ -243,3 +243,49 @@ By default, each NLB node distributes traffic across only the registered targets
 With TCP traffic, the NLB selects a target using a flow hash algorithm based on the protocol, source IP address, source port, destination IP address, destination port and TCP sequence number. It support long-lived TCP connections, good for Websocket applications and applications that communicate via TCP instead of HTTP or HTTPS.
 
 With UDP traffic, NLB selects a target using a flow hash algorithm based on the protocol, source IP address, source port, destination IP address and destination port. UDP traffic flow has the same source and destination, so it is consistently routed to a single target throughout its life. Different UDP flow have different source UP addresses and ports, therefore they can be routed to different targets. When you create a NLB you can specify one Elastic IP address per subnet using a subnet mapping.
+
+![Network Load Balancer Components](assets/network-lb-components.png)
+
+##### Gateway Load Balancer(GWLB)
+
+It makes it easy to deploy and manage virtual appliances in the cloud and it can be used to deploy a variety of virtual appliances, including firewalls, intrusion detection and prevention systems and deep packet inspection systems. `GWLB` is a transparent network gateway that offers high availability and scalability for virtual appliances without requiring modifications to your existing network infrastructure, distributing traffic to your virtual appliances based on their health and availability. It operates at the third layer the network layer, of the open interconnect(OSI) model and the virtual appliance instances exchange application traffic using the GENEVE protocol on port 6081.
+
+The main advantages of using `GWLB` are:
+- Scale your virtual appliance instances automatically.
+- Bring higher availability to your third-party virtual appliances.
+- Simplify deployment with AWS Marketplace appliances.
+- Ensure private connectivity over the AWS network using endpoints.
+
+#### Autoscaling
+
+The instance termination logic is as follows:
+
+![Instance termination logic](assets/instance-termination-logic.png)
+
+##### ASG Cooldown Period
+
+It is responsible to scaling cooldown to prevent your Auto Scaling group from launching or terminating additional instances before the effects of previous activities are visible. The cooldown default value is 300 seconds. You can specify a cooldown period when you create an Auto Scaling group or when you create a scaling policy. You can also specify a cooldown period when you execute a scaling activity. To reduce costs, you can set a cooldown period to 180 seconds, since the terminating is faster than launching an instance.
+
+#### AWS Lambda
+
+AWS Serverless is a cloud computing model that eliminates the need for managing underlying infrastructure, enabling developers to focus on code development and deployment. It offers scalability, cost-effectiveness ans resilience by automatically scaling applications based on demand. The advantages of using AWS Serverless are:
+- Lambda functions are triggered by events from various AWS services, such as S3, DynamoDB, API Gateway and CloudWatch Events.
+- It suppots multiple programming languages, including Node.js, Python, Java, C#, Go and Ruby.
+- AWS Lambda follows a pay-per-use pricing model, billing based on function invocations and execution time, with no charges when code is not running.
+
+How AWS Lambda works:
+
+![AWS Lambda Workflow](assets/how-lambda-works.png)
+
+The limitations of AWS Lambda are:
+- Maximum execution time of 15 minutes per invocation.
+- The maximum number of simultaneous executions are set at 1k per region by default, but expandable upon request.
+- You can allocate from 128 MB to 10 GB of memory in 64 MB increments, affecting CPU and network resources.
+- The size limit for deployment packages is 50 MB, but larger packages can be stored externally or referenced from S3.
+- Environment variables have a combined limit of 4 kb, with additional temporary space of up to 10 GB available in `/tmp` folder.
+
+##### AWS Lambda@Edge
+
+It is a extension of AWS Lambda that allows you to run code at AWS Edge locations in response to CloudFront events. It is used to customize the content that CloudFront delivers, such as modifying HTTP headers, generating responses or performing A/B testing.
+
+![Lambda@edge Workflow](assets/lambda-edge-workflow.png)
