@@ -300,3 +300,44 @@ It is a full managed service that simplifies the process of deploying, managing 
 #### AWS Outposts
 
 AWS Outposts is a fully managed service that extends AWS infrastructure, services, APIs and tools to customers. It is a pool of AWS compute and storage capacity deployed at a customer site which AWS operates, monitors and manages this capacity as part of an AWS region.
+
+### Storage
+
+#### S3
+
+Amazon S3 is an object storage service that offers industry-leading scalability, data availability, security and performance. It is designed to store and retrieve any amount of data from anywhere on the web. The advantages of using Amazon S3 are:
+- Scalability
+- Durability
+- Availability
+- Flexibility
+- Global Access
+- Cost Effective
+
+Those are the lifecycle policies for S3:
+
+![S3 Object Lifecycle](assets/s3-object-lifecycle.png)
+
+##### S3 Security
+
+There are some security features for S3:
+- S3 Bucket Policy: It is a resource-based policy that you can use to grant access permissions to your S3 buckets and objects. It allows you to specify who can access your S3 resources and what actions they can perform on those resources.
+- Access Control List(ACLs)
+- Identify and Access Management(IAM)
+- Encryption
+- Multi-Factor Authentication(MFA) Delete
+
+The differeces between S3 Policies and S3 ACLs are S3 Policies (JSON-based) and S3 ACLs (XML-based) both manage permissions, but differ fundamentally in scope, complexity, and hierarchy. While Policies evaluate rules globally with Allow and Deny, ACLs are simplistic, legacy mechanisms that only grant Allow permissions to specific AWS accounts or predefined groups.
+
+##### S3 Cross-Region Replication(CRR)
+
+CCR enables automatic ans asynchronous copying of objects across buckets in different AWS regions. It is used for compliance, latency optimization, and disaster recovery. It needs to enable versioning on both source and destination buckets and it needs an IAM role with permissions to read, replicate and perform other required operations on objects. It supports both same-account and cross-account replication.
+
+The drawbacks of using CRR are:
+- Latency: It adds some latency to the object access time.
+- Cost: Adds some cost to your AWS bill, because you pay S3 for storage, requests and inter-region data transfer for the replicated copy of data.
+
+##### S3 Glacier types
+
+There are three types of S3 Glacier as image below:
+
+![S3 Glacier Types](assets/s3-glacier-types.png)
