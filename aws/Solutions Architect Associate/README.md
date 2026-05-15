@@ -270,7 +270,7 @@ It is responsible to scaling cooldown to prevent your Auto Scaling group from la
 
 AWS Serverless is a cloud computing model that eliminates the need for managing underlying infrastructure, enabling developers to focus on code development and deployment. It offers scalability, cost-effectiveness ans resilience by automatically scaling applications based on demand. The advantages of using AWS Serverless are:
 - Lambda functions are triggered by events from various AWS services, such as S3, DynamoDB, API Gateway and CloudWatch Events.
-- It suppots multiple programming languages, including Node.js, Python, Java, C#, Go and Ruby.
+- It supports multiple programming languages, including Node.js, Python, Java, C#, Go and Ruby.
 - AWS Lambda follows a pay-per-use pricing model, billing based on function invocations and execution time, with no charges when code is not running.
 
 How AWS Lambda works:
@@ -289,3 +289,14 @@ The limitations of AWS Lambda are:
 It is a extension of AWS Lambda that allows you to run code at AWS Edge locations in response to CloudFront events. It is used to customize the content that CloudFront delivers, such as modifying HTTP headers, generating responses or performing A/B testing.
 
 ![Lambda@edge Workflow](assets/lambda-edge-workflow.png)
+
+#### Elastic Beanstalk
+
+It is a full managed service that simplifies the process of deploying, managing and scaling web applications and services. It automatically handles the provisioning of the necessary AWS resources, such as EC2 instances, load balancers, auto scaling groups to run your application. The limitations of using Elastic Beanstalk are:
+- Limited control.
+- Scaling delays.
+- Cost management complexity.
+
+#### AWS Outposts
+
+AWS Outposts is a fully managed service that extends AWS infrastructure, services, APIs and tools to customers. It is a pool of AWS compute and storage capacity deployed at a customer site which AWS operates, monitors and manages this capacity as part of an AWS region.
