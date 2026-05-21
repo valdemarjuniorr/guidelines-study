@@ -341,3 +341,24 @@ The drawbacks of using CRR are:
 There are three types of S3 Glacier as image below:
 
 ![S3 Glacier Types](assets/s3-glacier-types.png)
+
+**Data Retrieval**
+
+The Data Retrieval is asynchronous. You can work in another task while waiting for the retrieval to complete. The retrieval time depends on the retrieval option you choose. After the retrieval is complete, you have 24 hours to access your data before it is deleted.
+
+**Types of server-side Encryption**
+
+There are three types of server-side encryption for S3:
+- SS3 S3: S3 manages the key policies and rotations allowing you to easily share your data across accounts. It manages the encryption keys and encrypts your objects using a secure, industry-standard encryption algorithm which each object is encrypted with a unique key.
+- SS3 KMS: Allows you to log S3's call to AWS KMS to encrypt or decrypt your objects. For every encryption and decryption action S3 makes a call to KMS to get the encryption key. With customer-managed keys, you also control the key rotation schedule for these keys.
+- DSSE-KMS: It is a client-side encryption method that uses AWS KMS to manage the encryption keys. With DSSE-KMS, you encrypt your data on the client side before uploading it to S3, and you use AWS KMS to manage the encryption keys. This method provides an additional layer of security by ensuring that your data is encrypted before it leaves your environment.
+
+#### AWS Storage Gateway
+
+AWS Storage Gateway is a hybrid cloud storage service that enables on-premises applications to seamlessly use AWS cloud storage. It provides a secure and efficient way to integrate on-premises environments with AWS, allowing you to leverage the scalability, durability and cost-effectiveness of AWS storage services while maintaining low-latency access to your data.
+
+#### AWS S3 CORS
+
+Cross-origin resource sharing(CORS) allow client web applications from one domain to interact with resources in different domains. Create rich client-side web applications and selectively allow cross-origin access to your S3 resources. CORS use cases include:
+- S3 hosted website which uses javascript on it's web pages to make authenticated GET and PUT requests for resources in the same bucket using the S3 API.
+- Browser blocks javascript from allowing those requests, but with CORS you can configure your bucket to explicitly enable cross-origin requests
